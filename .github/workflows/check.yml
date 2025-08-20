@@ -1,9 +1,13 @@
-name: Check
-on: push
+name: CI Test 
+on: 
+  push:
+    branches:
+      - dev
+      - master
 
 jobs:
   test:
-    name: Test
+    name: Build & Test 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
