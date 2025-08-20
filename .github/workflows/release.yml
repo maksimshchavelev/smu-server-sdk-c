@@ -1,0 +1,55 @@
+name: Release DEB
+
+on:
+  push:
+    branches:
+      - master 
+
+jobs:
+  build-deb:
+    name: Build .deb package
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install deps
+        run: |
+          sudo apt update
+          sudo apt install -y cmake gcc dpkg-dev fakeroot git
+
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSDK_C_BUILD_TESTS=OFF -DSDK_C_ENABLE_SANITIZERS=OFF
+
+      - name: Build
+        run: cmake --build build --parallel
+
+      - name: Build DEB package
+        run: cmake --build build --target package
+
+      - name: Get project version
+        id: version
+        run: |
+          VERSION=$(grep -Po '(?<=project\(smu-server-sdk-c LANGUAGES C VERSION )[^) ]+' CMakeLists.txt)
+          echo "PROJECT_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 HEAD^)
+          echo "Last tag: $LAST_TAG"
+          CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s (%an)" --no-merges)
+          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
+          echo "$CHANGELOG" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with: 
+          tag_name: ${{ env.PROJECT_VERSION }}
+          release_name: Release ${{ env.PROJECT_VERSION }} 
+          body: ${{ env.CHANGELOG }}
+          draft: false
+          prerelease: false   
