@@ -1,0 +1,12 @@
+/**
+ * @file version.h
+ *
+ * @license GPLv3, see LICENSE for details
+ * @copyright Copyright (©) 2025, Maksim Shchavelev <maksimshchavelev@gmail.com>
+ */
+
+#define SDK_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define SDK_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define SDK_VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+#define ABI_VERSION @ABI_VERSION@
