@@ -9,6 +9,8 @@
 
 #include <stdint.h>
 
+#define MDTP_VERSION 1 ///< Version of MDTP
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -48,25 +50,29 @@ typedef enum LogType {
  */
 typedef struct MDTP {
     /**
-     * @brief Generates a valid MDTP frame with header, ready to be sent to the server
-     * @return Valid MDTP frame
+     * @copydoc sdk_mdtp_make_root()
      */
     SDK_MODULE_MDTP_DATA *(*make_root)(void *first, ...);
 
     /**
-     * @brief Creates a container node. Accepts both other container nodes and value nodes.
-     * @return `void*` pointer to container with nodes
+     * @copydoc sdk_mdtp_make_container()
      */
-    void *(*make_container)(void *first, ...);
+    void *(*make_container)(const char *name, void *first, ...);
 
     /**
-     * @brief Creates a value node
-     * @param value_name Name of value
-     * @param value Value
-     * @param value_units Units of value
-     * @return `void*` pointer to value node
+     * @copydoc sdk_mdtp_make_value()
      */
     void *(*make_value)(const char *value_name, const char *value, const char *value_units);
+
+    /**
+     * @copydoc sdk_mdtp_free_container()
+     */
+    void (*free_container)(void *container_node);
+
+    /**
+     * @copydoc sdk_mdtp_free_value
+     */
+    void (*free_value)(void *value_node);
 } MDTP;
 
 

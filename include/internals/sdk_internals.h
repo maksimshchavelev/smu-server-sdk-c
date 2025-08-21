@@ -8,6 +8,7 @@
 #pragma once
 
 #include <stdint.h>
+#include <stdio.h>
 
 #if defined _WIN32
 #define SDK_ABI __declspec(dllexport)
@@ -114,57 +115,96 @@ SDK_ABI SDK_ABI_MODULE_FUNCTIONS *module_init(SDK_ABI_SERVER_CORE_FUNCTIONS serv
 SDK_ABI void module_destroy(void);
 
 
-// =========================== SDK STRUCTURES ===========================
-
-/**
- * @brief MDTP container node. Read about MDTP protocol in documentation
- */
-typedef struct MDTP_CONTAINER_NODE {
-    uint8_t     node_type;        ///< `0` - if node type is container, `1` if node type is value
-    uint32_t    node_name_length; ///< Length of node name without terminating zero
-    const char *node_name;        ///< Name of node without terminating zero
-    uint32_t    payload_size;     ///< Size of payload
-    void       *payload; ///< Payload. Determine the node type and cast to the required type
-} MDTP_CONTAINER_NODE;
-
-
-/**
- * @brief MDTP value node. Read about MDTP protocol in documentation
- */
-typedef struct MDTP_VALUE_NODE {
-    uint8_t     node_type;        ///< `0` - if node type is container, `1` if node type is value
-    uint32_t    node_name_length; ///< Length of node name without terminating zero
-    const char *node_name;        ///< Name of node without terminating zero
-    uint32_t    units_length;     ///< Length of node units without terminating zero
-    const char *units;            ///< Units of node without terminating zero
-    uint32_t    value_length;     ///< Length of value without terminating zero
-    const char *value;            ///< Value of node without terminating zero
-} MDTP_VALUE_NODE;
-
-
-
 // =========================== SDK MDTP FUNCTIONS ===========================
 
 /**
- * @brief Generates a valid MDTP frame with header, ready to be sent to the server
- * @return Valid MDTP frame
+ * @brief Generates a valid MDTP frame with header, ready to be sent to the server.
+ *
+ * This function creates the root frame of the MDTP protocol.
+ * It accepts a variable number of nodes (containers or values) and packs them into a root object.
+ * The result can be directly sent to the server since the frame is complete and valid.
+ *
+ * @param first Pointer to the first nested node (container or value). Must not be `NULL`.
+ * @param ...   Additional nodes. The list must always be terminated with `NULL`.
+ *
+ * @warning Always terminate the argument list with `NULL`.
+ * @warning The function takes ownership of passed nodes. Do not free them manually afterwards.
+ *
+ * @return Pointer to a valid `SDK_MODULE_MDTP_DATA` frame. **Do not free it, as this will happen
+ * automatically when the module terminates!**
+ *
+ * @code{.c}
+ * // Example usage:
+ * SDK_MODULE_MDTP_DATA *data = sdk_mdtp_make_root(
+ *     sdk_mdtp_make_container("ram",
+ *         sdk_mdtp_make_value("use", "12", "gb"),
+ *         NULL),
+ *     NULL);
+ * @endcode
  */
 SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...);
 
 
 /**
- * @brief Creates a container node. Accepts both other container nodes and value nodes.
- * @return `void*` pointer to container with nodes
+ * @brief Creates a container node.
+ *
+ * Containers can include both value nodes and other containers, allowing hierarchical structures.
+ * The payload size is automatically calculated from the nested nodes.
+ *
+ * @param name  Name of the container (non-NULL, zero-terminated string).
+ *              Length is stored without the terminating `\0`.
+ * @param first Pointer to the first nested node (container or value). May be `NULL` if the
+ * container is empty.
+ * @param ...   Additional nested nodes. The list must always be terminated with `NULL`.
+ *
+ * @warning Always terminate the argument list with `NULL`.
+ * @warning The function takes ownership of nested nodes and frees them when the container is
+ * destroyed.
+ * @warning The `name` string is copied into the container. The caller remains responsible for
+ * freeing it if allocated dynamically.
+ *
+ * @return `void*` Pointer to the created container node. **Must be freed with
+ * `sdk_mdtp_free_container()`**.
+ *
+ * @code{.c}
+ * // Example usage:
+ * void *container = sdk_mdtp_make_container("ram",
+ *     sdk_mdtp_make_value("use", "12", "gb"),
+ *     NULL);
+ * @endcode
  */
-void *sdk_mdtp_make_container(void *first, ...);
+void *sdk_mdtp_make_container(const char *name, void *first, ...);
 
 
 /**
- * @brief Creates a value node
- * @param value_name Name of value
- * @param value Value
- * @param value_units Units of value
- * @return `void*` pointer to value node
+ * @brief Frees memory allocated for container node
+ * @param value_node Pointer to container node
+ * @note If a node of a other type is passed, there will be no effect
+ */
+void sdk_mdtp_free_container(void *container_node);
+
+
+/**
+ * @brief Creates a value node.
+ *
+ * A value node holds a name, a measurement unit, and a value string.
+ * All strings are stored without the terminating `\0`.
+ *
+ * @param value_name  Name of the value (non-NULL, zero-terminated string).
+ * @param value       Value string (non-NULL, zero-terminated string).
+ * @param value_units Units string (non-NULL, zero-terminated string).
+ *
+ * @warning The strings are copied into the node. The caller remains responsible for freeing them if
+ * allocated dynamically.
+ * @warning Value nodes cannot contain children. They are always leaves in the MDTP structure.
+ *
+ * @return `void*` Pointer to the created value node. **Must be freed with
+ * `sdk_mdtp_free_value()`**.
+ *
+ * @code{.c}
+ * // Example usage:
+ * void *val = sdk_mdtp_make_value("RAM", "1234", "MB");
+ * @endcode
  */
 void *sdk_mdtp_make_value(const char *value_name, const char *value, const char *value_units);
 
@@ -172,8 +212,99 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
 /**
  * @brief Frees memory allocated for value node
  * @param value_node Pointer to value node
+ * @note If a node of a other type is passed, there will be no effect
  */
 void sdk_mdtp_free_value(void *value_node);
+
+
+/**
+ * @brief Computes the total serialized size (in bytes) of one or more MDTP nodes.
+ *
+ * This function accepts a variable number of pointers to **serialized MDTP nodes in memory**
+ * (wire layout), determines the node type from the first byte, parses the big-endian length
+ * fields according to the MDTP specification, and returns the sum of sizes for all nodes.
+ * The argument list MUST be terminated with NULL.
+ *
+ * ## Assumptions
+ * - Each pointer refers to the **serialized** node layout starting at the node's first byte:
+ *   - **Container node** layout:
+ *     @code
+ *     [1 byte type=0]
+ *     [4 bytes name_len (BE)]
+ *     [name bytes (name_len)]
+ *     [4 bytes payload_size (BE)]
+ *     [payload bytes (payload_size)]
+ *     @endcode
+ *   - **Value node** layout:
+ *     @code
+ *     [1 byte type=1]
+ *     [4 bytes name_len (BE)]
+ *     [name bytes (name_len)]
+ *     [4 bytes units_len (BE)]
+ *     [units bytes (units_len)]
+ *     [4 bytes value_len (BE)]
+ *     [value bytes (value_len)]
+ *     @endcode
+ * - All 32-bit integers are encoded **big-endian**.
+ * - Input pointers must be valid and point to buffers large enough for the declared lengths.
+ * - The function does **not** validate contents beyond basic parsing; malformed nodes yield
+ *   undefined behavior (or truncated size if arithmetic overflows).
+ *
+ * ## Overflow behavior
+ * - The function accumulates sizes in 64-bit and clamps the final result to UINT32_MAX.
+ *
+ * ## Variadic termination
+ * - The list MUST end with `NULL`, e.g.:
+ *   @code
+ *   uint32_t sum = sdk_mdtp_get_nodes_size(nodeA, nodeB, NULL);
+ *   @endcode
+ *
+ * @param first Pointer to the first serialized node (container or value). Pass NULL for zero nodes.
+ * @param ...   More node pointers, terminated with NULL.
+ * @return The total size in bytes (clamped to UINT32_MAX).
+ *
+ * @section example_value Example: single value node
+ * @code
+ * // value node for: name="version", units="", value="1.0.42"
+ * // Layout: [1][4][name][4][units][4][value]
+ * const uint8_t value_node[] = {
+ *   0x01,                           // type = value
+ *   0x00,0x00,0x00,0x07,            // name_len = 7
+ *   'v','e','r','s','i','o','n',    // name
+ *   0x00,0x00,0x00,0x00,            // units_len = 0
+ *   0x00,0x00,0x00,0x06,            // value_len = 6
+ *   '1','.','0','.','4','2'         // value
+ * };
+ * uint32_t sz = sdk_mdtp_get_nodes_size((void*)value_node, NULL);
+ * // sz == 1 + 4 + 7 + 4 + 0 + 4 + 6 = 26 bytes
+ * @endcode
+ *
+ * @section example_container Example: container with payload
+ * @code
+ * // Suppose 'payload' already contains two serialized value nodes, total 55 bytes.
+ * extern const uint8_t payload[55];
+ * const uint8_t container_node[] = {
+ *   0x00,                         // type = container
+ *   0x00,0x00,0x00,0x03,          // name_len = 3
+ *   'c','p','u',                  // name
+ *   0x00,0x00,0x00,0x37,          // payload_size = 55
+ *   // ... 55 bytes of payload follow ...
+ * };
+ * uint32_t sz = sdk_mdtp_get_nodes_size((void*)container_node, NULL);
+ * // sz == 1 + 4 + 3 + 4 + 55 = 67 bytes
+ * @endcode
+ */
+uint32_t sdk_mdtp_get_nodes_size(void *first, ...);
+
+
+/**
+ * @brief Calculates the total size of MDTP nodes using va_list.
+ * @param first Pointer to the first node.
+ * @param args  Variadic argument list with subsequent nodes, ending with NULL.
+ * @return Total size of all nodes in bytes.
+ * @warning **Copy the `va_list` instance via `va_copy` and pass the copy along!**
+ */
+uint32_t sdk_mdtp_get_nodes_size_va(void *first, va_list args);
 
 
 // =========================== SDK UTILITY FUNCTIONS ===========================
