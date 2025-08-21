@@ -133,7 +133,7 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
     offset += 4;
 
     // Write node name
-    memcpy(buffer + offset, value_name, value_name_length);
+    memcpy((char*)buffer + offset, value_name, value_name_length);
     offset += value_name_length;
 
     // Write units length
@@ -141,7 +141,7 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
     offset += 4;
 
     // Write units
-    memcpy(buffer + offset, value_units, value_units_length);
+    memcpy((char*)buffer + offset, value_units, value_units_length);
     offset += value_units_length;
 
     // Write value length
@@ -149,7 +149,7 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
     offset += 4;
 
     // Write value
-    memcpy(buffer + offset, value, value_length);
+    memcpy((char*)buffer + offset, value, value_length);
 
     return buffer;
 }
