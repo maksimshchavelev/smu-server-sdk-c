@@ -331,7 +331,7 @@ uint32_t sdk_mdtp_get_nodes_size_va(void *first, va_list args) {
             off += 4;
             off += (size_t)value_len;
 
-            total += (uint64_t)off;
+            total += off;
 
         } else if (type == 0) {
             /* CONTAINER NODE:
@@ -347,7 +347,7 @@ uint32_t sdk_mdtp_get_nodes_size_va(void *first, va_list args) {
             off += 4;
             off += (size_t)payload_size;
 
-            total += (uint64_t)off;
+            total += off;
 
         } else {
             // Unknown type: ignore (adds 0). Optionally you can choose to bail out.

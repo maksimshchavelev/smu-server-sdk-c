@@ -47,11 +47,8 @@ configure_file(
 target_compile_options(${SDK_NAME} PRIVATE
   -pedantic
   -Wall -Wextra
-  -Wnon-virtual-dtor
-  -Wold-style-cast
   -Wcast-align
   -Wunused
-  -Woverloaded-virtual
   -Wpedantic
   -Wconversion
   -Wsign-conversion

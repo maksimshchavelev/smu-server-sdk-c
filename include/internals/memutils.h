@@ -34,10 +34,10 @@
  */
 
 static inline void write_uint32_be(void *memory, size_t offset, uint32_t value) {
-    ((char *)memory)[offset] = (value >> 24) & 0xFF;
-    ((char *)memory)[offset + 1] = (value >> 16) & 0xFF;
-    ((char *)memory)[offset + 2] = (value >> 8) & 0xFF;
-    ((char *)memory)[offset + 3] = value & 0xFF;
+    ((uint8_t *)memory)[offset] = (uint8_t)((value >> 24) & 0xFF);
+    ((uint8_t *)memory)[offset + 1] = (value >> 16) & 0xFF;
+    ((uint8_t *)memory)[offset + 2] = (value >> 8) & 0xFF;
+    ((uint8_t *)memory)[offset + 3] = value & 0xFF;
 }
 
 
@@ -64,7 +64,7 @@ static inline void write_uint32_be(void *memory, size_t offset, uint32_t value) 
  * @param value The 8-bit value to write.
  */
 static inline void write_ubyte_be(void *memory, size_t offset, uint8_t value) {
-    ((char *)memory)[offset] = value;
+    ((uint8_t *)memory)[offset] = value;
 }
 
 
@@ -88,7 +88,7 @@ static inline void write_ubyte_be(void *memory, size_t offset, uint8_t value) {
  * @return The 8-bit value read from memory.
  */
 static inline uint8_t read_ubyte_be(void *memory, size_t offset) {
-    return ((char *)memory)[offset];
+    return ((uint8_t *)memory)[offset];
 }
 
 
