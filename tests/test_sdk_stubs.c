@@ -14,7 +14,7 @@ const char *sdk_module_get_configuration(void) {
 }
 
 
-SDK_MODULE_MDTP_DATA *sdk_module_get_data(void) {
+ABI_MODULE_MDTP_DATA *sdk_module_get_data(void) {
     return 0;
 }
 
