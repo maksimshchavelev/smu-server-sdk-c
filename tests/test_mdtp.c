@@ -95,7 +95,7 @@ void test_make_container_node(void) {
     TEST_ASSERT_EQUAL(((char *)node)[30], '1');
     TEST_ASSERT_EQUAL(((char *)node)[31], '2');
 
-    sdk_mdtp_free_value(node);
+    sdk_mdtp_free_container(node);
 }
 
 
