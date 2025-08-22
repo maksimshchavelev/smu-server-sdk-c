@@ -10,8 +10,6 @@
 #include "modules/internals/mdtp.h"
 #include <stdint.h>
 
-#define MDTP_VERSION 1 ///< Version of MDTP
-
 #ifdef __cplusplus
 extern "C" {
 #endif
