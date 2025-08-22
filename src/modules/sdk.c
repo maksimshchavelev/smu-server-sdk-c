@@ -14,12 +14,15 @@
 #include <string.h>
 
 
-static SDK_MODULE_ABI_CONTEXT module_context_storage; ///< For context
-static SDK_MODULE_MDTP_DATA
-    module_mdtp_data_storage; ///< For temporary storage of MDTP protocol data
+static SDK_MODULE_ABI_CONTEXT module_context_storage =
+    (SDK_MODULE_ABI_CONTEXT){0}; ///< For context
+
+static SDK_MODULE_MDTP_DATA module_mdtp_data_storage = (SDK_MODULE_MDTP_DATA){0}; ///< For temporary storage of MDTP protocol data
+
 static SDK_ABI_SERVER_CORE_FUNCTIONS
-    abi_server_core_functions_storage;                    ///< For pointers to server functions
-static SDK_ABI_MODULE_FUNCTIONS module_functions_storage; ///< For pointer to module functions
+    abi_server_core_functions_storage = (SDK_ABI_SERVER_CORE_FUNCTIONS){0};                    ///< For pointers to server functions
+
+static SDK_ABI_MODULE_FUNCTIONS module_functions_storage = (SDK_ABI_MODULE_FUNCTIONS){0}; ///< For pointer to module functions
 
 
 // We use pointers to understand whether structures are initialized or not. malloc is not used and
