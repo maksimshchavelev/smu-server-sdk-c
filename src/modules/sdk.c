@@ -257,6 +257,10 @@ void sdk_mdtp_free_container(void *container_node) {
 
 // Make root node
 SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...) {
+    if (first == NULL) {
+        return NULL;
+    }
+
     va_list args;
     va_list args_copy;
     va_start(args, first);
@@ -267,8 +271,17 @@ SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...) {
     uint32_t payload_size = sdk_mdtp_get_nodes_size_va(first, args_copy);
 
     uint32_t size = 1 /* version of MDTP */ + 4 /* payload size */ + payload_size /* payload */;
+    void *buffer = calloc(1, size); // calloc to fill memory by zeroes
+
+    if (buffer == NULL) {
+        va_end(args);
+        va_end(args_copy);
+        return NULL;
+    }
+
+    // Success allocation
     free((void *)module_mdtp_data->data);
-    module_mdtp_data->data = calloc(1, size); // calloc to fill memory by zeroes
+    module_mdtp_data->data = buffer;
     module_mdtp_data->size = size;
 
     // Fill buffer
