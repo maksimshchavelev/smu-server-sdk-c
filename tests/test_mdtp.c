@@ -143,6 +143,8 @@ void test_make_root_node(void) {
     // Value
     TEST_ASSERT_EQUAL(((char *)data->data)[35], '1');
     TEST_ASSERT_EQUAL(((char *)data->data)[36], '2');
+
+    module_destroy();
 }
 
 
