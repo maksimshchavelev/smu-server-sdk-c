@@ -1,4 +1,4 @@
-#include <sdk.h>
+#include <modules/sdk.h>
 
 
 SDKStatus sdk_module_init(const char *json_config) {

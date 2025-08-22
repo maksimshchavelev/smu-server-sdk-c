@@ -5,9 +5,9 @@
  * @copyright Copyright (©) 2025, Maksim Shchavelev <maksimshchavelev@gmail.com>
  */
 
-#include "sdk.h"                     // For public interface
-#include "internals/memutils.h"      // For memory utilities
-#include "internals/sdk_internals.h" // For SDK internals
+#include "modules/sdk.h"                     // For public interface
+#include "modules/internals/memutils.h"      // For memory utilities
+#include "modules/internals/sdk_internals.h" // For SDK internals
 #include "version.h"
 #include <stdarg.h> // For variable arguments
 #include <stdlib.h>

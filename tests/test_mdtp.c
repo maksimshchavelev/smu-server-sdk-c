@@ -1,6 +1,6 @@
-#include "sdk.h"
-#include <internals/memutils.h>
-#include <internals/sdk_internals.h>
+#include "modules/sdk.h"
+#include "modules/internals/memutils.h"
+#include "modules/internals/sdk_internals.h"
 #include <unity.h>
 
 
