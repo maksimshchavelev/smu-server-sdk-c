@@ -51,8 +51,8 @@ SDKStatus sdk_utils_module_setup(const char *module_name, const char *module_des
         return SDK_INVALID_ARGUMENT;
     }
 
-    module_context->module_name = strdup(module_name);        // Free after use
-    module_context->module_description = strdup(module_name); // Free after use
+    module_context->module_name = strdup(module_name);               // Free after use
+    module_context->module_description = strdup(module_description); // Free after use
 
     if (module_context->module_name == NULL || module_context->module_description == NULL) {
         return SDK_ALLOCATION_ERROR;
