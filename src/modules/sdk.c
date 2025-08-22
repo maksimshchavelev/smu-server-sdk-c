@@ -176,6 +176,10 @@ void sdk_mdtp_free_value(void *value_node) {
 
 // Make container node
 void *sdk_mdtp_make_container(const char *name, void *first, ...) {
+    if (name == NULL || first == NULL) {
+        return NULL;
+    }
+
     va_list args;
     va_list args_copy;
     va_start(args, first);
@@ -190,6 +194,12 @@ void *sdk_mdtp_make_container(const char *name, void *first, ...) {
     uint32_t size = 1 /* node type */ + 4 /* name length */ + (uint32_t)name_length /* name */ +
                     4 /* payload size */ + payload_size /* payload */;
     buffer = calloc(1, size); // calloc to fill memory by zeroes
+
+    if (buffer == NULL) {
+        va_end(args);
+        va_end(args_copy);
+        return NULL;
+    }
 
     // Fill buffer
     // Write node type
