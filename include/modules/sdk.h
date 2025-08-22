@@ -52,12 +52,12 @@ typedef struct MDTP {
     /**
      * @copydoc sdk_mdtp_make_root()
      */
-    SDK_MODULE_MDTP_DATA *(*make_root)(void *first, ...);
+    SDK_MODULE_MDTP_DATA *(*make_root)(const void *first, ...);
 
     /**
      * @copydoc sdk_mdtp_make_container()
      */
-    void *(*make_container)(const char *name, void *first, ...);
+    void *(*make_container)(const char *name, const void *first, ...);
 
     /**
      * @copydoc sdk_mdtp_make_value()
@@ -67,12 +67,12 @@ typedef struct MDTP {
     /**
      * @copydoc sdk_mdtp_free_container()
      */
-    void (*free_container)(void *container_node);
+    void (*free_container)(const void *container_node);
 
     /**
      * @copydoc sdk_mdtp_free_value
      */
-    void (*free_value)(void *value_node);
+    void (*free_value)(const void *value_node);
 } MDTP;
 
 

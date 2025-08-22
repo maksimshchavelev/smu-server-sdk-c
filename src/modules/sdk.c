@@ -164,7 +164,7 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
 
 
 // Free value node
-void sdk_mdtp_free_value(void *value_node) {
+void sdk_mdtp_free_value(const void *value_node) {
     // If not value node
     if (read_ubyte_be(value_node, 0) != 1) {
         return;
@@ -175,7 +175,7 @@ void sdk_mdtp_free_value(void *value_node) {
 
 
 // Make container node
-void *sdk_mdtp_make_container(const char *name, void *first, ...) {
+void *sdk_mdtp_make_container(const char *name, const void *first, ...) {
     if (name == NULL || first == NULL) {
         return NULL;
     }
@@ -245,7 +245,7 @@ void *sdk_mdtp_make_container(const char *name, void *first, ...) {
 
 
 // Free container node
-void sdk_mdtp_free_container(void *container_node) {
+void sdk_mdtp_free_container(const void *container_node) {
     // If not container node
     if (read_ubyte_be(container_node, 0) != 0) {
         return;
@@ -256,7 +256,7 @@ void sdk_mdtp_free_container(void *container_node) {
 
 
 // Make root node
-SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...) {
+SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(const void *first, ...) {
     if (first == NULL) {
         return NULL;
     }
@@ -320,7 +320,7 @@ SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...) {
 
 
 // Get node size
-uint32_t sdk_mdtp_get_nodes_size(void *first, ...) {
+uint32_t sdk_mdtp_get_nodes_size(const void *first, ...) {
     va_list args;
     va_start(args, first);
     uint32_t size = sdk_mdtp_get_nodes_size_va(first, args);
@@ -330,7 +330,7 @@ uint32_t sdk_mdtp_get_nodes_size(void *first, ...) {
 
 
 // Get nodes size via va_list
-uint32_t sdk_mdtp_get_nodes_size_va(void *first, va_list args) {
+uint32_t sdk_mdtp_get_nodes_size_va(const void *first, va_list args) {
     if (first == NULL) {
         return 0u;
     }

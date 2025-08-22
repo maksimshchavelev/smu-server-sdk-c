@@ -142,7 +142,7 @@ SDK_ABI void module_destroy(void);
  *     NULL);
  * @endcode
  */
-SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...);
+SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(const void *first, ...);
 
 
 /**
@@ -173,7 +173,7 @@ SDK_MODULE_MDTP_DATA *sdk_mdtp_make_root(void *first, ...);
  *     NULL);
  * @endcode
  */
-void *sdk_mdtp_make_container(const char *name, void *first, ...);
+void *sdk_mdtp_make_container(const char *name, const void *first, ...);
 
 
 /**
@@ -181,7 +181,7 @@ void *sdk_mdtp_make_container(const char *name, void *first, ...);
  * @param value_node Pointer to container node
  * @note If a node of a other type is passed, there will be no effect
  */
-void sdk_mdtp_free_container(void *container_node);
+void sdk_mdtp_free_container(const void *container_node);
 
 
 /**
@@ -214,7 +214,7 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
  * @param value_node Pointer to value node
  * @note If a node of a other type is passed, there will be no effect
  */
-void sdk_mdtp_free_value(void *value_node);
+void sdk_mdtp_free_value(const void *value_node);
 
 
 /**
@@ -294,7 +294,7 @@ void sdk_mdtp_free_value(void *value_node);
  * // sz == 1 + 4 + 3 + 4 + 55 = 67 bytes
  * @endcode
  */
-uint32_t sdk_mdtp_get_nodes_size(void *first, ...);
+uint32_t sdk_mdtp_get_nodes_size(const void *first, ...);
 
 
 /**
@@ -304,7 +304,7 @@ uint32_t sdk_mdtp_get_nodes_size(void *first, ...);
  * @return Total size of all nodes in bytes.
  * @warning **Copy the `va_list` instance via `va_copy` and pass the copy along!**
  */
-uint32_t sdk_mdtp_get_nodes_size_va(void *first, va_list args);
+uint32_t sdk_mdtp_get_nodes_size_va(const void *first, va_list args);
 
 
 // =========================== SDK UTILITY FUNCTIONS ===========================

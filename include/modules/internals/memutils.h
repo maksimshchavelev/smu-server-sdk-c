@@ -87,7 +87,7 @@ static inline void write_ubyte_be(void *memory, size_t offset, uint8_t value) {
  * @param offset The offset in bytes from the start of the buffer.
  * @return The 8-bit value read from memory.
  */
-static inline uint8_t read_ubyte_be(void *memory, size_t offset) {
+static inline uint8_t read_ubyte_be(const void *memory, size_t offset) {
     return ((uint8_t *)memory)[offset];
 }
 
@@ -114,7 +114,7 @@ static inline uint8_t read_ubyte_be(void *memory, size_t offset) {
  * @param offset The offset in bytes from the start of the buffer.
  * @return The 32-bit value reconstructed from memory.
  */
-static inline uint32_t read_uint32_be(void *memory, size_t offset) {
+static inline uint32_t read_uint32_be(const void *memory, size_t offset) {
     return ((uint32_t)(((char *)memory)[offset]) << 24) |
            ((uint32_t)(((char *)memory)[offset + 1]) << 16) |
            ((uint32_t)(((char *)memory)[offset + 2]) << 8) |
