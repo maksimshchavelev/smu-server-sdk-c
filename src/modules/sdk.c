@@ -14,15 +14,16 @@
 #include <string.h>
 
 
-static SDK_MODULE_ABI_CONTEXT module_context_storage =
-    (SDK_MODULE_ABI_CONTEXT){0}; ///< For context
+static SDK_MODULE_ABI_CONTEXT module_context_storage = (SDK_MODULE_ABI_CONTEXT){0}; ///< For context
 
-static SDK_MODULE_MDTP_DATA module_mdtp_data_storage = (SDK_MODULE_MDTP_DATA){0}; ///< For temporary storage of MDTP protocol data
+static SDK_MODULE_MDTP_DATA module_mdtp_data_storage =
+    (SDK_MODULE_MDTP_DATA){0}; ///< For temporary storage of MDTP protocol data
 
-static SDK_ABI_SERVER_CORE_FUNCTIONS
-    abi_server_core_functions_storage = (SDK_ABI_SERVER_CORE_FUNCTIONS){0};                    ///< For pointers to server functions
+static SDK_ABI_SERVER_CORE_FUNCTIONS abi_server_core_functions_storage =
+    (SDK_ABI_SERVER_CORE_FUNCTIONS){0}; ///< For pointers to server functions
 
-static SDK_ABI_MODULE_FUNCTIONS module_functions_storage = (SDK_ABI_MODULE_FUNCTIONS){0}; ///< For pointer to module functions
+static SDK_ABI_MODULE_FUNCTIONS module_functions_storage =
+    (SDK_ABI_MODULE_FUNCTIONS){0}; ///< For pointer to module functions
 
 
 // We use pointers to understand whether structures are initialized or not. malloc is not used and
@@ -49,8 +50,6 @@ SDKStatus sdk_utils_module_setup(const char *module_name, const char *module_des
         strlen(module_description) == 0) {
         return SDK_INVALID_ARGUMENT;
     }
-
-    module_context = &module_context_storage; // Init pointer
 
     module_context->module_name = strdup(module_name);        // Free after use
     module_context->module_description = strdup(module_name); // Free after use
@@ -375,6 +374,8 @@ SDK_ABI SDK_ABI_MODULE_FUNCTIONS *module_init(SDK_ABI_SERVER_CORE_FUNCTIONS serv
     if (json_configuration == NULL) {
         return NULL; // error
     }
+
+    module_context = &module_context_storage; // Init pointer
 
     abi_server_core_functions = &abi_server_core_functions_storage;
     *abi_server_core_functions = server_functions;
