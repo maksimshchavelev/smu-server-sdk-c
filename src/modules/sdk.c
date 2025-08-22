@@ -112,6 +112,11 @@ void *sdk_mdtp_make_value(const char *value_name, const char *value, const char 
     // [value length]: unsigned int32
     // [value...]: array of char
 
+    if (value_name == NULL || value == NULL || value_units == NULL) {
+
+        return NULL;
+    }
+
     size_t buffer_size = 1 + sizeof(uint32_t) + strlen(value_name) + sizeof(uint32_t) +
                          strlen(value_units) + sizeof(uint32_t) + strlen(value);
     size_t offset = 0; // Current position
