@@ -381,8 +381,6 @@ SDK_ABI SDK_ABI_MODULE_FUNCTIONS *module_init(SDK_ABI_SERVER_CORE_FUNCTIONS serv
     *abi_server_core_functions = server_functions;
 
     module_mdtp_data = &module_mdtp_data_storage;
-    module_mdtp_data->size = 0;
-    module_mdtp_data->data = NULL;
 
     sdk_utils = (SDK_UTILS){.log = sdk_utils_log,
                             .module_setup = sdk_utils_module_setup,
