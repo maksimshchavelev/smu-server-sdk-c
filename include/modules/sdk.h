@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "modules/internals/mdtp.h"
 #include <stdint.h>
 
 #define MDTP_VERSION 1 ///< Version of MDTP
@@ -15,10 +16,10 @@
 extern "C" {
 #endif
 
-typedef struct SDK_MODULE_MDTP_DATA          SDK_MODULE_MDTP_DATA;          ///< Forward declaration
-typedef struct SDK_MODULE_ABI_CONTEXT        SDK_MODULE_ABI_CONTEXT;        ///< Forward declaration
-typedef struct SDK_ABI_MODULE_FUNCTIONS      SDK_ABI_MODULE_FUNCTIONS;      ///< Forward declaration
-typedef struct SDK_ABI_SERVER_CORE_FUNCTIONS SDK_ABI_SERVER_CORE_FUNCTIONS; ///< Forward declaration
+typedef struct ABI_MODULE_MDTP_DATA      ABI_MODULE_MDTP_DATA;      ///< Forward declaration
+typedef struct ABI_MODULE_CONTEXT        ABI_MODULE_CONTEXT;        ///< Forward declaration
+typedef struct ABI_MODULE_FUNCTIONS      ABI_MODULE_FUNCTIONS;      ///< Forward declaration
+typedef struct ABI_SERVER_CORE_FUNCTIONS ABI_SERVER_CORE_FUNCTIONS; ///< Forward declaration
 
 /**
  * @brief Describes the return value of some SDK utility functions
@@ -43,37 +44,6 @@ typedef enum LogType {
     LOG_WARNING, ///< **Yellow** logs
     LOG_ERROR    ///< **Red** logs
 } LogType;
-
-
-/**
- * @brief Structure with pointers to functions for working with the MDTP protocol
- */
-typedef struct MDTP {
-    /**
-     * @copydoc sdk_mdtp_make_root()
-     */
-    SDK_MODULE_MDTP_DATA *(*make_root)(const void *first, ...);
-
-    /**
-     * @copydoc sdk_mdtp_make_container()
-     */
-    void *(*make_container)(const char *name, const void *first, ...);
-
-    /**
-     * @copydoc sdk_mdtp_make_value()
-     */
-    void *(*make_value)(const char *value_name, const char *value, const char *value_units);
-
-    /**
-     * @copydoc sdk_mdtp_free_container()
-     */
-    void (*free_container)(const void *container_node);
-
-    /**
-     * @copydoc sdk_mdtp_free_value
-     */
-    void (*free_value)(const void *value_node);
-} MDTP;
 
 
 /**
@@ -119,9 +89,9 @@ typedef struct SDK_UTILS {
      * @brief Get module name using context
      * @return Module context
      */
-    SDK_MODULE_ABI_CONTEXT *(*get_module_context)(void);
+    ABI_MODULE_CONTEXT *(*get_module_context)(void);
 
-    MDTP mdtp; ///< MDTP utils
+    MDTP_UTILS mdtp; ///< MDTP utils
 
 } SDK_UTILS;
 
@@ -155,7 +125,7 @@ const char *sdk_module_get_configuration(void);
  * @note Implement this function in your module yourself
  * @return MDTP encoded data with metrics
  */
-SDK_MODULE_MDTP_DATA *sdk_module_get_data(void);
+ABI_MODULE_MDTP_DATA *sdk_module_get_data(void);
 
 /**
  * @brief Called when the module is activated.
