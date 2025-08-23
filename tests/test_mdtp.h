@@ -1,6 +1,8 @@
-#include "modules/sdk.h"
+#pragma once
+
 #include "modules/internals/memutils.h"
 #include "modules/internals/sdk_internals.h"
+#include "modules/sdk.h"
 #include <unity.h>
 
 
@@ -120,7 +122,7 @@ void test_make_root_node(void) {
     TEST_ASSERT_EQUAL(((uint32_t *)data->data)[0], MDTP_VERSION); // MDTP version
     TEST_ASSERT_EQUAL(read_uint32_be((void *)data->data, 1), 32); // Payload size
 
-    TEST_ASSERT_EQUAL(read_ubyte_be((void *)data->data, 5), 0);           // 0 is container
+    TEST_ASSERT_EQUAL(read_ubyte_be((void *)data->data, 5), 0);  // 0 is container
     TEST_ASSERT_EQUAL(read_uint32_be((void *)data->data, 6), 3); // node name length (ram)
 
     // Node name
@@ -155,12 +157,9 @@ void test_make_root_node(void) {
 
 
 
-int main(void) {
-    UNITY_BEGIN();
+void test_run_mdtp(void) {
     RUN_TEST(test_make_value_node);
     RUN_TEST(test_make_empty_value_node);
     RUN_TEST(test_make_container_node);
     RUN_TEST(test_make_root_node);
-
-    return UNITY_END();
 }

@@ -82,7 +82,6 @@ if(${SDK_C_BUILD_TESTS})
 
     include(FetchContent)
 
-    # Подтягиваем Check 0.15.2
     FetchContent_Declare(
         unity
         GIT_REPOSITORY https://github.com/ThrowTheSwitch/Unity.git
@@ -91,9 +90,9 @@ if(${SDK_C_BUILD_TESTS})
     )
     FetchContent_MakeAvailable(unity)
 
-    # Собираем тесты
     file(GLOB_RECURSE TESTS_SOURCES "tests/*.c")
-    add_executable(sdk_tests ${TESTS_SOURCES})
+    file(GLOB_RECURSE TESTS_HEADERS "tests/*.h")
+    add_executable(sdk_tests ${TESTS_SOURCES} ${TESTS_HEADERS})
     target_link_libraries(sdk_tests PRIVATE ${SDK_NAME} unity)
     target_include_directories(sdk_tests PRIVATE ${SDK_NAME})
 
