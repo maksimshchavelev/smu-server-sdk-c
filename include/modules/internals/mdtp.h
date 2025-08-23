@@ -139,9 +139,10 @@ MDTP_UTILS mdtp_utils_init(void);
 /**
  * @internal
  * @brief Destroys internal resources allocated during MDTP operation.
+ * @param mdtp `MDTP_UTILS` object obtained after calling `mdtp_utils_init`
  * @endinternal
  */
-void mdtp_utils_destroy(void);
+void mdtp_utils_destroy(MDTP_UTILS mdtp);
 
 
 #ifdef __cplusplus

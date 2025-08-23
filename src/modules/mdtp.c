@@ -331,7 +331,7 @@ MDTP_UTILS mdtp_utils_init(void) {
 
 
 // Destroy resources
-void mdtp_utils_destroy(void) {
+void mdtp_utils_destroy(MDTP_UTILS mdtp __attribute__((unused))) {
     free((void *)mdtp_data.data);
     mdtp_data.data = NULL;
     mdtp_data.size = 0;
