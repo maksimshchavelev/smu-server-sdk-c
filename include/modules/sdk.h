@@ -10,6 +10,12 @@
 #include "modules/internals/mdtp.h"
 #include <stdint.h>
 
+#if defined _WIN32
+#define SDK_ABI __declspec(dllexport)
+#else
+#define SDK_ABI __attribute__((visibility("default")))
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -103,46 +109,46 @@ extern SDK_UTILS sdk_utils; ///< Implementation are in sdk.c
  * @return `SDKStatus` which describes the return status of the function (success or error)
  * @see SDK_UTILS
  */
-SDKStatus sdk_module_init(const char *json_config);
+SDK_ABI SDKStatus sdk_module_init(const char *json_config);
 
 /**
  * @brief Called when the module is destroyed.
  * @note Implement this function in your module yourself
  */
-void sdk_module_destroy(void);
+SDK_ABI void sdk_module_destroy(void);
 
 /**
  * @brief Called when a module's configuration needs to be retrieved.
  * @note Implement this function in your module yourself
  * @return Raw string with module configuration
  */
-const char *sdk_module_get_configuration(void);
+SDK_ABI const char *sdk_module_get_configuration(void);
 
 /**
  * @brief Get data of module
  * @note Implement this function in your module yourself
  * @return MDTP encoded data with metrics
  */
-ABI_MODULE_MDTP_DATA *sdk_module_get_data(void);
+SDK_ABI ABI_MODULE_MDTP_DATA *sdk_module_get_data(void);
 
 /**
  * @brief Called when the module is activated.
  * @note Implement this function in your module yourself
  */
-void sdk_module_enable(void);
+SDK_ABI void sdk_module_enable(void);
 
 /**
  * @brief Called when the module is deactivated.
  * @note Implement this function in your module yourself
  */
-void sdk_module_disable(void);
+SDK_ABI void sdk_module_disable(void);
 
 /**
  * @brief Called when you need to know if a module is active
  * @note Implement this function in your module yourself
  * @return Should return `1` if the module is active, otherwise `0`
  */
-uint8_t sdk_module_is_enabled(void);
+SDK_ABI uint8_t sdk_module_is_enabled(void);
 
 
 #ifdef __cplusplus
