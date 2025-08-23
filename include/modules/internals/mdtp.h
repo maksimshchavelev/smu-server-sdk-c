@@ -20,7 +20,6 @@ typedef struct ABI_MODULE_MDTP_DATA ABI_MODULE_MDTP_DATA; ///< Forward declarati
  */
 typedef struct MDTP_UTILS {
     /**
-     * @internal
      * @brief Generates a valid MDTP frame with header, ready to be sent to the server.
      *
      * This function creates the root frame of the MDTP protocol.
@@ -44,12 +43,10 @@ typedef struct MDTP_UTILS {
      *         NULL),
      *     NULL);
      * @endcode
-     * @endinternal
      */
     ABI_MODULE_MDTP_DATA *(*make_root)(void *first, ...);
 
     /**
-     * @internal
      * @brief Creates a container node.
      *
      * Containers can include both value nodes and other containers, allowing hierarchical
@@ -76,12 +73,10 @@ typedef struct MDTP_UTILS {
      *     sdk_mdtp_make_value("use", "12", "gb"),
      *     NULL);
      * @endcode
-     * @endinternal
      */
     void *(*make_container)(const char *name, void *first, ...);
 
     /**
-     * @internal
      * @brief Creates a value node.
      *
      * A value node holds a name, a measurement unit, and a value string.
@@ -102,25 +97,20 @@ typedef struct MDTP_UTILS {
      * // Example usage:
      * void *val = sdk_mdtp_make_value("RAM", "1234", "MB");
      * @endcode
-     * @endinternal
      */
     void *(*make_value)(const char *value_name, const char *value, const char *value_units);
 
     /**
-     * @internal
      * @brief Frees memory allocated for container node
      * @param value_node Pointer to container node
      * @note If a node of a other type is passed, there will be no effect
-     * @endinternal
      */
     void (*free_container)(void *container_node);
 
     /**
-     * @internal
      * @brief Frees memory allocated for value node
      * @param value_node Pointer to value node
      * @note If a node of a other type is passed, there will be no effect
-     * @endinternal
      */
     void (*free_value)(void *value_node);
 } MDTP_UTILS;
