@@ -146,5 +146,5 @@ SDK_ABI void module_destroy(void) {
     // Free resources
     free((void *)module_context->module_name);
     free((void *)module_context->module_description);
-    mdtp_utils_destroy();
+    mdtp_utils_destroy(sdk_utils.mdtp);
 }

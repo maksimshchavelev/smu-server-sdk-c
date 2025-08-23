@@ -12,7 +12,7 @@ void setUp(void) {
 }
 
 void tearDown(void) {
-    mdtp_utils_destroy();
+    mdtp_utils_destroy(mdtp_utils);
 }
 
 
