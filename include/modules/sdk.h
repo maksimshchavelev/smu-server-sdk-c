@@ -96,10 +96,15 @@ typedef struct SDK_UTILS {
     ABI_MODULE_CONTEXT *(*get_module_context)(void);
 
     MDTP_UTILS mdtp; ///< MDTP utils
+                     ///< @see `MDTP_UTILS` for details
 
 } SDK_UTILS;
 
-extern SDK_UTILS sdk_utils; ///< Implementation are in sdk.c
+/**
+ * @brief Get a pointer to an instance of `SDK_UTILS`
+ * @return Pointer to `SDK_UTILS`
+ */
+SDK_ABI SDK_UTILS *sdk_utils_get(void);
 
 /**
  * @brief Called when the module is initialized

@@ -29,7 +29,15 @@ static ABI_MODULE_FUNCTIONS *module_functions =
     NULL; ///< Pointer to structure with module functions
 
 
-SDK_UTILS sdk_utils; ///< For sdk utility functions
+static SDK_UTILS sdk_utils; ///< For sdk utility functions
+
+
+// =================================== OTHER FUNCTIONS ===================================
+
+// Get SDK_UTILS instance
+SDK_ABI SDK_UTILS *sdk_utils_get(void) {
+    return &sdk_utils;
+}
 
 
 // ========================== SDK HELPER FUNCTIONS IMPLEMENTATION ==========================
