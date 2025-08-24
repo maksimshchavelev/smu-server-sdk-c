@@ -1,0 +1,5 @@
+<map id="SDK_UTILS" name="SDK_UTILS">
+<area shape="rect" id="Node000001" title="Structure with SDK utility functions, such as logging or Json parsing. See details for usage example." alt="" coords="11,93,104,119"/>
+<area shape="rect" id="Node000002" href="$structMDTP__UTILS.html" title="Structure with pointers to functions for working with the MDTP protocol." alt="" coords="5,5,109,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,45,60,93,55,93,55,45"/>
+</map>
