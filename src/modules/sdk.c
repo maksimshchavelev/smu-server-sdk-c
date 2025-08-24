@@ -102,8 +102,13 @@ ABI_MODULE_CONTEXT *sdk_utils_get_module_context(void) {
 // Init module. Calls sdk_module_init implemented by user
 SDK_ABI ABI_MODULE_FUNCTIONS *module_init(ABI_SERVER_CORE_FUNCTIONS server_functions,
                                           const char               *json_configuration) {
+    ABI_MODULE_CONTEXT temporary_context = (ABI_MODULE_CONTEXT){
+        .module_name = "anonymously",
+        .module_description = "anonymously"
+    };
+
     // Check ABI version
-    if (server_functions.abi_get_abi_version(NULL /* no context yet */) != ABI_VERSION) {
+    if (server_functions.abi_get_abi_version(&temporary_context /* anonymously context */) != ABI_VERSION) {
         return NULL; // Incorrect ABI version
     }
 
@@ -120,7 +125,7 @@ SDK_ABI ABI_MODULE_FUNCTIONS *module_init(ABI_SERVER_CORE_FUNCTIONS server_funct
     sdk_utils = (SDK_UTILS){.log = sdk_utils_log,
                             .module_setup = sdk_utils_module_setup,
                             .get_module_name = sdk_utils_get_module_name,
-                            .get_module_description = sdk_utils_get_module_name,
+                            .get_module_description = sdk_utils_get_module_description,
                             .get_module_context = sdk_utils_get_module_context,
                             // Init MDTP utils
                             .mdtp = mdtp_utils_init()};
