@@ -22,12 +22,12 @@ var sdk_8h =
       [ "SDK_INTERNALS_UNINITIALIZED", "sdk_8h.html#a09bc07a45d1e0af1897809edf472f41eac557311539889526ed61e47f1f935e04", null ],
       [ "SDK_OTHER_ERROR", "sdk_8h.html#a09bc07a45d1e0af1897809edf472f41eaedd8056a0f475d0bda8364d33cf20d2b", null ]
     ] ],
-    [ "sdk_module_destroy", "sdk_8h.html#a7a42c3e100f7752d9b1a91eeba313c7b", null ],
-    [ "sdk_module_disable", "sdk_8h.html#a6985fc09d3ad0c72c07a9122a1ffe96e", null ],
-    [ "sdk_module_enable", "sdk_8h.html#ae3fac111cb6e4c864099224d6ae5790b", null ],
-    [ "sdk_module_get_configuration", "sdk_8h.html#a46a728fddf5a48652e551c6603f65d20", null ],
-    [ "sdk_module_get_data", "sdk_8h.html#aa06dbcc5b87fe3061a667eab931a8211", null ],
-    [ "sdk_module_init", "sdk_8h.html#a014af0b1b46a67b61854e9f035458cb6", null ],
-    [ "sdk_module_is_enabled", "sdk_8h.html#a4a87effdf17404a4881418a0df1d16b9", null ],
-    [ "sdk_utils_get", "sdk_8h.html#a650dd8c5b4ee3a4f165b3891c39a3579", null ]
+    [ "sdk_module_destroy", "sdk_8h.html#acd4c566858cbc8dbdae531cb05f10d5c", null ],
+    [ "sdk_module_disable", "sdk_8h.html#a9104c5c6fd92fe6a97be35c14e120c0f", null ],
+    [ "sdk_module_enable", "sdk_8h.html#a37f385ac0bd140e49b0fefa2d90d0cda", null ],
+    [ "sdk_module_get_configuration", "sdk_8h.html#aa2e01df9ba43c00d83ce9d04744c1066", null ],
+    [ "sdk_module_get_data", "sdk_8h.html#a9552f7a5d2c7b53171fde7456b53e245", null ],
+    [ "sdk_module_init", "sdk_8h.html#a7ac0a5d8664d0e3ba1d4284841d6bce7", null ],
+    [ "sdk_module_is_enabled", "sdk_8h.html#af7c0f89231f7a0f57c8d07ff6a27c7be", null ],
+    [ "sdk_utils_get", "sdk_8h.html#a71c9e4e5450eaa66c63e6286fa506e1c", null ]
 ];

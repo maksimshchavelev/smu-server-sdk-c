@@ -39,36 +39,42 @@ typedef struct __attribute__((packed)) ABI_MODULE_CONTEXT {
 
 
 /**
- * @internal
  * @brief Functions provided by the server for the module
  *
  * This structure will be passed to the module initialization function.
  *
  * @note This is a packaged structure.
- * @endinternal
  */
 typedef struct __attribute__((packed)) ABI_SERVER_CORE_FUNCTIONS {
-    int (*abi_get_abi_version)(ABI_MODULE_CONTEXT *context); ///< Returns ABI version
+    /**
+     * @brief Get ABI version
+     * @param context Module context. See `ABI_MODULE_CONTEXT`
+     * @return ABI version
+     */
+    int (*abi_get_abi_version)(ABI_MODULE_CONTEXT *context);
 
-    void (*abi_log)(ABI_MODULE_CONTEXT *context,
-                    int                 log_type,
-                    const char         *message); ///< Logging function. Log types:
-    ///< `0`: White (info) log message
-    ///< `1`: Yellow (warning) log message
-    ///< '2': Red (error) log message
+    /**
+     * @brief Logging function
+     *
+     * @param context Module context. See `ABI_MODULE_CONTEXT`
+     * @param log_type Type of log. Available log types:
+     *          - `0`: White (info) log message
+     *          - `1`: Yellow (warning) log message
+     *          - `2`: Red (error) log message
+     * @param message Message to log
+     */
+    void (*abi_log)(ABI_MODULE_CONTEXT *context, int log_type, const char *message);
 } ABI_SERVER_CORE_FUNCTIONS;
 
 
 typedef struct ABI_MODULE_FUNCTIONS ABI_MODULE_FUNCTIONS; ///< Forward declaration
 
 /**
- * @internal
  * @brief Functions of the module that calls the server core
  *
  * @warning If functions that return a pointer return `NULL`, it means that an error has occurred.
  *
  * @note This is a packaged structure.
- * @endinternal
  */
 typedef struct __attribute__((packed)) ABI_MODULE_FUNCTIONS {
     ABI_MODULE_FUNCTIONS *(*module_init)(ABI_SERVER_CORE_FUNCTIONS server_functions,
@@ -90,7 +96,8 @@ typedef struct __attribute__((packed)) ABI_MODULE_FUNCTIONS {
 
     const char *(*module_get_module_description)(void); ///< Get module description
 
-    ABI_MODULE_CONTEXT *(*module_get_context)(void); ///< Get context of module. See `ABI_CONTEXT`
+    ABI_MODULE_CONTEXT *(*module_get_context)(
+        void); ///< Get context of module. See `ABI_MODULE_CONTEXT`
 } ABI_MODULE_FUNCTIONS;
 
 

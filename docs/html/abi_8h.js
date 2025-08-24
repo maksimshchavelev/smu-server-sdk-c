@@ -1,8 +1,11 @@
 var abi_8h =
 [
-    [ "ABI_MODULE_FUNCTIONS", "abi_8h.html#a65f5925173afb320e5581fc2d52c03b3", null ],
-    [ "__attribute__", "abi_8h.html#a5a3814cc9dab61bce9c7124605100d8b", null ],
-    [ "ABI_MODULE_CONTEXT", "abi_8h.html#a71ebfe07ee562fef12381173a0a25587", null ],
-    [ "ABI_MODULE_MDTP_DATA", "abi_8h.html#a5c3b539ca99c658df51ebd0030223496", null ],
-    [ "ABI_SERVER_CORE_FUNCTIONS", "abi_8h.html#a52f889903dce0d2fe6559a4553ff5ab5", null ]
+    [ "ABI_MODULE_MDTP_DATA", "structABI__MODULE__MDTP__DATA.html", "structABI__MODULE__MDTP__DATA" ],
+    [ "ABI_MODULE_CONTEXT", "structABI__MODULE__CONTEXT.html", "structABI__MODULE__CONTEXT" ],
+    [ "ABI_SERVER_CORE_FUNCTIONS", "structABI__SERVER__CORE__FUNCTIONS.html", "structABI__SERVER__CORE__FUNCTIONS" ],
+    [ "ABI_MODULE_FUNCTIONS", "structABI__MODULE__FUNCTIONS.html", "structABI__MODULE__FUNCTIONS" ],
+    [ "ABI_MODULE_CONTEXT", "abi_8h.html#a1ebf306fcfce8e0242ab0e18cc45e6b8", null ],
+    [ "ABI_MODULE_FUNCTIONS", "abi_8h.html#a9b777dd47d0b02a2842b67cd11105914", null ],
+    [ "ABI_MODULE_MDTP_DATA", "abi_8h.html#a9016ce294f17633f6865cb8d8b959b28", null ],
+    [ "ABI_SERVER_CORE_FUNCTIONS", "abi_8h.html#ae3606da7e738649ddd31cc3ab509ed84", null ]
 ];

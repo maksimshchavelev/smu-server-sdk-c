@@ -7,6 +7,12 @@ INPUT                  = include guides README.md
 FILE_PATTERNS          = *.h *.md
 RECURSIVE              = YES
 STRIP_FROM_INC_PATH    = include
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+PREDEFINED 	       += __attribute__(x)=
+PREDEFINED 	       += __attribute__((x))=
+PREDEFINED 	       += __attribute__((packed))=
+ALIASES 	       += sdk_internal="\ingroup internal \warning This is internal API, do not use in production"
 
 #--------------------------------------------------------------------------- 
 # Build related configuration options
@@ -21,6 +27,8 @@ INTERNAL_DOCS          = YES          # export @internal
 HIDE_UNDOC_MEMBERS     = YES
 HIDE_UNDOC_CLASSES     = YES
 OPTIMIZE_OUTPUT_FOR_C  = YES
+
+# EXCLUDE_PATTERNS       += */internals/*
 
 #--------------------------------------------------------------------------- 
 # Configuration options related to warning and progress messages

@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['license_0',['License',['../index.html#autotoc_md6',1,'']]],
-  ['log_1',['log',['../structSDK__UTILS.html#ab891541bd625d1c3be33b1fb03cb42e6',1,'SDK_UTILS']]],
-  ['log_5ferror_2',['LOG_ERROR',['../sdk_8h.html#af67907baa897e9fb84df0cb89795b87ca230506cce5c68c3bac5a821c42ed3473',1,'sdk.h']]],
-  ['log_5finfo_3',['LOG_INFO',['../sdk_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837',1,'sdk.h']]],
-  ['log_5fwarning_4',['LOG_WARNING',['../sdk_8h.html#af67907baa897e9fb84df0cb89795b87ca8f6fe15bfe15104da6d1b360194a5400',1,'sdk.h']]],
-  ['logtype_5',['logtype',['../sdk_8h.html#af67907baa897e9fb84df0cb89795b87c',1,'LogType:&#160;sdk.h'],['../sdk__internals_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'LogType:&#160;sdk_internals.h'],['../sdk_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'LogType:&#160;sdk.h']]]
+  ['make_5fcontainer_0',['make_container',['../structMDTP__UTILS.html#a63303f1791b0ebad0c6299f840b30dc6',1,'MDTP_UTILS']]],
+  ['make_5froot_1',['make_root',['../structMDTP__UTILS.html#aab4232999a794907bdcbb60db07f1eba',1,'MDTP_UTILS']]],
+  ['make_5fvalue_2',['make_value',['../structMDTP__UTILS.html#aa46ee1caaf74d7548d058d921eba4c8b',1,'MDTP_UTILS']]],
+  ['mdtp_3',['mdtp',['../structSDK__UTILS.html#a38bbaa8fe636510cec2ba5ff0d18252f',1,'SDK_UTILS']]],
+  ['mdtp_2eh_4',['mdtp.h',['../mdtp_8h.html',1,'']]],
+  ['mdtp_5futils_5',['mdtp_utils',['../structMDTP__UTILS.html',1,'MDTP_UTILS'],['../mdtp_8h.html#a9531e94d625f502d7c4918d046ccda89',1,'MDTP_UTILS:&#160;mdtp.h']]],
+  ['mdtp_5futils_5fdestroy_6',['mdtp_utils_destroy',['../mdtp_8h.html#aa4e0ab38b2514f412a2bd2af68fe7175',1,'mdtp.h']]],
+  ['mdtp_5futils_5finit_7',['mdtp_utils_init',['../mdtp_8h.html#a1ff708aaf500fc05e1c8a98671339d88',1,'mdtp.h']]],
+  ['mdtp_5fversion_8',['MDTP_VERSION',['../mdtp_8h.html#a357643e0e2d554074819928045d769b4',1,'mdtp.h']]],
+  ['memutils_2eh_9',['memutils.h',['../memutils_8h.html',1,'']]],
+  ['module_10',['Development of your own module',['../md_guides_20__first__module.html',1,'']]],
+  ['module_5fdescription_11',['module_description',['../structABI__MODULE__CONTEXT.html#ad45cbed3efb47fa6396876720381ac50',1,'ABI_MODULE_CONTEXT']]],
+  ['module_5fdestroy_12',['module_destroy',['../structABI__MODULE__FUNCTIONS.html#aaa32dc4225efa245169b9d53f4575c54',1,'ABI_MODULE_FUNCTIONS::module_destroy'],['../sdk__internals_8h.html#a13753cac9a78f7869a265c4aa98bc771',1,'module_destroy():&#160;sdk_internals.h']]],
+  ['module_5fdisable_13',['module_disable',['../structABI__MODULE__FUNCTIONS.html#ad0a5380348dfae4a2729957f27f7a015',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fenable_14',['module_enable',['../structABI__MODULE__FUNCTIONS.html#ac32b3500896e094eb6fdad83a2553a57',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fget_5fconfiguration_15',['module_get_configuration',['../structABI__MODULE__FUNCTIONS.html#ae89bbc5a755c8727a2d2f6e85805b319',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fget_5fcontext_16',['module_get_context',['../structABI__MODULE__FUNCTIONS.html#ab7988156c503934bf16f1442513399e6',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fget_5fdata_17',['module_get_data',['../structABI__MODULE__FUNCTIONS.html#a57776e58575a48bdfd077dbfb8f67bc6',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fget_5fmodule_5fdescription_18',['module_get_module_description',['../structABI__MODULE__FUNCTIONS.html#acedeb650e03e5f617c66dba86ce61733',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fget_5fmodule_5fname_19',['module_get_module_name',['../structABI__MODULE__FUNCTIONS.html#a6af72c8a33979452c8884a071a2af8e3',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5finit_20',['module_init',['../structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be',1,'ABI_MODULE_FUNCTIONS::module_init'],['../sdk__internals_8h.html#a3b7cfe402078ec0fdbe5f3cce650847c',1,'module_init():&#160;sdk_internals.h']]],
+  ['module_5fis_5fenabled_21',['module_is_enabled',['../structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fname_22',['module_name',['../structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e',1,'ABI_MODULE_CONTEXT']]],
+  ['module_5fsetup_23',['module_setup',['../structSDK__UTILS.html#ac0fcfcc8aba030cce8c8accacceb170d',1,'SDK_UTILS']]]
 ];
