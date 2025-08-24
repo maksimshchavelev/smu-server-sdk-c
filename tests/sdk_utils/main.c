@@ -48,6 +48,16 @@ int server_abi_version_stub(ABI_MODULE_CONTEXT *context) {
 }
 
 
+void server_abi_log(ABI_MODULE_CONTEXT *context, int log_type, const char* msg) {
+    TEST_ASSERT_EQUAL_STRING("name", context->module_name);
+    TEST_ASSERT_EQUAL_STRING("description", context->module_description);
+
+    TEST_ASSERT_EQUAL(LOG_INFO, log_type);
+
+    TEST_ASSERT_EQUAL_STRING("test log", msg);
+}
+
+
 void tearDown(void) {
 }
 
@@ -79,11 +89,15 @@ void test_get_module_context(void) {
 }
 
 
+void test_log(void) {
+    utils->log(LOG_INFO, "test log");
+}
+
 // ================================== MAIN ==================================
 
 int main(void) {
     ABI_SERVER_CORE_FUNCTIONS server_functions = (ABI_SERVER_CORE_FUNCTIONS){
-        .abi_get_abi_version = server_abi_version_stub, .abi_log = NULL};
+        .abi_get_abi_version = server_abi_version_stub, .abi_log = server_abi_log};
 
     // Call module init
     module_init(server_functions, "");
@@ -95,6 +109,7 @@ int main(void) {
     RUN_TEST(test_get_module_name);
     RUN_TEST(test_get_module_description);
     RUN_TEST(test_get_module_context);
+    RUN_TEST(test_log);
 
     module_destroy();
 
