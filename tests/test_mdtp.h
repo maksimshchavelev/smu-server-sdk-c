@@ -8,14 +8,9 @@
 
 MDTP_UTILS mdtp_utils;
 
+void tearDown(void) {}
 
-void setUp(void) {
-    mdtp_utils = mdtp_utils_init();
-}
-
-void tearDown(void) {
-    mdtp_utils_destroy(mdtp_utils);
-}
+void setUp(void) {}
 
 
 int server_abi_version_stub(ABI_MODULE_CONTEXT *context) {
@@ -24,6 +19,7 @@ int server_abi_version_stub(ABI_MODULE_CONTEXT *context) {
 
 
 void test_make_value_node(void) {
+    mdtp_utils = mdtp_utils_init();
     void *node = mdtp_utils.make_value("RAM", "1234", "MB");
     TEST_ASSERT_NOT_NULL(node);
 
@@ -50,11 +46,13 @@ void test_make_value_node(void) {
     TEST_ASSERT_EQUAL(((char *)node)[21], '4');
 
     mdtp_utils.free_value(node);
+    mdtp_utils_destroy(mdtp_utils);
 }
 
 
 
 void test_make_empty_value_node(void) {
+    mdtp_utils = mdtp_utils_init();
     void *node = mdtp_utils.make_value("", "", "");
     TEST_ASSERT_NOT_NULL(node);
 
@@ -64,11 +62,13 @@ void test_make_empty_value_node(void) {
     TEST_ASSERT_EQUAL(read_uint32_be(node, 9), 0); // Value length
 
     mdtp_utils.free_value(node);
+    mdtp_utils_destroy(mdtp_utils);
 }
 
 
 
 void test_make_container_node(void) {
+    mdtp_utils = mdtp_utils_init();
     void *node = mdtp_utils.make_container("ram", mdtp_utils.make_value("use", "12", "gb"), NULL);
 
     TEST_ASSERT_NOT_NULL(node);
@@ -105,11 +105,13 @@ void test_make_container_node(void) {
     TEST_ASSERT_EQUAL(((char *)node)[31], '2');
 
     mdtp_utils.free_container(node);
+    mdtp_utils_destroy(mdtp_utils);
 }
 
 
 
 void test_make_root_node(void) {
+    mdtp_utils = mdtp_utils_init();
     module_init((ABI_SERVER_CORE_FUNCTIONS){server_abi_version_stub, NULL}, "");
 
     ABI_MODULE_MDTP_DATA *data = mdtp_utils.make_root(
@@ -152,6 +154,8 @@ void test_make_root_node(void) {
     // Value
     TEST_ASSERT_EQUAL(((char *)data->data)[35], '1');
     TEST_ASSERT_EQUAL(((char *)data->data)[36], '2');
+    mdtp_utils_destroy(mdtp_utils);
+    module_destroy();
 }
 
 
