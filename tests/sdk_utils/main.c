@@ -1,5 +1,3 @@
-#pragma once
-
 #include "modules/internals/memutils.h"
 #include "modules/internals/sdk_internals.h"
 #include "modules/sdk.h"
