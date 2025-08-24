@@ -122,6 +122,17 @@ void test_module_is_enabled(void) {
 }
 
 
+// Check get name
+void test_module_is_get_name(void) {
+    TEST_ASSERT_EQUAL_STRING(module_name, module_functions->module_get_module_name());
+}
+
+
+// Check get description
+void test_module_is_get_description(void) {
+    TEST_ASSERT_EQUAL_STRING(module_description, module_functions->module_get_module_description());
+}
+
 
 // Check which module functions were called during tests
 void test_functions_done(void) {
@@ -190,12 +201,15 @@ int main(void) {
     UNITY_BEGIN();
 
     RUN_TEST(test_module_init);
-    RUN_TEST(test_module_destroy);
     RUN_TEST(test_module_get_data);
     RUN_TEST(test_module_get_configuration);
     RUN_TEST(test_module_enable);
     RUN_TEST(test_module_disable);
     RUN_TEST(test_module_is_enabled);
+    RUN_TEST(test_module_is_get_name);
+    RUN_TEST(test_module_is_get_description);
+
+    RUN_TEST(test_module_destroy);
 
     RUN_TEST(test_functions_done);
 
