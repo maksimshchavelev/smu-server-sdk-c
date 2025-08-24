@@ -6,6 +6,40 @@
 #include <unity.h>
 
 
+// =================== STUBS ====================
+
+SDKStatus sdk_module_init(const char *json_config) {
+    return SDK_OK;
+}
+
+
+void sdk_module_destroy(void) {}
+
+
+const char *sdk_module_get_configuration(void) {
+    return 0;
+}
+
+
+ABI_MODULE_MDTP_DATA *sdk_module_get_data(void) {
+    return 0;
+}
+
+
+void sdk_module_enable(void) {}
+
+
+
+void sdk_module_disable(void) {}
+
+
+uint8_t sdk_module_is_enabled(void) {
+    return 1;
+}
+
+
+// ================ END OF STUBS ================
+
 MDTP_UTILS mdtp_utils;
 
 void tearDown(void) {}
@@ -161,9 +195,13 @@ void test_make_root_node(void) {
 
 
 
-void test_run_mdtp(void) {
+int main(void) {
+    UNITY_BEGIN();
+
     RUN_TEST(test_make_value_node);
     RUN_TEST(test_make_empty_value_node);
     RUN_TEST(test_make_container_node);
     RUN_TEST(test_make_root_node);
+
+    return UNITY_END();
 }

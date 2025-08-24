@@ -79,9 +79,9 @@ endif()
 # Configuring tests
 if(${SDK_C_BUILD_TESTS})
     message(STATUS "Configuring tests...")
+    enable_testing()
 
     include(FetchContent)
-
     FetchContent_Declare(
         unity
         GIT_REPOSITORY https://github.com/ThrowTheSwitch/Unity.git
@@ -90,14 +90,28 @@ if(${SDK_C_BUILD_TESTS})
     )
     FetchContent_MakeAvailable(unity)
 
-    file(GLOB_RECURSE TESTS_SOURCES "tests/*.c")
-    file(GLOB_RECURSE TESTS_HEADERS "tests/*.h")
-    add_executable(sdk_tests ${TESTS_SOURCES} ${TESTS_HEADERS})
-    target_link_libraries(sdk_tests PRIVATE ${SDK_NAME} unity)
-    target_include_directories(sdk_tests PRIVATE ${SDK_NAME})
+    file(GLOB TEST_SUBDIRS LIST_DIRECTORIES true "tests/*")
 
-    enable_testing()
-    add_test(NAME sdk_tests COMMAND sdk_tests)
+    foreach(TEST_DIR ${TEST_SUBDIRS})
+        if(IS_DIRECTORY ${TEST_DIR})
+            get_filename_component(TEST_NAME ${TEST_DIR} NAME)
+
+            message(STATUS "Found test: ${TEST_NAME}")
+
+            set(TARGET_NAME "test_${TEST_NAME}")
+
+            file(GLOB_RECURSE CURRENT_TEST_SOURCES "${TEST_DIR}/*.c")
+            file(GLOB_RECURSE CURRENT_TEST_HEADERS "${TEST_DIR}/*.h")
+
+            add_executable(${TARGET_NAME} ${CURRENT_TEST_SOURCES} ${CURRENT_TEST_HEADERS})
+
+            target_link_libraries(${TARGET_NAME} PRIVATE ${SDK_NAME} unity)
+
+            target_include_directories(${TARGET_NAME} PRIVATE ${SDK_NAME})
+
+            add_test(NAME ${TARGET_NAME} COMMAND ${TARGET_NAME})
+        endif()
+    endforeach()
 endif()
 
 
