@@ -23,20 +23,16 @@ extern "C" {
 // =========================== ABI FUNCTIONS ===========================
 
 /**
- * @internal
  * @brief Initialize the module. Entry function
  * @param server_functions Struct with server functions
  * @param json_configuration Json configuration
  * @return Pointer to `ABI_MODULE_FUNCTIONS` with module functions
- * @endinternal
  */
 SDK_ABI ABI_MODULE_FUNCTIONS *module_init(ABI_SERVER_CORE_FUNCTIONS server_functions,
                                           const char               *json_configuration);
 
 /**
- * @internal
  * @brief Calls `sdk_module_destroy` and frees resources
- * @endinternal
  */
 SDK_ABI void module_destroy(void);
 
