@@ -54,18 +54,19 @@ typedef struct MDTP_UTILS {
      *
      * @param name  Name of the container (non-NULL, zero-terminated string).
      *              Length is stored without the terminating `\0`.
-     * @param first Pointer to the first nested node (container or value). May be `NULL` if the
-     * container is empty.
+     * @param first Pointer to the first nested node (container or value).
      * @param ...   Additional nested nodes. The list must always be terminated with `NULL`.
      *
-     * @warning Always terminate the argument list with `NULL`.
+     * @warning **Always** terminate the argument list with `NULL`.
      * @warning The function takes ownership of nested nodes and frees them when the container is
      * destroyed.
      * @warning The `name` string is copied into the container. The caller remains responsible for
      * freeing it if allocated dynamically.
+     * @note If you want to generate a frame ready for transmission to the server, pass the pointer
+     * obtained after calling this function to `MDTP_UTILS::make_root`
      *
      * @return `void*` Pointer to the created container node. **Must be freed with
-     * `sdk_mdtp_free_container()`**.
+     * `MDTP_UTILS::free_container()` if you do not pass this pointer to `MDTP_UTILS::make_root`**.
      *
      * @code{.c}
      * // Example usage:
@@ -89,9 +90,11 @@ typedef struct MDTP_UTILS {
      * @warning The strings are copied into the node. The caller remains responsible for freeing
      * them if allocated dynamically.
      * @warning Value nodes cannot contain children. They are always leaves in the MDTP structure.
+     * @note If you want to generate a frame ready for transmission to the server, pass the pointer
+     * obtained after calling this function to `MDTP_UTILS::make_root`
      *
      * @return `void*` Pointer to the created value node. **Must be freed with
-     * `sdk_mdtp_free_value()`**.
+     * `MDTP_UTILS::free_value()` if you do not pass this pointer to `MDTP_UTILS::make_root`**.
      *
      * @code{.c}
      * // Example usage:
@@ -101,16 +104,16 @@ typedef struct MDTP_UTILS {
     void *(*make_value)(const char *value_name, const char *value, const char *value_units);
 
     /**
-     * @brief Frees memory allocated for container node
+     * @brief Frees memory allocated for container node via `MDTP_UTILS::make_container`
      * @param value_node Pointer to container node
-     * @note If a node of a other type is passed, there will be no effect
+     * @note If a node of a **other type** is passed, there will be no effect
      */
     void (*free_container)(void *container_node);
 
     /**
-     * @brief Frees memory allocated for value node
+     * @brief Frees memory allocated for value node via `MDTP_UTILS::make_value`
      * @param value_node Pointer to value node
-     * @note If a node of a other type is passed, there will be no effect
+     * @note If a node of a **other type** is passed, there will be no effect
      */
     void (*free_value)(void *value_node);
 } MDTP_UTILS;
