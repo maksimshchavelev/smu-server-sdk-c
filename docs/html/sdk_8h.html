@@ -198,6 +198,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af7c0f89231f7a0f57c8d07ff6a27c7be" id="r_af7c0f89231f7a0f57c8d07ff6a27c7be"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdk_8h.html#af7c0f89231f7a0f57c8d07ff6a27c7be">sdk_module_is_enabled</a> (void)</td></tr>
 <tr class="memdesc:af7c0f89231f7a0f57c8d07ff6a27c7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when you need to know if a module is active.  <br /></td></tr>
 <tr class="separator:af7c0f89231f7a0f57c8d07ff6a27c7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c91621ff575fde633d27713b62ccd9" id="r_ac2c91621ff575fde633d27713b62ccd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdk_8h.html#ac2c91621ff575fde633d27713b62ccd9">sdk_module_set_poll_ratio</a> (uint32_t poll_ratio)</td></tr>
+<tr class="memdesc:ac2c91621ff575fde633d27713b62ccd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the poll ratio of module. See smu-server documentation for poll ratio.  <br /></td></tr>
+<tr class="separator:ac2c91621ff575fde633d27713b62ccd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6270fb3606b365235fef21f6e60ce699" id="r_a6270fb3606b365235fef21f6e60ce699"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdk_8h.html#a6270fb3606b365235fef21f6e60ce699">sdk_module_get_poll_ratio</a> (void)</td></tr>
+<tr class="memdesc:a6270fb3606b365235fef21f6e60ce699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get poll ratio of module. See smu-server documentation for poll ratio.  <br /></td></tr>
+<tr class="separator:a6270fb3606b365235fef21f6e60ce699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>@license GPLv3, see LICENSE for details </p><dl class="section copyright"><dt>Copyright</dt><dd>Copyright (©) 2025, Maksim Shchavelev <a href="#" onclick="location.href='mai'+'lto:'+'mak'+'si'+'msh'+'ch'+'ave'+'le'+'v@g'+'ma'+'il.'+'co'+'m'; return false;">maksi<span class="obfuscator">.nosp@m.</span>mshc<span class="obfuscator">.nosp@m.</span>havel<span class="obfuscator">.nosp@m.</span>ev@g<span class="obfuscator">.nosp@m.</span>mail.<span class="obfuscator">.nosp@m.</span>com</a> </dd></dl>
@@ -498,6 +504,27 @@ Example usage</h1>
 
 </div>
 </div>
+<a id="a6270fb3606b365235fef21f6e60ce699" name="a6270fb3606b365235fef21f6e60ce699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6270fb3606b365235fef21f6e60ce699">&#9670;&#160;</a></span>sdk_module_get_poll_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t sdk_module_get_poll_ratio </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get poll ratio of module. See smu-server documentation for poll ratio. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>uint32_t</code> with poll ratio </dd></dl>
+
+</div>
+</div>
 <a id="a7ac0a5d8664d0e3ba1d4284841d6bce7" name="a7ac0a5d8664d0e3ba1d4284841d6bce7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ac0a5d8664d0e3ba1d4284841d6bce7">&#9670;&#160;</a></span>sdk_module_init()</h2>
 
@@ -547,6 +574,32 @@ Example usage</h1>
 <p>Called when you need to know if a module is active. </p>
 <dl class="section note"><dt>Note</dt><dd>Implement this function in your module yourself </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Should return <code>1</code> if the module is active, otherwise <code>0</code> </dd></dl>
+
+</div>
+</div>
+<a id="ac2c91621ff575fde633d27713b62ccd9" name="ac2c91621ff575fde633d27713b62ccd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c91621ff575fde633d27713b62ccd9">&#9670;&#160;</a></span>sdk_module_set_poll_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sdk_module_set_poll_ratio </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>poll_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the poll ratio of module. See smu-server documentation for poll ratio. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">poll_ratio</td><td>Poll ratio </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

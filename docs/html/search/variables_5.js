@@ -13,8 +13,10 @@ var searchData=
   ['module_5fget_5fdata_10',['module_get_data',['../structABI__MODULE__FUNCTIONS.html#a57776e58575a48bdfd077dbfb8f67bc6',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fget_5fmodule_5fdescription_11',['module_get_module_description',['../structABI__MODULE__FUNCTIONS.html#acedeb650e03e5f617c66dba86ce61733',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fget_5fmodule_5fname_12',['module_get_module_name',['../structABI__MODULE__FUNCTIONS.html#a6af72c8a33979452c8884a071a2af8e3',1,'ABI_MODULE_FUNCTIONS']]],
-  ['module_5finit_13',['module_init',['../structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be',1,'ABI_MODULE_FUNCTIONS']]],
-  ['module_5fis_5fenabled_14',['module_is_enabled',['../structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a',1,'ABI_MODULE_FUNCTIONS']]],
-  ['module_5fname_15',['module_name',['../structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e',1,'ABI_MODULE_CONTEXT']]],
-  ['module_5fsetup_16',['module_setup',['../structSDK__UTILS.html#ac0fcfcc8aba030cce8c8accacceb170d',1,'SDK_UTILS']]]
+  ['module_5fget_5fpoll_5fratio_13',['module_get_poll_ratio',['../structABI__MODULE__FUNCTIONS.html#a6eb7e6fd839e59e2dc8a3fb1ecc8732f',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5finit_14',['module_init',['../structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fis_5fenabled_15',['module_is_enabled',['../structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fname_16',['module_name',['../structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e',1,'ABI_MODULE_CONTEXT']]],
+  ['module_5fset_5fpoll_5fratio_17',['module_set_poll_ratio',['../structABI__MODULE__FUNCTIONS.html#a97a52c05a47ba6b789be5401eeed48af',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fsetup_18',['module_setup',['../structSDK__UTILS.html#ac0fcfcc8aba030cce8c8accacceb170d',1,'SDK_UTILS']]]
 ];

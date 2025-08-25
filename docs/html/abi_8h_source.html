@@ -158,14 +158,18 @@ $(document).ready(function(){initNavTree('abi_8h_source.html',''); initResizable
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structABI__MODULE__FUNCTIONS.html#ab7988156c503934bf16f1442513399e6">   99</a></span>    <a class="code hl_struct" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *(*module_get_context)(</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        void); </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <a class="code hl_struct" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a>;</div>
-</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structABI__MODULE__FUNCTIONS.html#a97a52c05a47ba6b789be5401eeed48af">  102</a></span>    void (*module_set_poll_ratio)(uint32_t poll_ratio); </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="asdk__internals_8h_html_a13753cac9a78f7869a265c4aa98bc771"><div class="ttname"><a href="sdk__internals_8h.html#a13753cac9a78f7869a265c4aa98bc771">module_destroy</a></div><div class="ttdeci">void module_destroy(void)</div><div class="ttdoc">Calls sdk_module_destroy and frees resources .</div></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structABI__MODULE__FUNCTIONS.html#a6eb7e6fd839e59e2dc8a3fb1ecc8732f">  104</a></span>    uint32_t (*module_get_poll_ratio)(void); </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>} <a class="code hl_struct" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a>;</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asdk__internals_8h_html_a13753cac9a78f7869a265c4aa98bc771"><div class="ttname"><a href="sdk__internals_8h.html#a13753cac9a78f7869a265c4aa98bc771">module_destroy</a></div><div class="ttdeci">void module_destroy(void)</div><div class="ttdoc">Calls sdk_module_destroy and frees resources.</div></div>
 <div class="ttc" id="astructABI__MODULE__CONTEXT_html"><div class="ttname"><a href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a></div><div class="ttdoc">Context of module.</div><div class="ttdef"><b>Definition</b> abi.h:35</div></div>
 <div class="ttc" id="astructABI__MODULE__CONTEXT_html_a4433f2df4ddc74d433f829868e04c94e"><div class="ttname"><a href="structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e">ABI_MODULE_CONTEXT::module_name</a></div><div class="ttdeci">const char * module_name</div><div class="ttdoc">Name of module.</div><div class="ttdef"><b>Definition</b> abi.h:36</div></div>
 <div class="ttc" id="astructABI__MODULE__CONTEXT_html_ad45cbed3efb47fa6396876720381ac50"><div class="ttname"><a href="structABI__MODULE__CONTEXT.html#ad45cbed3efb47fa6396876720381ac50">ABI_MODULE_CONTEXT::module_description</a></div><div class="ttdeci">const char * module_description</div><div class="ttdoc">Description of module.</div><div class="ttdef"><b>Definition</b> abi.h:37</div></div>

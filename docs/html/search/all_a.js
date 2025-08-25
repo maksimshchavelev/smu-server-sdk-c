@@ -12,7 +12,7 @@ var searchData=
   ['memutils_2eh_9',['memutils.h',['../memutils_8h.html',1,'']]],
   ['module_10',['Development of your own module',['../md_guides_20__first__module.html',1,'']]],
   ['module_5fdescription_11',['module_description',['../structABI__MODULE__CONTEXT.html#ad45cbed3efb47fa6396876720381ac50',1,'ABI_MODULE_CONTEXT']]],
-  ['module_5fdestroy_12',['module_destroy',['../structABI__MODULE__FUNCTIONS.html#aaa32dc4225efa245169b9d53f4575c54',1,'ABI_MODULE_FUNCTIONS::module_destroy'],['../sdk__internals_8h.html#a13753cac9a78f7869a265c4aa98bc771',1,'module_destroy():&#160;sdk_internals.h']]],
+  ['module_5fdestroy_12',['module_destroy',['../sdk__internals_8h.html#a13753cac9a78f7869a265c4aa98bc771',1,'module_destroy():&#160;sdk_internals.h'],['../structABI__MODULE__FUNCTIONS.html#aaa32dc4225efa245169b9d53f4575c54',1,'ABI_MODULE_FUNCTIONS::module_destroy']]],
   ['module_5fdisable_13',['module_disable',['../structABI__MODULE__FUNCTIONS.html#ad0a5380348dfae4a2729957f27f7a015',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fenable_14',['module_enable',['../structABI__MODULE__FUNCTIONS.html#ac32b3500896e094eb6fdad83a2553a57',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fget_5fconfiguration_15',['module_get_configuration',['../structABI__MODULE__FUNCTIONS.html#ae89bbc5a755c8727a2d2f6e85805b319',1,'ABI_MODULE_FUNCTIONS']]],
@@ -20,8 +20,10 @@ var searchData=
   ['module_5fget_5fdata_17',['module_get_data',['../structABI__MODULE__FUNCTIONS.html#a57776e58575a48bdfd077dbfb8f67bc6',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fget_5fmodule_5fdescription_18',['module_get_module_description',['../structABI__MODULE__FUNCTIONS.html#acedeb650e03e5f617c66dba86ce61733',1,'ABI_MODULE_FUNCTIONS']]],
   ['module_5fget_5fmodule_5fname_19',['module_get_module_name',['../structABI__MODULE__FUNCTIONS.html#a6af72c8a33979452c8884a071a2af8e3',1,'ABI_MODULE_FUNCTIONS']]],
-  ['module_5finit_20',['module_init',['../structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be',1,'ABI_MODULE_FUNCTIONS::module_init'],['../sdk__internals_8h.html#a3b7cfe402078ec0fdbe5f3cce650847c',1,'module_init():&#160;sdk_internals.h']]],
-  ['module_5fis_5fenabled_21',['module_is_enabled',['../structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a',1,'ABI_MODULE_FUNCTIONS']]],
-  ['module_5fname_22',['module_name',['../structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e',1,'ABI_MODULE_CONTEXT']]],
-  ['module_5fsetup_23',['module_setup',['../structSDK__UTILS.html#ac0fcfcc8aba030cce8c8accacceb170d',1,'SDK_UTILS']]]
+  ['module_5fget_5fpoll_5fratio_20',['module_get_poll_ratio',['../structABI__MODULE__FUNCTIONS.html#a6eb7e6fd839e59e2dc8a3fb1ecc8732f',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5finit_21',['module_init',['../structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be',1,'ABI_MODULE_FUNCTIONS::module_init'],['../sdk__internals_8h.html#a3b7cfe402078ec0fdbe5f3cce650847c',1,'module_init():&#160;sdk_internals.h']]],
+  ['module_5fis_5fenabled_22',['module_is_enabled',['../structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fname_23',['module_name',['../structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e',1,'ABI_MODULE_CONTEXT']]],
+  ['module_5fset_5fpoll_5fratio_24',['module_set_poll_ratio',['../structABI__MODULE__FUNCTIONS.html#a97a52c05a47ba6b789be5401eeed48af',1,'ABI_MODULE_FUNCTIONS']]],
+  ['module_5fsetup_25',['module_setup',['../structSDK__UTILS.html#ac0fcfcc8aba030cce8c8accacceb170d',1,'SDK_UTILS']]]
 ];
