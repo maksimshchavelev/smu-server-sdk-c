@@ -155,6 +155,18 @@ SDK_ABI void sdk_module_disable(void);
  */
 SDK_ABI uint8_t sdk_module_is_enabled(void);
 
+/**
+ * @brief Set the poll ratio of module. See smu-server documentation for poll ratio
+ * @param poll_ratio Poll ratio
+ */
+SDK_ABI void sdk_module_set_poll_ratio(uint32_t poll_ratio);
+
+/**
+ * @brief Get poll ratio of module. See smu-server documentation for poll ratio
+ * @return `uint32_t` with poll ratio
+ */
+SDK_ABI uint32_t sdk_module_get_poll_ratio(void);
+
 
 #ifdef __cplusplus
 }

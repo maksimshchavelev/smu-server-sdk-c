@@ -144,6 +144,8 @@ SDK_ABI ABI_MODULE_FUNCTIONS *module_init(ABI_SERVER_CORE_FUNCTIONS server_funct
         .module_enable = sdk_module_enable,
         .module_disable = sdk_module_disable,
         .module_is_enabled = sdk_module_is_enabled,
+        .module_set_poll_ratio = sdk_module_set_poll_ratio,
+        .module_get_poll_ratio = sdk_module_get_poll_ratio,
         .module_get_module_name = sdk_utils.get_module_name,
         .module_get_module_description = sdk_utils.get_module_description,
         .module_get_context = sdk_utils.get_module_context};

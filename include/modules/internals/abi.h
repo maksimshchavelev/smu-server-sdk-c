@@ -98,6 +98,10 @@ typedef struct __attribute__((packed)) ABI_MODULE_FUNCTIONS {
 
     ABI_MODULE_CONTEXT *(*module_get_context)(
         void); ///< Get context of module. See `ABI_MODULE_CONTEXT`
+
+    void (*module_set_poll_ratio)(uint32_t poll_ratio); ///< Set the poll ratio of module
+
+    uint32_t (*module_get_poll_ratio)(void); ///< Get poll ratio of module
 } ABI_MODULE_FUNCTIONS;
 
 
