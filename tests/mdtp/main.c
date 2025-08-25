@@ -38,6 +38,14 @@ uint8_t sdk_module_is_enabled(void) {
 }
 
 
+void sdk_module_set_poll_ratio(uint32_t poll_ratio) {}
+
+
+uint32_t sdk_module_get_poll_ratio(void) {
+    return 1;
+}
+
+
 // ================ END OF STUBS ================
 
 MDTP_UTILS mdtp_utils;

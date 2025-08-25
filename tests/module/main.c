@@ -24,6 +24,8 @@ static const char *test_json_configuration = "{"
 
 ABI_MODULE_FUNCTIONS *module_functions;
 
+uint32_t m_poll_ratio = 0;
+
 // ================================ FUNCTIONS DONE ================================
 
 /**
@@ -44,6 +46,8 @@ typedef struct FUNCTIONS_DONE {
     unsigned test_sdk_module_enable : 1;
     unsigned test_sdk_module_disable : 1;
     unsigned test_sdk_module_is_enabled : 1;
+    unsigned test_sdk_module_set_poll_ratio : 1;
+    unsigned test_sdk_module_get_poll_ratio : 1;
 } FUNCTIONS_DONE;
 
 static FUNCTIONS_DONE functions_done = {0};
@@ -98,7 +102,7 @@ void test_module_get_data(void) {
 
 // Check get configuration
 void test_module_get_configuration(void) {
-    const char* str = module_functions->module_get_configuration();
+    const char *str = module_functions->module_get_configuration();
     TEST_ASSERT_TRUE(str != NULL);
     TEST_ASSERT_EQUAL_STRING(test_json_configuration, str);
 }
@@ -134,6 +138,16 @@ void test_module_is_get_description(void) {
 }
 
 
+void test_module_set_poll_ratio(void) {
+    module_functions->module_set_poll_ratio(10);
+}
+
+
+void test_module_get_poll_ratio(void) {
+    TEST_ASSERT_EQUAL(10, module_functions->module_get_poll_ratio());
+}
+
+
 // Check which module functions were called during tests
 void test_functions_done(void) {
     TEST_ASSERT_EQUAL(1, functions_done.test_abi_get_abi_version);
@@ -146,6 +160,8 @@ void test_functions_done(void) {
     TEST_ASSERT_EQUAL(1, functions_done.test_sdk_module_enable);
     TEST_ASSERT_EQUAL(1, functions_done.test_sdk_module_disable);
     TEST_ASSERT_EQUAL(1, functions_done.test_sdk_module_is_enabled);
+    TEST_ASSERT_EQUAL(1, functions_done.test_sdk_module_set_poll_ratio);
+    TEST_ASSERT_EQUAL(1, functions_done.test_sdk_module_get_poll_ratio);
 }
 
 
@@ -195,6 +211,18 @@ uint8_t sdk_module_is_enabled(void) {
 }
 
 
+void sdk_module_set_poll_ratio(uint32_t poll_ratio) {
+    m_poll_ratio = poll_ratio;
+    functions_done.test_sdk_module_set_poll_ratio = 1;
+}
+
+
+uint32_t sdk_module_get_poll_ratio(void) {
+    functions_done.test_sdk_module_get_poll_ratio = 1;
+    return m_poll_ratio;
+}
+
+
 // ======================== MAIN ========================
 
 int main(void) {
@@ -208,6 +236,8 @@ int main(void) {
     RUN_TEST(test_module_is_enabled);
     RUN_TEST(test_module_is_get_name);
     RUN_TEST(test_module_is_get_description);
+    RUN_TEST(test_module_set_poll_ratio);
+    RUN_TEST(test_module_get_poll_ratio);
 
     RUN_TEST(test_module_destroy);
 
