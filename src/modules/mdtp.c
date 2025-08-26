@@ -7,6 +7,7 @@
 
 #include "modules/internals/mdtp.h"
 #include "modules/internals/abi.h"
+#include "modules/internals/imodule.h"
 #include "modules/internals/memutils.h"
 #include <stdarg.h>
 #include <stddef.h>
@@ -16,23 +17,14 @@
 #include <string.h>
 
 
-static ABI_MODULE_MDTP_DATA mdtp_data = {0}; ///< MDTP buffer
-
-
 // Forward declaration begin
-static void *mdtp_make_value(const char *value_name, const char *value, const char *value_units);
-static void  mdtp_free_value(void *value_node);
-static void *mdtp_make_container(const char *name, void *first, ...);
-static void  mdtp_free_container(void *container_node);
-static ABI_MODULE_MDTP_DATA *mdtp_make_root(void *first, ...);
-static uint32_t              mdtp_get_nodes_size(const void *first, ...);
-static uint32_t              mdtp_get_nodes_size_va(const void *first, va_list args);
+static uint32_t mdtp_get_nodes_size(const void *first, ...);
+static uint32_t mdtp_get_nodes_size_va(const void *first, va_list args);
 // Forward declaration end
 
 
-
 // Make value node
-static void *mdtp_make_value(const char *value_name, const char *value, const char *value_units) {
+void *sdk_mdtp_make_value(const char *value_name, const char *value, const char *value_units) {
     // From MDTP v1 specification:
 
     // [node type]: 1 unsigned byte (1 because node is value)
@@ -95,7 +87,7 @@ static void *mdtp_make_value(const char *value_name, const char *value, const ch
 
 
 // Free value node
-static void mdtp_free_value(void *value_node) {
+void sdk_mdtp_free_value(void *value_node) {
     // If not value node
     if (read_ubyte_be(value_node, 0) != 1) {
         return;
@@ -105,8 +97,8 @@ static void mdtp_free_value(void *value_node) {
 }
 
 
-// Make container node
-static void *mdtp_make_container(const char *name, void *first, ...) {
+// Make container node]
+void *sdk_mdtp_make_container(const char *name, void *first, ...) {
     if (name == NULL || first == NULL) {
         return NULL;
     }
@@ -156,11 +148,11 @@ static void *mdtp_make_container(const char *name, void *first, ...) {
 
         // If node type is value
         if (read_ubyte_be(ptr, 0) == 1) {
-            mdtp_free_value(ptr);
+            sdk_mdtp_free_value(ptr);
         }
         // If node type is container
         else if (read_ubyte_be(ptr, 0) == 0) {
-            mdtp_free_container(ptr);
+            sdk_mdtp_free_container(ptr);
         }
 
         offset += node_size;
@@ -176,7 +168,7 @@ static void *mdtp_make_container(const char *name, void *first, ...) {
 
 
 // Free container node
-static void mdtp_free_container(void *container_node) {
+void sdk_mdtp_free_container(void *container_node) {
     // If not container node
     if (read_ubyte_be(container_node, 0) != 0) {
         return;
@@ -187,7 +179,7 @@ static void mdtp_free_container(void *container_node) {
 
 
 // Make root node
-static ABI_MODULE_MDTP_DATA *mdtp_make_root(void *first, ...) {
+const ABI_MODULE_MDTP_DATA *sdk_mdtp_make_root(IModule *module, void *first, ...) {
     if (first == NULL) {
         return NULL;
     }
@@ -210,32 +202,29 @@ static ABI_MODULE_MDTP_DATA *mdtp_make_root(void *first, ...) {
         return NULL;
     }
 
-    // Success allocation
-    free((void *)mdtp_data.data);
-    mdtp_data.data = buffer;
-    mdtp_data.size = size;
+    ABI_MODULE_MDTP_DATA mdtp = (ABI_MODULE_MDTP_DATA){.data = buffer, .size = size};
 
     // Fill buffer
     // Write MDTP version
-    write_ubyte_be((void *)mdtp_data.data, offset, MDTP_VERSION);
+    write_ubyte_be((void *)mdtp.data, offset, MDTP_VERSION);
     ++offset;
 
     // Write payload size
-    write_uint32_be((void *)mdtp_data.data, offset, payload_size);
+    write_uint32_be((void *)mdtp.data, offset, payload_size);
     offset += 4;
 
     // Write payload
     while (ptr != NULL) {
         uint32_t node_size = mdtp_get_nodes_size(ptr, NULL);
-        memcpy((char *)mdtp_data.data + offset, ptr, node_size);
+        memcpy((char *)mdtp.data + offset, ptr, node_size);
 
         // If node type is value
         if (read_ubyte_be(ptr, 0) == 1) {
-            mdtp_free_value(ptr);
+            sdk_mdtp_free_value(ptr);
         }
         // If node type is container
         else if (read_ubyte_be(ptr, 0) == 0) {
-            mdtp_free_container(ptr);
+            sdk_mdtp_free_container(ptr);
         }
 
         offset += node_size;
@@ -246,7 +235,9 @@ static ABI_MODULE_MDTP_DATA *mdtp_make_root(void *first, ...) {
     va_end(args);
     va_end(args_copy);
 
-    return &mdtp_data;
+    sdk_imodule_set_mdtp_data(module, mdtp);
+
+    return sdk_imodule_get_mdtp_data(module);
 }
 
 
@@ -317,22 +308,4 @@ static uint32_t mdtp_get_nodes_size_va(const void *first, va_list args) {
 
     // Clamp to UINT32_MAX if sum exceeded 32-bit range
     return (total > 0xFFFFFFFFu) ? 0xFFFFFFFFu : (uint32_t)total;
-}
-
-
-// Make MDTP_UTILS
-MDTP_UTILS mdtp_utils_init(void) {
-    return (MDTP_UTILS){.make_value = mdtp_make_value,
-                        .make_container = mdtp_make_container,
-                        .make_root = mdtp_make_root,
-                        .free_value = mdtp_free_value,
-                        .free_container = mdtp_free_container};
-}
-
-
-// Destroy resources
-void mdtp_utils_destroy(MDTP_UTILS mdtp __attribute__((unused))) {
-    free((void *)mdtp_data.data);
-    mdtp_data.data = NULL;
-    mdtp_data.size = 0;
 }
