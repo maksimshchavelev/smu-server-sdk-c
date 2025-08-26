@@ -152,12 +152,12 @@ SDK_EXPORT void sdk_module_register_get_configuration(IModule *module,
  * @brief Registers a module function that returns MDTP data and will be called by the
  * server core
  * @param module Not-null pointer to `IModule`. If `NULL`, no effect.
- * @param callback Not-null pointer to function with signature `ABI_MODULE_MDTP_DATA *(void)`. If
- * `NULL`, no effect.
+ * @param callback Not-null pointer to function with signature `const ABI_MODULE_MDTP_DATA *(void)`.
+ * If `NULL`, no effect.
  * @note Do not block thread in this function
  */
 SDK_EXPORT void sdk_module_register_get_data(IModule *module,
-                                             ABI_MODULE_MDTP_DATA *(*callback)(void));
+                                             const ABI_MODULE_MDTP_DATA *(*callback)(void));
 
 /**
  * @brief Registers a module function that enables the module and will be called by the
