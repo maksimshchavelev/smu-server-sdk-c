@@ -175,7 +175,7 @@ void sdk_module_register_get_configuration(IModule *module, const char *(*callba
 }
 
 // Get data
-void sdk_module_register_get_data(IModule *module, ABI_MODULE_MDTP_DATA *(*callback)(void)) {
+void sdk_module_register_get_data(IModule *module, const ABI_MODULE_MDTP_DATA *(*callback)(void)) {
     if (!module || !callback) {
         return;
     }
