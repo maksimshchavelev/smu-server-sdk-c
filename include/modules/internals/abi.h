@@ -18,7 +18,7 @@ extern "C" {
  * @brief Struct to storing MDTP data. See documentation for MDTP protocol.
  * @note This is a **packaged** structure.
  */
-typedef struct __attribute__((packed)) ABI_MODULE_MDTP_DATA {
+typedef struct ABI_MODULE_MDTP_DATA {
     const void *data; ///< Pointer to MDTP bytes
     uint32_t    size; ///< Count of MDTP bytes (size of data)
 } ABI_MODULE_MDTP_DATA;
@@ -32,7 +32,7 @@ typedef struct __attribute__((packed)) ABI_MODULE_MDTP_DATA {
  *
  * @note This is a **packaged** structure
  */
-typedef struct __attribute__((packed)) ABI_MODULE_CONTEXT {
+typedef struct ABI_MODULE_CONTEXT {
     const char *module_name;        ///< Name of module
     const char *module_description; ///< Description of module
 } ABI_MODULE_CONTEXT;
@@ -45,13 +45,13 @@ typedef struct __attribute__((packed)) ABI_MODULE_CONTEXT {
  *
  * @note This is a packaged structure.
  */
-typedef struct __attribute__((packed)) ABI_SERVER_CORE_FUNCTIONS {
+typedef struct ABI_SERVER_CORE_FUNCTIONS {
     /**
      * @brief Get ABI version
      * @param context Module context. See `ABI_MODULE_CONTEXT`
      * @return ABI version
      */
-    int (*abi_get_abi_version)(ABI_MODULE_CONTEXT *context);
+    uint32_t (*abi_get_abi_version)(const ABI_MODULE_CONTEXT *context);
 
     /**
      * @brief Logging function
@@ -63,7 +63,7 @@ typedef struct __attribute__((packed)) ABI_SERVER_CORE_FUNCTIONS {
      *          - `2`: Red (error) log message
      * @param message Message to log
      */
-    void (*abi_log)(ABI_MODULE_CONTEXT *context, int log_type, const char *message);
+    void (*abi_log)(const ABI_MODULE_CONTEXT *context, int log_type, const char *message);
 } ABI_SERVER_CORE_FUNCTIONS;
 
 
@@ -76,15 +76,16 @@ typedef struct ABI_MODULE_FUNCTIONS ABI_MODULE_FUNCTIONS; ///< Forward declarati
  *
  * @note This is a packaged structure.
  */
-typedef struct __attribute__((packed)) ABI_MODULE_FUNCTIONS {
-    ABI_MODULE_FUNCTIONS *(*module_init)(ABI_SERVER_CORE_FUNCTIONS server_functions,
-                                         const char *json_configuration); ///< Initializes module
+typedef struct ABI_MODULE_FUNCTIONS {
+    ABI_MODULE_FUNCTIONS(*module_init)
+    (ABI_SERVER_CORE_FUNCTIONS server_functions,
+     const char               *json_configuration); ///< Initializes module
 
     void (*module_destroy)(void); ///< Destroys module
 
     const char *(*module_get_configuration)(void); ///< Get module json configuration
 
-    ABI_MODULE_MDTP_DATA *(*module_get_data)(void); ///< Get MDTP module data
+    const ABI_MODULE_MDTP_DATA *(*module_get_data)(void); ///< Get MDTP module data
 
     void (*module_enable)(void); ///< Enables a module
 
@@ -95,9 +96,6 @@ typedef struct __attribute__((packed)) ABI_MODULE_FUNCTIONS {
     const char *(*module_get_module_name)(void); ///< Get module name
 
     const char *(*module_get_module_description)(void); ///< Get module description
-
-    ABI_MODULE_CONTEXT *(*module_get_context)(
-        void); ///< Get context of module. See `ABI_MODULE_CONTEXT`
 
     void (*module_set_poll_ratio)(uint32_t poll_ratio); ///< Set the poll ratio of module
 
