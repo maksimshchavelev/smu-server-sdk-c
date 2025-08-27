@@ -39,6 +39,8 @@ void test_make_value_node(void) {
     TEST_ASSERT_EQUAL(((char *)node)[19], '2');
     TEST_ASSERT_EQUAL(((char *)node)[20], '3');
     TEST_ASSERT_EQUAL(((char *)node)[21], '4');
+
+    sdk_mdtp_free_value(node);
 }
 
 
@@ -51,6 +53,8 @@ void test_make_empty_value_node(void) {
     TEST_ASSERT_EQUAL(read_uint32_be(node, 1), 0); // node name length
     TEST_ASSERT_EQUAL(read_uint32_be(node, 5), 0); // Units length
     TEST_ASSERT_EQUAL(read_uint32_be(node, 9), 0); // Value length
+
+    sdk_mdtp_free_value(node);
 }
 
 
@@ -90,6 +94,8 @@ void test_make_container_node(void) {
     // Value
     TEST_ASSERT_EQUAL(((char *)node)[30], '1');
     TEST_ASSERT_EQUAL(((char *)node)[31], '2');
+
+    sdk_mdtp_free_container(node);
 }
 
 
