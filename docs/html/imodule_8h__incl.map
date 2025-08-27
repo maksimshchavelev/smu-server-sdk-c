@@ -1,9 +1,9 @@
 <map id="include/modules/internals/imodule.h" name="include/modules/internals/imodule.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="101,5,292,45"/>
-<area shape="rect" id="Node000002" href="$abi_8h.html" title=" " alt="" coords="5,93,180,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,48,121,87,117,83,170,43"/>
-<area shape="rect" id="Node000004" href="$macro_8h.html" title=" " alt="" coords="204,93,400,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,43,277,83,274,87,221,48"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="57,167,128,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,119,95,153,90,153,90,119"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,196,45"/>
+<area shape="rect" id="Node000002" href="$abi_8h.html" title=" " alt="" coords="29,93,84,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,47,72,83,68,80,88,44"/>
+<area shape="rect" id="Node000004" href="$macro_8h.html" title=" " alt="" coords="109,93,183,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="114,44,135,80,130,83,109,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="21,167,92,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="59,119,59,153,54,153,54,119"/>
 </map>

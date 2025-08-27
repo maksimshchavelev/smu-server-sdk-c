@@ -96,20 +96,20 @@ $(document).ready(function(){initNavTree('imodule_8h.html',''); initResizable();
   <div class="headertitle"><div class="title">imodule.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="abi_8h_source.html">modules/internals/abi.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="macro_8h_source.html">modules/internals/macro.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="abi_8h_source.html">abi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="macro_8h_source.html">macro.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for imodule.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="imodule_8h__incl.png" border="0" usemap="#ainclude_2modules_2internals_2imodule_8h" alt=""/></div>
 <map name="ainclude_2modules_2internals_2imodule_8h" id="ainclude_2modules_2internals_2imodule_8h">
-<area shape="rect" title=" " alt="" coords="101,5,292,45"/>
-<area shape="rect" href="abi_8h.html" title=" " alt="" coords="5,93,180,119"/>
-<area shape="poly" title=" " alt="" coords="173,48,121,87,117,83,170,43"/>
-<area shape="rect" href="macro_8h.html" title=" " alt="" coords="204,93,400,119"/>
-<area shape="poly" title=" " alt="" coords="224,43,277,83,274,87,221,48"/>
-<area shape="rect" title=" " alt="" coords="57,167,128,192"/>
-<area shape="poly" title=" " alt="" coords="95,119,95,153,90,153,90,119"/>
+<area shape="rect" title=" " alt="" coords="5,5,196,45"/>
+<area shape="rect" href="abi_8h.html" title=" " alt="" coords="29,93,84,119"/>
+<area shape="poly" title=" " alt="" coords="92,47,72,83,68,80,88,44"/>
+<area shape="rect" href="macro_8h.html" title=" " alt="" coords="109,93,183,119"/>
+<area shape="poly" title=" " alt="" coords="114,44,135,80,130,83,109,47"/>
+<area shape="rect" title=" " alt="" coords="21,167,92,192"/>
+<area shape="poly" title=" " alt="" coords="59,119,59,153,54,153,54,119"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -133,75 +133,75 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa75c0dfbf0fa1b37d7e160e75224c91a" id="r_aa75c0dfbf0fa1b37d7e160e75224c91a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#aa75c0dfbf0fa1b37d7e160e75224c91a">sdk_imodule_create</a> (const char *name, const char *description, <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> server_functions, uint32_t poll_ratio, uint8_t is_enabled)</td></tr>
-<tr class="memdesc:aa75c0dfbf0fa1b37d7e160e75224c91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory, initializes <code>IModule</code> and returns pointer to that.  <br /></td></tr>
-<tr class="separator:aa75c0dfbf0fa1b37d7e160e75224c91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e073917d1ad9cd89de0d1aaf39c4ad" id="r_a64e073917d1ad9cd89de0d1aaf39c4ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a64e073917d1ad9cd89de0d1aaf39c4ad">sdk_imodule_destroy</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:a64e073917d1ad9cd89de0d1aaf39c4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys module and deallocates memory allocated via <code>sdk_imodule_create</code>  <br /></td></tr>
-<tr class="separator:a64e073917d1ad9cd89de0d1aaf39c4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e003af7ea3fb7d0df94c60a0a6d8c2" id="r_ad7e003af7ea3fb7d0df94c60a0a6d8c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ad7e003af7ea3fb7d0df94c60a0a6d8c2">sdk_imodule_get_context</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:ad7e003af7ea3fb7d0df94c60a0a6d8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get context of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:ad7e003af7ea3fb7d0df94c60a0a6d8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb092ad6b4db19346b1db16861a1215" id="r_a5cb092ad6b4db19346b1db16861a1215"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a5cb092ad6b4db19346b1db16861a1215">sdk_imodule_set_context</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> context)</td></tr>
-<tr class="memdesc:a5cb092ad6b4db19346b1db16861a1215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set context of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:a5cb092ad6b4db19346b1db16861a1215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae913ef4b6c4c2d4051f4348321e73aed" id="r_ae913ef4b6c4c2d4051f4348321e73aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ae913ef4b6c4c2d4051f4348321e73aed">sdk_imodule_get_mdtp_data</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:ae913ef4b6c4c2d4051f4348321e73aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MDTP data of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:ae913ef4b6c4c2d4051f4348321e73aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9865afb8b0e072958bb974fe67f6bc03" id="r_a9865afb8b0e072958bb974fe67f6bc03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a9865afb8b0e072958bb974fe67f6bc03">sdk_imodule_set_mdtp_data</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> data)</td></tr>
-<tr class="memdesc:a9865afb8b0e072958bb974fe67f6bc03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MDTP data of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:a9865afb8b0e072958bb974fe67f6bc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6d891f2b3e3ec65b80a512459865459" id="r_ae6d891f2b3e3ec65b80a512459865459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ae6d891f2b3e3ec65b80a512459865459">sdk_imodule_get_poll_ratio</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:ae6d891f2b3e3ec65b80a512459865459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get poll ratio of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:ae6d891f2b3e3ec65b80a512459865459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb929e5df243e775aa48ad5918f84d98" id="r_abb929e5df243e775aa48ad5918f84d98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#abb929e5df243e775aa48ad5918f84d98">sdk_imodule_set_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint32_t poll_ratio)</td></tr>
-<tr class="memdesc:abb929e5df243e775aa48ad5918f84d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets poll ratio of the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:abb929e5df243e775aa48ad5918f84d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9b53192bcb9718de79bdfbb98b06ee2" id="r_af9b53192bcb9718de79bdfbb98b06ee2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#af9b53192bcb9718de79bdfbb98b06ee2">sdk_imodule_enable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:af9b53192bcb9718de79bdfbb98b06ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:af9b53192bcb9718de79bdfbb98b06ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a410f272668eb5dc1d7793efe2d79698c" id="r_a410f272668eb5dc1d7793efe2d79698c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a410f272668eb5dc1d7793efe2d79698c">sdk_imodule_disable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:a410f272668eb5dc1d7793efe2d79698c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the module using pointer to <code>IModule</code>  <br /></td></tr>
-<tr class="separator:a410f272668eb5dc1d7793efe2d79698c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c158226b92213bf14ca579751016b10" id="r_a2c158226b92213bf14ca579751016b10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a2c158226b92213bf14ca579751016b10">sdk_imodule_is_enabled</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:a2c158226b92213bf14ca579751016b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the module is enabled.  <br /></td></tr>
-<tr class="separator:a2c158226b92213bf14ca579751016b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5604fac417cb3f0cbc23c09b4939633" id="r_ac5604fac417cb3f0cbc23c09b4939633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ac5604fac417cb3f0cbc23c09b4939633">sdk_imodule_get_module_functions</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:ac5604fac417cb3f0cbc23c09b4939633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get structure with pointer to module functions.  <br /></td></tr>
-<tr class="separator:ac5604fac417cb3f0cbc23c09b4939633"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad243c232f8285c1a1b7468142bad5f59" id="r_ad243c232f8285c1a1b7468142bad5f59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ad243c232f8285c1a1b7468142bad5f59">sdk_imodule_get_server_core_functions</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
-<tr class="memdesc:ad243c232f8285c1a1b7468142bad5f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get structure with pointer to server core functions.  <br /></td></tr>
-<tr class="separator:ad243c232f8285c1a1b7468142bad5f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720c1cbec1590622d2a02814c3153c68" id="r_a720c1cbec1590622d2a02814c3153c68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a720c1cbec1590622d2a02814c3153c68">sdk_module_register_destroy</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
-<tr class="memdesc:a720c1cbec1590622d2a02814c3153c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module destroy function that will be called by the server.  <br /></td></tr>
-<tr class="separator:a720c1cbec1590622d2a02814c3153c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669aecdfd9707eff2d9ccb2b0d5f66df" id="r_a669aecdfd9707eff2d9ccb2b0d5f66df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a669aecdfd9707eff2d9ccb2b0d5f66df">sdk_module_register_get_configuration</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
-<tr class="memdesc:a669aecdfd9707eff2d9ccb2b0d5f66df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns JSON configuration and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a669aecdfd9707eff2d9ccb2b0d5f66df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89f5d5395af1fdafc0cd87f92071f682" id="r_a89f5d5395af1fdafc0cd87f92071f682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a89f5d5395af1fdafc0cd87f92071f682">sdk_module_register_get_data</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *(*callback)(void))</td></tr>
-<tr class="memdesc:a89f5d5395af1fdafc0cd87f92071f682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns MDTP data and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a89f5d5395af1fdafc0cd87f92071f682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a477829532685cd357302b4a4d3120c8e" id="r_a477829532685cd357302b4a4d3120c8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a477829532685cd357302b4a4d3120c8e">sdk_module_register_enable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
-<tr class="memdesc:a477829532685cd357302b4a4d3120c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that enables the module and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a477829532685cd357302b4a4d3120c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a216d2b20d3b11e6d4db507ef4dffe79d" id="r_a216d2b20d3b11e6d4db507ef4dffe79d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a216d2b20d3b11e6d4db507ef4dffe79d">sdk_module_register_disable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
-<tr class="memdesc:a216d2b20d3b11e6d4db507ef4dffe79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that disables the module and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a216d2b20d3b11e6d4db507ef4dffe79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68f712a6a16e8f4302b1f7ddf8c09c93" id="r_a68f712a6a16e8f4302b1f7ddf8c09c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a68f712a6a16e8f4302b1f7ddf8c09c93">sdk_module_register_is_enabled</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint8_t(*callback)(void))</td></tr>
-<tr class="memdesc:a68f712a6a16e8f4302b1f7ddf8c09c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that checks if the module is enabled and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a68f712a6a16e8f4302b1f7ddf8c09c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9a0ec380c55aac38f51dc62ea9c2dd7" id="r_ac9a0ec380c55aac38f51dc62ea9c2dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ac9a0ec380c55aac38f51dc62ea9c2dd7">sdk_module_register_get_module_name</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
-<tr class="memdesc:ac9a0ec380c55aac38f51dc62ea9c2dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the module name and will be called by the server core.  <br /></td></tr>
-<tr class="separator:ac9a0ec380c55aac38f51dc62ea9c2dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab6921174786ca9882190aac8b98738" id="r_a3ab6921174786ca9882190aac8b98738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a3ab6921174786ca9882190aac8b98738">sdk_module_register_get_module_description</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
-<tr class="memdesc:a3ab6921174786ca9882190aac8b98738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the module description and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a3ab6921174786ca9882190aac8b98738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a039e1a098c332d9858cd697f78bd8a46" id="r_a039e1a098c332d9858cd697f78bd8a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a039e1a098c332d9858cd697f78bd8a46">sdk_module_register_set_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(uint32_t poll_ratio))</td></tr>
-<tr class="memdesc:a039e1a098c332d9858cd697f78bd8a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that sets the poll ratio and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a039e1a098c332d9858cd697f78bd8a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3800d8d1040bb31505d031d431de3c" id="r_a4a3800d8d1040bb31505d031d431de3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a4a3800d8d1040bb31505d031d431de3c">sdk_module_register_get_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint32_t(*callback)(void))</td></tr>
-<tr class="memdesc:a4a3800d8d1040bb31505d031d431de3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the poll ratio and will be called by the server core.  <br /></td></tr>
-<tr class="separator:a4a3800d8d1040bb31505d031d431de3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c4800f4f43442f9022199489fa808f" id="r_a90c4800f4f43442f9022199489fa808f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a90c4800f4f43442f9022199489fa808f">sdk_imodule_create</a> (const char *name, const char *description, <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> server_functions, uint32_t poll_ratio, uint8_t is_enabled)</td></tr>
+<tr class="memdesc:a90c4800f4f43442f9022199489fa808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory, initializes <code>IModule</code> and returns pointer to that.  <br /></td></tr>
+<tr class="separator:a90c4800f4f43442f9022199489fa808f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90b626232c3ec21f7f921a7bfa972de" id="r_ab90b626232c3ec21f7f921a7bfa972de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#ab90b626232c3ec21f7f921a7bfa972de">sdk_imodule_destroy</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:ab90b626232c3ec21f7f921a7bfa972de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys module and deallocates memory allocated via <code>sdk_imodule_create</code>  <br /></td></tr>
+<tr class="separator:ab90b626232c3ec21f7f921a7bfa972de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a612139c1847eb36c9e0e9c7e069c2" id="r_a36a612139c1847eb36c9e0e9c7e069c2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a36a612139c1847eb36c9e0e9c7e069c2">sdk_imodule_get_context</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a36a612139c1847eb36c9e0e9c7e069c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get context of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a36a612139c1847eb36c9e0e9c7e069c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e755afa42a08ad0099b36e8de6ece4a" id="r_a5e755afa42a08ad0099b36e8de6ece4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a5e755afa42a08ad0099b36e8de6ece4a">sdk_imodule_set_context</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> context)</td></tr>
+<tr class="memdesc:a5e755afa42a08ad0099b36e8de6ece4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set context of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a5e755afa42a08ad0099b36e8de6ece4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34aacaade718910c04e1c27982215612" id="r_a34aacaade718910c04e1c27982215612"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a34aacaade718910c04e1c27982215612">sdk_imodule_get_mdtp_data</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a34aacaade718910c04e1c27982215612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MDTP data of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a34aacaade718910c04e1c27982215612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd5f01df8a69d0371a3940c270d0487" id="r_a0fd5f01df8a69d0371a3940c270d0487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a0fd5f01df8a69d0371a3940c270d0487">sdk_imodule_set_mdtp_data</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> data)</td></tr>
+<tr class="memdesc:a0fd5f01df8a69d0371a3940c270d0487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MDTP data of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a0fd5f01df8a69d0371a3940c270d0487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3c478ae8c9b103bb34c2772b0f5320" id="r_a6e3c478ae8c9b103bb34c2772b0f5320"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a6e3c478ae8c9b103bb34c2772b0f5320">sdk_imodule_get_poll_ratio</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a6e3c478ae8c9b103bb34c2772b0f5320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get poll ratio of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a6e3c478ae8c9b103bb34c2772b0f5320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46abeb8ab82d28d32c37cdd2c91068b0" id="r_a46abeb8ab82d28d32c37cdd2c91068b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a46abeb8ab82d28d32c37cdd2c91068b0">sdk_imodule_set_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint32_t poll_ratio)</td></tr>
+<tr class="memdesc:a46abeb8ab82d28d32c37cdd2c91068b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets poll ratio of the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a46abeb8ab82d28d32c37cdd2c91068b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82dc1ecb02b5e126a5550470b73a7690" id="r_a82dc1ecb02b5e126a5550470b73a7690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a82dc1ecb02b5e126a5550470b73a7690">sdk_imodule_enable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a82dc1ecb02b5e126a5550470b73a7690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:a82dc1ecb02b5e126a5550470b73a7690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdafaf928a53e4792e02c117560c5bb" id="r_acfdafaf928a53e4792e02c117560c5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#acfdafaf928a53e4792e02c117560c5bb">sdk_imodule_disable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:acfdafaf928a53e4792e02c117560c5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the module using pointer to <code>IModule</code>  <br /></td></tr>
+<tr class="separator:acfdafaf928a53e4792e02c117560c5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9244e519a8bbde3586b891337a9e95b7" id="r_a9244e519a8bbde3586b891337a9e95b7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a9244e519a8bbde3586b891337a9e95b7">sdk_imodule_is_enabled</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a9244e519a8bbde3586b891337a9e95b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the module is enabled.  <br /></td></tr>
+<tr class="separator:a9244e519a8bbde3586b891337a9e95b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1a41abeb75f72b3e4898da85c32dd7" id="r_a2b1a41abeb75f72b3e4898da85c32dd7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a2b1a41abeb75f72b3e4898da85c32dd7">sdk_imodule_get_module_functions</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a2b1a41abeb75f72b3e4898da85c32dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get structure with pointer to module functions.  <br /></td></tr>
+<tr class="separator:a2b1a41abeb75f72b3e4898da85c32dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3481587778666204638532e0ac8c4ed8" id="r_a3481587778666204638532e0ac8c4ed8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a3481587778666204638532e0ac8c4ed8">sdk_imodule_get_server_core_functions</a> (const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module)</td></tr>
+<tr class="memdesc:a3481587778666204638532e0ac8c4ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get structure with pointer to server core functions.  <br /></td></tr>
+<tr class="separator:a3481587778666204638532e0ac8c4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7cffa14f32c80e78cc1c369582f1fc" id="r_acd7cffa14f32c80e78cc1c369582f1fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#acd7cffa14f32c80e78cc1c369582f1fc">sdk_module_register_destroy</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
+<tr class="memdesc:acd7cffa14f32c80e78cc1c369582f1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module destroy function that will be called by the server.  <br /></td></tr>
+<tr class="separator:acd7cffa14f32c80e78cc1c369582f1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0860138b29b20783aede3878288e0d16" id="r_a0860138b29b20783aede3878288e0d16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a0860138b29b20783aede3878288e0d16">sdk_module_register_get_configuration</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
+<tr class="memdesc:a0860138b29b20783aede3878288e0d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns JSON configuration and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a0860138b29b20783aede3878288e0d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16079b98989075d83f2c090afa84a9b" id="r_aa16079b98989075d83f2c090afa84a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#aa16079b98989075d83f2c090afa84a9b">sdk_module_register_get_data</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *(*callback)(void))</td></tr>
+<tr class="memdesc:aa16079b98989075d83f2c090afa84a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns MDTP data and will be called by the server core.  <br /></td></tr>
+<tr class="separator:aa16079b98989075d83f2c090afa84a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5514ee0ec86f1db399ec24bd734984" id="r_a3c5514ee0ec86f1db399ec24bd734984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a3c5514ee0ec86f1db399ec24bd734984">sdk_module_register_enable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
+<tr class="memdesc:a3c5514ee0ec86f1db399ec24bd734984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that enables the module and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a3c5514ee0ec86f1db399ec24bd734984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7205dad8e92fedb2fdce2fe200a0044a" id="r_a7205dad8e92fedb2fdce2fe200a0044a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a7205dad8e92fedb2fdce2fe200a0044a">sdk_module_register_disable</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(void))</td></tr>
+<tr class="memdesc:a7205dad8e92fedb2fdce2fe200a0044a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that disables the module and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a7205dad8e92fedb2fdce2fe200a0044a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9bcedf6beda810aa37677eb4492ab8" id="r_a0e9bcedf6beda810aa37677eb4492ab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a0e9bcedf6beda810aa37677eb4492ab8">sdk_module_register_is_enabled</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint8_t(*callback)(void))</td></tr>
+<tr class="memdesc:a0e9bcedf6beda810aa37677eb4492ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that checks if the module is enabled and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a0e9bcedf6beda810aa37677eb4492ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd4973e0d039e11522bd9100d0cc97b" id="r_a8bd4973e0d039e11522bd9100d0cc97b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a8bd4973e0d039e11522bd9100d0cc97b">sdk_module_register_get_module_name</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
+<tr class="memdesc:a8bd4973e0d039e11522bd9100d0cc97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the module name and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a8bd4973e0d039e11522bd9100d0cc97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47463462d5cf7c2c4c2f27ac3fa7ae95" id="r_a47463462d5cf7c2c4c2f27ac3fa7ae95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a47463462d5cf7c2c4c2f27ac3fa7ae95">sdk_module_register_get_module_description</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, const char *(*callback)(void))</td></tr>
+<tr class="memdesc:a47463462d5cf7c2c4c2f27ac3fa7ae95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the module description and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a47463462d5cf7c2c4c2f27ac3fa7ae95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa154b98a1ebcf8a0a12ae9abaeb5cbd7" id="r_aa154b98a1ebcf8a0a12ae9abaeb5cbd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#aa154b98a1ebcf8a0a12ae9abaeb5cbd7">sdk_module_register_set_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, void(*callback)(uint32_t poll_ratio))</td></tr>
+<tr class="memdesc:aa154b98a1ebcf8a0a12ae9abaeb5cbd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that sets the poll ratio and will be called by the server core.  <br /></td></tr>
+<tr class="separator:aa154b98a1ebcf8a0a12ae9abaeb5cbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fd7b82098320665daae9910b594746" id="r_a95fd7b82098320665daae9910b594746"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imodule_8h.html#a95fd7b82098320665daae9910b594746">sdk_module_register_get_poll_ratio</a> (<a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *module, uint32_t(*callback)(void))</td></tr>
+<tr class="memdesc:a95fd7b82098320665daae9910b594746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a module function that returns the poll ratio and will be called by the server core.  <br /></td></tr>
+<tr class="separator:a95fd7b82098320665daae9910b594746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>@license GPLv3, see LICENSE for details </p><dl class="section copyright"><dt>Copyright</dt><dd>Copyright (©) 2025, Maksim Shchavelev <a href="#" onclick="location.href='mai'+'lto:'+'mak'+'si'+'msh'+'ch'+'ave'+'le'+'v@g'+'ma'+'il.'+'co'+'m'; return false;">maksi<span class="obfuscator">.nosp@m.</span>mshc<span class="obfuscator">.nosp@m.</span>havel<span class="obfuscator">.nosp@m.</span>ev@g<span class="obfuscator">.nosp@m.</span>mail.<span class="obfuscator">.nosp@m.</span>com</a> </dd></dl>
@@ -223,14 +223,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa75c0dfbf0fa1b37d7e160e75224c91a" name="aa75c0dfbf0fa1b37d7e160e75224c91a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa75c0dfbf0fa1b37d7e160e75224c91a">&#9670;&#160;</a></span>sdk_imodule_create()</h2>
+<a id="a90c4800f4f43442f9022199489fa808f" name="a90c4800f4f43442f9022199489fa808f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c4800f4f43442f9022199489fa808f">&#9670;&#160;</a></span>sdk_imodule_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> * sdk_imodule_create </td>
+          <td class="memname"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> * sdk_imodule_create </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -282,14 +282,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a64e073917d1ad9cd89de0d1aaf39c4ad" name="a64e073917d1ad9cd89de0d1aaf39c4ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64e073917d1ad9cd89de0d1aaf39c4ad">&#9670;&#160;</a></span>sdk_imodule_destroy()</h2>
+<a id="ab90b626232c3ec21f7f921a7bfa972de" name="ab90b626232c3ec21f7f921a7bfa972de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90b626232c3ec21f7f921a7bfa972de">&#9670;&#160;</a></span>sdk_imodule_destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_destroy </td>
+          <td class="memname">void sdk_imodule_destroy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -308,14 +308,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a410f272668eb5dc1d7793efe2d79698c" name="a410f272668eb5dc1d7793efe2d79698c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a410f272668eb5dc1d7793efe2d79698c">&#9670;&#160;</a></span>sdk_imodule_disable()</h2>
+<a id="acfdafaf928a53e4792e02c117560c5bb" name="acfdafaf928a53e4792e02c117560c5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdafaf928a53e4792e02c117560c5bb">&#9670;&#160;</a></span>sdk_imodule_disable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_disable </td>
+          <td class="memname">void sdk_imodule_disable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -334,14 +334,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af9b53192bcb9718de79bdfbb98b06ee2" name="af9b53192bcb9718de79bdfbb98b06ee2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9b53192bcb9718de79bdfbb98b06ee2">&#9670;&#160;</a></span>sdk_imodule_enable()</h2>
+<a id="a82dc1ecb02b5e126a5550470b73a7690" name="a82dc1ecb02b5e126a5550470b73a7690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82dc1ecb02b5e126a5550470b73a7690">&#9670;&#160;</a></span>sdk_imodule_enable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_enable </td>
+          <td class="memname">void sdk_imodule_enable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -360,14 +360,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7e003af7ea3fb7d0df94c60a0a6d8c2" name="ad7e003af7ea3fb7d0df94c60a0a6d8c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e003af7ea3fb7d0df94c60a0a6d8c2">&#9670;&#160;</a></span>sdk_imodule_get_context()</h2>
+<a id="a36a612139c1847eb36c9e0e9c7e069c2" name="a36a612139c1847eb36c9e0e9c7e069c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a612139c1847eb36c9e0e9c7e069c2">&#9670;&#160;</a></span>sdk_imodule_get_context()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> * sdk_imodule_get_context </td>
+          <td class="memname">const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> * sdk_imodule_get_context </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -387,14 +387,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae913ef4b6c4c2d4051f4348321e73aed" name="ae913ef4b6c4c2d4051f4348321e73aed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae913ef4b6c4c2d4051f4348321e73aed">&#9670;&#160;</a></span>sdk_imodule_get_mdtp_data()</h2>
+<a id="a34aacaade718910c04e1c27982215612" name="a34aacaade718910c04e1c27982215612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34aacaade718910c04e1c27982215612">&#9670;&#160;</a></span>sdk_imodule_get_mdtp_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> * sdk_imodule_get_mdtp_data </td>
+          <td class="memname">const <a class="el" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> * sdk_imodule_get_mdtp_data </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -414,14 +414,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5604fac417cb3f0cbc23c09b4939633" name="ac5604fac417cb3f0cbc23c09b4939633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5604fac417cb3f0cbc23c09b4939633">&#9670;&#160;</a></span>sdk_imodule_get_module_functions()</h2>
+<a id="a2b1a41abeb75f72b3e4898da85c32dd7" name="a2b1a41abeb75f72b3e4898da85c32dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1a41abeb75f72b3e4898da85c32dd7">&#9670;&#160;</a></span>sdk_imodule_get_module_functions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> * sdk_imodule_get_module_functions </td>
+          <td class="memname">const <a class="el" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> * sdk_imodule_get_module_functions </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -441,14 +441,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae6d891f2b3e3ec65b80a512459865459" name="ae6d891f2b3e3ec65b80a512459865459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6d891f2b3e3ec65b80a512459865459">&#9670;&#160;</a></span>sdk_imodule_get_poll_ratio()</h2>
+<a id="a6e3c478ae8c9b103bb34c2772b0f5320" name="a6e3c478ae8c9b103bb34c2772b0f5320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3c478ae8c9b103bb34c2772b0f5320">&#9670;&#160;</a></span>sdk_imodule_get_poll_ratio()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> uint32_t sdk_imodule_get_poll_ratio </td>
+          <td class="memname">uint32_t sdk_imodule_get_poll_ratio </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -468,14 +468,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad243c232f8285c1a1b7468142bad5f59" name="ad243c232f8285c1a1b7468142bad5f59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad243c232f8285c1a1b7468142bad5f59">&#9670;&#160;</a></span>sdk_imodule_get_server_core_functions()</h2>
+<a id="a3481587778666204638532e0ac8c4ed8" name="a3481587778666204638532e0ac8c4ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3481587778666204638532e0ac8c4ed8">&#9670;&#160;</a></span>sdk_imodule_get_server_core_functions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> const <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> * sdk_imodule_get_server_core_functions </td>
+          <td class="memname">const <a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> * sdk_imodule_get_server_core_functions </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -495,14 +495,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c158226b92213bf14ca579751016b10" name="a2c158226b92213bf14ca579751016b10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c158226b92213bf14ca579751016b10">&#9670;&#160;</a></span>sdk_imodule_is_enabled()</h2>
+<a id="a9244e519a8bbde3586b891337a9e95b7" name="a9244e519a8bbde3586b891337a9e95b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9244e519a8bbde3586b891337a9e95b7">&#9670;&#160;</a></span>sdk_imodule_is_enabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> uint8_t sdk_imodule_is_enabled </td>
+          <td class="memname">uint8_t sdk_imodule_is_enabled </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
@@ -522,14 +522,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5cb092ad6b4db19346b1db16861a1215" name="a5cb092ad6b4db19346b1db16861a1215"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb092ad6b4db19346b1db16861a1215">&#9670;&#160;</a></span>sdk_imodule_set_context()</h2>
+<a id="a5e755afa42a08ad0099b36e8de6ece4a" name="a5e755afa42a08ad0099b36e8de6ece4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e755afa42a08ad0099b36e8de6ece4a">&#9670;&#160;</a></span>sdk_imodule_set_context()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_set_context </td>
+          <td class="memname">void sdk_imodule_set_context </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -560,14 +560,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9865afb8b0e072958bb974fe67f6bc03" name="a9865afb8b0e072958bb974fe67f6bc03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9865afb8b0e072958bb974fe67f6bc03">&#9670;&#160;</a></span>sdk_imodule_set_mdtp_data()</h2>
+<a id="a0fd5f01df8a69d0371a3940c270d0487" name="a0fd5f01df8a69d0371a3940c270d0487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd5f01df8a69d0371a3940c270d0487">&#9670;&#160;</a></span>sdk_imodule_set_mdtp_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_set_mdtp_data </td>
+          <td class="memname">void sdk_imodule_set_mdtp_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -598,14 +598,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abb929e5df243e775aa48ad5918f84d98" name="abb929e5df243e775aa48ad5918f84d98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb929e5df243e775aa48ad5918f84d98">&#9670;&#160;</a></span>sdk_imodule_set_poll_ratio()</h2>
+<a id="a46abeb8ab82d28d32c37cdd2c91068b0" name="a46abeb8ab82d28d32c37cdd2c91068b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46abeb8ab82d28d32c37cdd2c91068b0">&#9670;&#160;</a></span>sdk_imodule_set_poll_ratio()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_imodule_set_poll_ratio </td>
+          <td class="memname">void sdk_imodule_set_poll_ratio </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -635,14 +635,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a720c1cbec1590622d2a02814c3153c68" name="a720c1cbec1590622d2a02814c3153c68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720c1cbec1590622d2a02814c3153c68">&#9670;&#160;</a></span>sdk_module_register_destroy()</h2>
+<a id="acd7cffa14f32c80e78cc1c369582f1fc" name="acd7cffa14f32c80e78cc1c369582f1fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7cffa14f32c80e78cc1c369582f1fc">&#9670;&#160;</a></span>sdk_module_register_destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_destroy </td>
+          <td class="memname">void sdk_module_register_destroy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -675,14 +675,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a216d2b20d3b11e6d4db507ef4dffe79d" name="a216d2b20d3b11e6d4db507ef4dffe79d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a216d2b20d3b11e6d4db507ef4dffe79d">&#9670;&#160;</a></span>sdk_module_register_disable()</h2>
+<a id="a7205dad8e92fedb2fdce2fe200a0044a" name="a7205dad8e92fedb2fdce2fe200a0044a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7205dad8e92fedb2fdce2fe200a0044a">&#9670;&#160;</a></span>sdk_module_register_disable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_disable </td>
+          <td class="memname">void sdk_module_register_disable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -713,14 +713,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a477829532685cd357302b4a4d3120c8e" name="a477829532685cd357302b4a4d3120c8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a477829532685cd357302b4a4d3120c8e">&#9670;&#160;</a></span>sdk_module_register_enable()</h2>
+<a id="a3c5514ee0ec86f1db399ec24bd734984" name="a3c5514ee0ec86f1db399ec24bd734984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5514ee0ec86f1db399ec24bd734984">&#9670;&#160;</a></span>sdk_module_register_enable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_enable </td>
+          <td class="memname">void sdk_module_register_enable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -751,14 +751,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a669aecdfd9707eff2d9ccb2b0d5f66df" name="a669aecdfd9707eff2d9ccb2b0d5f66df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a669aecdfd9707eff2d9ccb2b0d5f66df">&#9670;&#160;</a></span>sdk_module_register_get_configuration()</h2>
+<a id="a0860138b29b20783aede3878288e0d16" name="a0860138b29b20783aede3878288e0d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0860138b29b20783aede3878288e0d16">&#9670;&#160;</a></span>sdk_module_register_get_configuration()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_get_configuration </td>
+          <td class="memname">void sdk_module_register_get_configuration </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -789,14 +789,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a89f5d5395af1fdafc0cd87f92071f682" name="a89f5d5395af1fdafc0cd87f92071f682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89f5d5395af1fdafc0cd87f92071f682">&#9670;&#160;</a></span>sdk_module_register_get_data()</h2>
+<a id="aa16079b98989075d83f2c090afa84a9b" name="aa16079b98989075d83f2c090afa84a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16079b98989075d83f2c090afa84a9b">&#9670;&#160;</a></span>sdk_module_register_get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_get_data </td>
+          <td class="memname">void sdk_module_register_get_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -827,14 +827,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a3ab6921174786ca9882190aac8b98738" name="a3ab6921174786ca9882190aac8b98738"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab6921174786ca9882190aac8b98738">&#9670;&#160;</a></span>sdk_module_register_get_module_description()</h2>
+<a id="a47463462d5cf7c2c4c2f27ac3fa7ae95" name="a47463462d5cf7c2c4c2f27ac3fa7ae95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47463462d5cf7c2c4c2f27ac3fa7ae95">&#9670;&#160;</a></span>sdk_module_register_get_module_description()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_get_module_description </td>
+          <td class="memname">void sdk_module_register_get_module_description </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -865,14 +865,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="ac9a0ec380c55aac38f51dc62ea9c2dd7" name="ac9a0ec380c55aac38f51dc62ea9c2dd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9a0ec380c55aac38f51dc62ea9c2dd7">&#9670;&#160;</a></span>sdk_module_register_get_module_name()</h2>
+<a id="a8bd4973e0d039e11522bd9100d0cc97b" name="a8bd4973e0d039e11522bd9100d0cc97b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd4973e0d039e11522bd9100d0cc97b">&#9670;&#160;</a></span>sdk_module_register_get_module_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_get_module_name </td>
+          <td class="memname">void sdk_module_register_get_module_name </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -903,14 +903,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a4a3800d8d1040bb31505d031d431de3c" name="a4a3800d8d1040bb31505d031d431de3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3800d8d1040bb31505d031d431de3c">&#9670;&#160;</a></span>sdk_module_register_get_poll_ratio()</h2>
+<a id="a95fd7b82098320665daae9910b594746" name="a95fd7b82098320665daae9910b594746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fd7b82098320665daae9910b594746">&#9670;&#160;</a></span>sdk_module_register_get_poll_ratio()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_get_poll_ratio </td>
+          <td class="memname">void sdk_module_register_get_poll_ratio </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -932,7 +932,8 @@ Do not block thread in this function </dd></dl>
 <p>Registers a module function that returns the poll ratio and will be called by the server core. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">module</td><td>Not-null pointer to <code>IModule</code>. If <code>NULL</code>, no effect.<code> @param callback Not-null pointer to function with signature</code>uint32_t(void)<code>. If</code>NULL`, no effect. </td></tr>
+    <tr><td class="paramname">module</td><td>Not-null pointer to <code>IModule</code>. If <code>NULL</code>, no effect. </td></tr>
+    <tr><td class="paramname">callback</td><td>Not-null pointer to function with signature <code>uint32_t(void)</code>. If <code>NULL</code>, no effect. </td></tr>
   </table>
   </dd>
 </dl>
@@ -940,14 +941,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a68f712a6a16e8f4302b1f7ddf8c09c93" name="a68f712a6a16e8f4302b1f7ddf8c09c93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68f712a6a16e8f4302b1f7ddf8c09c93">&#9670;&#160;</a></span>sdk_module_register_is_enabled()</h2>
+<a id="a0e9bcedf6beda810aa37677eb4492ab8" name="a0e9bcedf6beda810aa37677eb4492ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9bcedf6beda810aa37677eb4492ab8">&#9670;&#160;</a></span>sdk_module_register_is_enabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_is_enabled </td>
+          <td class="memname">void sdk_module_register_is_enabled </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>
@@ -978,14 +979,14 @@ Do not block thread in this function </dd></dl>
 
 </div>
 </div>
-<a id="a039e1a098c332d9858cd697f78bd8a46" name="a039e1a098c332d9858cd697f78bd8a46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a039e1a098c332d9858cd697f78bd8a46">&#9670;&#160;</a></span>sdk_module_register_set_poll_ratio()</h2>
+<a id="aa154b98a1ebcf8a0a12ae9abaeb5cbd7" name="aa154b98a1ebcf8a0a12ae9abaeb5cbd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa154b98a1ebcf8a0a12ae9abaeb5cbd7">&#9670;&#160;</a></span>sdk_module_register_set_poll_ratio()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="macro_8h.html#aa1017fe1a90661680724f3c0d1258330">SDK_EXPORT</a> void sdk_module_register_set_poll_ratio </td>
+          <td class="memname">void sdk_module_register_set_poll_ratio </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *&#160;</td>
           <td class="paramname"><em>module</em>, </td>

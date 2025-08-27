@@ -1,6 +1,5 @@
 var structABI__MODULE__FUNCTIONS =
 [
-    [ "json_configuration", "structABI__MODULE__FUNCTIONS.html#a7067c6739eca36e69c766d21fc63b3d9", null ],
     [ "module_destroy", "structABI__MODULE__FUNCTIONS.html#aaa32dc4225efa245169b9d53f4575c54", null ],
     [ "module_disable", "structABI__MODULE__FUNCTIONS.html#ad0a5380348dfae4a2729957f27f7a015", null ],
     [ "module_enable", "structABI__MODULE__FUNCTIONS.html#ac32b3500896e094eb6fdad83a2553a57", null ],
@@ -9,7 +8,7 @@ var structABI__MODULE__FUNCTIONS =
     [ "module_get_module_description", "structABI__MODULE__FUNCTIONS.html#acedeb650e03e5f617c66dba86ce61733", null ],
     [ "module_get_module_name", "structABI__MODULE__FUNCTIONS.html#a6af72c8a33979452c8884a071a2af8e3", null ],
     [ "module_get_poll_ratio", "structABI__MODULE__FUNCTIONS.html#a6eb7e6fd839e59e2dc8a3fb1ecc8732f", null ],
+    [ "module_init", "structABI__MODULE__FUNCTIONS.html#adaffde36015771aed6024ca64d6212be", null ],
     [ "module_is_enabled", "structABI__MODULE__FUNCTIONS.html#ac547324835c0f57e5fefae8871ddec0a", null ],
-    [ "module_set_poll_ratio", "structABI__MODULE__FUNCTIONS.html#a97a52c05a47ba6b789be5401eeed48af", null ],
-    [ "server_functions", "structABI__MODULE__FUNCTIONS.html#a8450415f9e9694d79390cfdb52592086", null ]
+    [ "module_set_poll_ratio", "structABI__MODULE__FUNCTIONS.html#a97a52c05a47ba6b789be5401eeed48af", null ]
 ];
