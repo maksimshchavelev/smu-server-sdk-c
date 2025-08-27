@@ -23,7 +23,7 @@ typedef struct IModule {
 } IModule;
 
 
-ABI_MODULE_FUNCTIONS module_init(ABI_SERVER_CORE_FUNCTIONS server_functions,
+ABI_MODULE_FUNCTIONS* module_init(ABI_SERVER_CORE_FUNCTIONS server_functions,
                                  const char *json_configuration); ///< Forward declaration
 
 
