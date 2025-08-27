@@ -5,7 +5,7 @@
  * @copyright Copyright (©) 2025, Maksim Shchavelev <maksimshchavelev@gmail.com>
  */
 
-#include "modules/internals/imodule.h"
+#include "../../include/modules/internals/imodule.h"
 #include <malloc.h>
 #include <string.h>
 

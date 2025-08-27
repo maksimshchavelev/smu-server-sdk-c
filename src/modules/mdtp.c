@@ -5,10 +5,10 @@
  * @copyright Copyright (©) 2025, Maksim Shchavelev <maksimshchavelev@gmail.com>
  */
 
-#include "modules/internals/mdtp.h"
-#include "modules/internals/abi.h"
-#include "modules/internals/imodule.h"
-#include "modules/internals/memutils.h"
+#include "../../include/modules/internals/mdtp.h"
+#include "../../include/modules/internals/abi.h"
+#include "../../include/modules/internals/imodule.h"
+#include "../../include/modules/internals/memutils.h"
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdint.h>

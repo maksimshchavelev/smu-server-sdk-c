@@ -5,8 +5,8 @@
  * @copyright Copyright (©) 2025, Maksim Shchavelev <maksimshchavelev@gmail.com>
  */
 
-#include "modules/internals/utils.h"
-#include "modules/internals/imodule.h"
+#include "../../include/modules/internals/utils.h"
+#include "../../include/modules/internals/imodule.h"
 
 // Log
 void sdk_utils_log(const IModule *module, LogType log_type, const char *message) {

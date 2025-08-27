@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include "modules/internals/abi.h"
-#include "modules/internals/macro.h"
+#include "abi.h"
+#include "macro.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -30,8 +30,8 @@ typedef struct IModule IModule;
  * @param is_enabled Is module enabled? (`1` if enabled, otherwise `0`)
  * @return Pointer to initialized `IModule` if success or `NULL` if error
  */
-SDK_EXPORT IModule *sdk_imodule_create(const char               *name,
-                                       const char               *description,
+SDK_EXPORT IModule* sdk_imodule_create(const char*               name,
+                                       const char*               description,
                                        ABI_SERVER_CORE_FUNCTIONS server_functions,
                                        uint32_t                  poll_ratio,
                                        uint8_t                   is_enabled);
@@ -41,14 +41,14 @@ SDK_EXPORT IModule *sdk_imodule_create(const char               *name,
  * @param module Not-null pointer to `IModule`. If a null pointer is passed, there will be no
  * effect.
  */
-SDK_EXPORT void sdk_imodule_destroy(IModule *module);
+SDK_EXPORT void sdk_imodule_destroy(IModule* module);
 
 /**
  * @brief Get context of the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  * @return Pointer to `ABI_MODULE_CONTEXT`
  */
-SDK_EXPORT const ABI_MODULE_CONTEXT *sdk_imodule_get_context(const IModule *module);
+SDK_EXPORT const ABI_MODULE_CONTEXT* sdk_imodule_get_context(const IModule* module);
 
 /**
  * @brief Set context of the module using pointer to `IModule`
@@ -57,14 +57,14 @@ SDK_EXPORT const ABI_MODULE_CONTEXT *sdk_imodule_get_context(const IModule *modu
  * @note The function frees the memory allocated for the old context, so you don't need to worry
  * about it.
  */
-SDK_EXPORT void sdk_imodule_set_context(IModule *module, ABI_MODULE_CONTEXT context);
+SDK_EXPORT void sdk_imodule_set_context(IModule* module, ABI_MODULE_CONTEXT context);
 
 /**
  * @brief Get MDTP data of the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  * @return Pointer to `ABI_MODULE_MDTP_DATA`
  */
-SDK_EXPORT const ABI_MODULE_MDTP_DATA *sdk_imodule_get_mdtp_data(const IModule *module);
+SDK_EXPORT const ABI_MODULE_MDTP_DATA* sdk_imodule_get_mdtp_data(const IModule* module);
 
 /**
  * @brief Set MDTP data of the module using pointer to `IModule`
@@ -73,55 +73,55 @@ SDK_EXPORT const ABI_MODULE_MDTP_DATA *sdk_imodule_get_mdtp_data(const IModule *
  * @note The function frees the memory allocated for the old data, so you don't need to worry
  * about it.
  */
-SDK_EXPORT void sdk_imodule_set_mdtp_data(IModule *module, ABI_MODULE_MDTP_DATA data);
+SDK_EXPORT void sdk_imodule_set_mdtp_data(IModule* module, ABI_MODULE_MDTP_DATA data);
 
 /**
  * @brief Get poll ratio of the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  * @return `uint32_t` with poll ratio
  */
-SDK_EXPORT uint32_t sdk_imodule_get_poll_ratio(const IModule *module);
+SDK_EXPORT uint32_t sdk_imodule_get_poll_ratio(const IModule* module);
 
 /**
  * @brief Sets poll ratio of the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  * @param poll_ratio Poll ratio
  */
-SDK_EXPORT void sdk_imodule_set_poll_ratio(IModule *module, uint32_t poll_ratio);
+SDK_EXPORT void sdk_imodule_set_poll_ratio(IModule* module, uint32_t poll_ratio);
 
 /**
  * @brief Enables the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  */
-SDK_EXPORT void sdk_imodule_enable(IModule *module);
+SDK_EXPORT void sdk_imodule_enable(IModule* module);
 
 /**
  * @brief Disables the module using pointer to `IModule`
  * @param module Not-null pointer to `IModule`
  */
-SDK_EXPORT void sdk_imodule_disable(IModule *module);
+SDK_EXPORT void sdk_imodule_disable(IModule* module);
 
 /**
  * @brief Check if the module is enabled
  * @param module Not-null pointer to `IModule`
  * @return `1` if the module is enabled, otherwise `0`
  */
-SDK_EXPORT uint8_t sdk_imodule_is_enabled(const IModule *module);
+SDK_EXPORT uint8_t sdk_imodule_is_enabled(const IModule* module);
 
 /**
  * @brief Get structure with pointer to module functions
  * @param module Not-null pointer to `IModule`
  * @return Pointer to `ABI_MODULE_FUNCTIONS`
  */
-SDK_EXPORT const ABI_MODULE_FUNCTIONS *sdk_imodule_get_module_functions(const IModule *module);
+SDK_EXPORT const ABI_MODULE_FUNCTIONS* sdk_imodule_get_module_functions(const IModule* module);
 
 /**
  * @brief Get structure with pointer to server core functions
  * @param module Not-null pointer to `IModule`
  * @return Pointer to `ABI_SERVER_CORE_FUNCTIONS`
  */
-SDK_EXPORT const ABI_SERVER_CORE_FUNCTIONS *sdk_imodule_get_server_core_functions(
-    const IModule *module);
+SDK_EXPORT const ABI_SERVER_CORE_FUNCTIONS* sdk_imodule_get_server_core_functions(
+    const IModule* module);
 
 
 // ================================== REGISTERERS ==================================
@@ -134,7 +134,7 @@ SDK_EXPORT const ABI_SERVER_CORE_FUNCTIONS *sdk_imodule_get_server_core_function
  * `IModule`
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_destroy(IModule *module, void (*callback)(void));
+SDK_EXPORT void sdk_module_register_destroy(IModule* module, void (*callback)(void));
 
 /**
  * @brief Registers a module function that returns JSON configuration and will be called by the
@@ -144,8 +144,8 @@ SDK_EXPORT void sdk_module_register_destroy(IModule *module, void (*callback)(vo
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_get_configuration(IModule *module,
-                                                      const char *(*callback)(void));
+SDK_EXPORT void sdk_module_register_get_configuration(IModule* module,
+                                                      const char* (*callback)(void));
 
 /**
  * @brief Registers a module function that returns MDTP data and will be called by the
@@ -155,8 +155,8 @@ SDK_EXPORT void sdk_module_register_get_configuration(IModule *module,
  * If `NULL`, no effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_get_data(IModule *module,
-                                             const ABI_MODULE_MDTP_DATA *(*callback)(void));
+SDK_EXPORT void sdk_module_register_get_data(IModule* module,
+                                             const ABI_MODULE_MDTP_DATA* (*callback)(void));
 
 /**
  * @brief Registers a module function that enables the module and will be called by the
@@ -165,7 +165,7 @@ SDK_EXPORT void sdk_module_register_get_data(IModule *module,
  * @param callback Not-null pointer to function with signature `void(void)`. If `NULL`, no effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_enable(IModule *module, void (*callback)(void));
+SDK_EXPORT void sdk_module_register_enable(IModule* module, void (*callback)(void));
 
 /**
  * @brief Registers a module function that disables the module and will be called by the
@@ -174,7 +174,7 @@ SDK_EXPORT void sdk_module_register_enable(IModule *module, void (*callback)(voi
  * @param callback Not-null pointer to function with signature `void(void)`. If `NULL`, no effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_disable(IModule *module, void (*callback)(void));
+SDK_EXPORT void sdk_module_register_disable(IModule* module, void (*callback)(void));
 
 /**
  * @brief Registers a module function that checks if the module is enabled and will be called by the
@@ -184,7 +184,7 @@ SDK_EXPORT void sdk_module_register_disable(IModule *module, void (*callback)(vo
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_is_enabled(IModule *module, uint8_t (*callback)(void));
+SDK_EXPORT void sdk_module_register_is_enabled(IModule* module, uint8_t (*callback)(void));
 
 /**
  * @brief Registers a module function that returns the module name and will be called by the
@@ -194,7 +194,7 @@ SDK_EXPORT void sdk_module_register_is_enabled(IModule *module, uint8_t (*callba
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_get_module_name(IModule *module, const char *(*callback)(void));
+SDK_EXPORT void sdk_module_register_get_module_name(IModule* module, const char* (*callback)(void));
 
 /**
  * @brief Registers a module function that returns the module description and will be called by the
@@ -204,8 +204,8 @@ SDK_EXPORT void sdk_module_register_get_module_name(IModule *module, const char 
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_get_module_description(IModule *module,
-                                                           const char *(*callback)(void));
+SDK_EXPORT void sdk_module_register_get_module_description(IModule* module,
+                                                           const char* (*callback)(void));
 
 /**
  * @brief Registers a module function that sets the poll ratio and will be called by the
@@ -215,7 +215,7 @@ SDK_EXPORT void sdk_module_register_get_module_description(IModule *module,
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_set_poll_ratio(IModule *module,
+SDK_EXPORT void sdk_module_register_set_poll_ratio(IModule* module,
                                                    void (*callback)(uint32_t poll_ratio));
 
 /**
@@ -226,7 +226,7 @@ SDK_EXPORT void sdk_module_register_set_poll_ratio(IModule *module,
  * effect.
  * @note Do not block thread in this function
  */
-SDK_EXPORT void sdk_module_register_get_poll_ratio(IModule *module, uint32_t (*callback)(void));
+SDK_EXPORT void sdk_module_register_get_poll_ratio(IModule* module, uint32_t (*callback)(void));
 
 
 #ifdef __cplusplus
