@@ -77,9 +77,8 @@ typedef struct ABI_MODULE_FUNCTIONS ABI_MODULE_FUNCTIONS; ///< Forward declarati
  * @note This is a packaged structure.
  */
 typedef struct ABI_MODULE_FUNCTIONS {
-    ABI_MODULE_FUNCTIONS(*module_init)
-    (ABI_SERVER_CORE_FUNCTIONS server_functions,
-     const char               *json_configuration); ///< Initializes module
+    ABI_MODULE_FUNCTIONS *(*module_init)(ABI_SERVER_CORE_FUNCTIONS server_functions,
+                                         const char *json_configuration); ///< Initializes module
 
     void (*module_destroy)(void); ///< Destroys module
 
