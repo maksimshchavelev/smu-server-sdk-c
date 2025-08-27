@@ -1,7 +1,19 @@
 <map id="include/modules/sdk.h" name="include/modules/sdk.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="93,5,261,31"/>
-<area shape="rect" id="Node000002" href="$mdtp_8h.html" title=" " alt="" coords="5,79,195,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,33,125,71,121,67,163,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="219,79,290,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,29,234,67,230,71,188,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="203,5,371,31"/>
+<area shape="rect" id="Node000002" href="$imodule_8h.html" title=" " alt="" coords="51,79,199,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,33,165,75,163,71,260,28"/>
+<area shape="rect" id="Node000006" href="$mdtp_8h.html" title=" " alt="" coords="223,79,352,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="290,31,290,65,285,65,285,31"/>
+<area shape="rect" id="Node000007" href="$utils_8h.html" title=" " alt="" coords="377,79,499,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="313,28,402,70,400,75,310,33"/>
+<area shape="rect" id="Node000003" href="$abi_8h.html" title=" " alt="" coords="5,152,180,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,105,106,141,101,139,117,103"/>
+<area shape="rect" id="Node000005" href="$macro_8h.html" title=" " alt="" coords="204,152,400,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="154,102,262,144,260,149,152,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="229,225,300,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="121,175,225,218,223,222,119,180"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="440,104,434,140,427,161,415,179,392,198,367,213,314,231,313,226,364,208,389,194,411,176,422,158,429,139,435,104"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="417,106,337,148,335,143,415,102"/>
+<area shape="rect" id="Node000008" href="$log__type_8h.html" title=" " alt="" coords="476,152,619,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="457,102,519,142,516,147,454,106"/>
 </map>

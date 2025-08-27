@@ -1,0 +1,10 @@
+<map id="include/modules/internals/macro.h" name="include/modules/internals/macro.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="112,5,303,45"/>
+<area shape="rect" id="Node000002" href="$imodule_8h.html" title=" " alt="" coords="5,93,196,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,56,126,95,123,91,171,52"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html" title=" " alt="" coords="220,93,411,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,52,293,91,290,95,240,56"/>
+<area shape="rect" id="Node000003" href="$sdk_8h.html" title=" " alt="" coords="123,181,291,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,139,193,179,190,183,136,144"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="280,144,225,183,222,179,277,139"/>
+</map>

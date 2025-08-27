@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mdtp_5futils_0',['MDTP_UTILS',['../mdtp_8h.html#a9531e94d625f502d7c4918d046ccda89',1,'mdtp.h']]]
+  ['logtype_0',['LogType',['../log__type_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'log_type.h']]]
 ];

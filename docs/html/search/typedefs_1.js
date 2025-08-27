@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logtype_0',['logtype',['../sdk__internals_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'LogType:&#160;sdk_internals.h'],['../sdk_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'LogType:&#160;sdk.h']]]
+  ['imodule_0',['imodule',['../imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;imodule.h'],['../mdtp_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;mdtp.h'],['../utils_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;utils.h']]]
 ];

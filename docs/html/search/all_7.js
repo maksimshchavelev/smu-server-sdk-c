@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['get_5fmodule_5fcontext_0',['get_module_context',['../structSDK__UTILS.html#a56f18e7052ae4358b778a7df520093fe',1,'SDK_UTILS']]],
-  ['get_5fmodule_5fdescription_1',['get_module_description',['../structSDK__UTILS.html#adbea32da49845568b7187ca23fb4ad14',1,'SDK_UTILS']]],
-  ['get_5fmodule_5fname_2',['get_module_name',['../structSDK__UTILS.html#af98e10b37db5c177b995d823168e098a',1,'SDK_UTILS']]]
+  ['imodule_0',['imodule',['../imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;imodule.h'],['../mdtp_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;mdtp.h'],['../utils_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;utils.h']]],
+  ['imodule_2eh_1',['imodule.h',['../imodule_8h.html',1,'']]],
+  ['installation_20usage_20for_20developers_2',['Installation &amp; Usage (for developers)',['../index.html#autotoc_md3',1,'']]],
+  ['installation_20usage_20for_20users_3',['Installation &amp; Usage (for users)',['../index.html#autotoc_md2',1,'']]],
+  ['is_20smu_20server_20sdk_20c_4',['What is smu-server-sdk-c?',['../index.html',1,'']]]
 ];

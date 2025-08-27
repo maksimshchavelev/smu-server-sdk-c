@@ -1,9 +1,11 @@
 var mdtp_8h =
 [
-    [ "MDTP_UTILS", "structMDTP__UTILS.html", "structMDTP__UTILS" ],
     [ "MDTP_VERSION", "mdtp_8h.html#a357643e0e2d554074819928045d769b4", null ],
     [ "ABI_MODULE_MDTP_DATA", "mdtp_8h.html#a9016ce294f17633f6865cb8d8b959b28", null ],
-    [ "MDTP_UTILS", "mdtp_8h.html#a9531e94d625f502d7c4918d046ccda89", null ],
-    [ "mdtp_utils_destroy", "mdtp_8h.html#aa4e0ab38b2514f412a2bd2af68fe7175", null ],
-    [ "mdtp_utils_init", "mdtp_8h.html#a1ff708aaf500fc05e1c8a98671339d88", null ]
+    [ "IModule", "mdtp_8h.html#ae33352835e22f05eb5ebddfae7e797ca", null ],
+    [ "sdk_mdtp_free_container", "mdtp_8h.html#aabd41e20c8678d87c8c2e84ae900934f", null ],
+    [ "sdk_mdtp_free_value", "mdtp_8h.html#ae4f952dfd4149f1f8a38b0164afd4e12", null ],
+    [ "sdk_mdtp_make_container", "mdtp_8h.html#adbae223ab213c794ce68819cd181d855", null ],
+    [ "sdk_mdtp_make_root", "mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a", null ],
+    [ "sdk_mdtp_make_value", "mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857", null ]
 ];

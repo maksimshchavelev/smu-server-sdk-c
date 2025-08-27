@@ -103,26 +103,26 @@ $(document).ready(function(){initNavTree('structABI__SERVER__CORE__FUNCTIONS.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ac3b2df118803a4018b44f4e5f9da2790" id="r_ac3b2df118803a4018b44f4e5f9da2790"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html#ac3b2df118803a4018b44f4e5f9da2790">abi_get_abi_version</a> )(<a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context)</td></tr>
-<tr class="memdesc:ac3b2df118803a4018b44f4e5f9da2790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ABI version.  <br /></td></tr>
-<tr class="separator:ac3b2df118803a4018b44f4e5f9da2790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5cc3ee924027cd7bf258da38829bc02" id="r_af5cc3ee924027cd7bf258da38829bc02"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html#af5cc3ee924027cd7bf258da38829bc02">abi_log</a> )(<a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context, int log_type, const char *message)</td></tr>
-<tr class="memdesc:af5cc3ee924027cd7bf258da38829bc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging function.  <br /></td></tr>
-<tr class="separator:af5cc3ee924027cd7bf258da38829bc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10fe0284f03bd22baa0ae37e863b338" id="r_ac10fe0284f03bd22baa0ae37e863b338"><td class="memItemLeft" align="right" valign="top">uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html#ac10fe0284f03bd22baa0ae37e863b338">abi_get_abi_version</a> )(const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context)</td></tr>
+<tr class="memdesc:ac10fe0284f03bd22baa0ae37e863b338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ABI version.  <br /></td></tr>
+<tr class="separator:ac10fe0284f03bd22baa0ae37e863b338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9012748332cc80b87f4abe4ae05432f9" id="r_a9012748332cc80b87f4abe4ae05432f9"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structABI__SERVER__CORE__FUNCTIONS.html#a9012748332cc80b87f4abe4ae05432f9">abi_log</a> )(const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context, int log_type, const char *message)</td></tr>
+<tr class="memdesc:a9012748332cc80b87f4abe4ae05432f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging function.  <br /></td></tr>
+<tr class="separator:a9012748332cc80b87f4abe4ae05432f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions provided by the server for the module. </p>
 <p>This structure will be passed to the module initialization function.</p>
 <dl class="section note"><dt>Note</dt><dd>This is a packaged structure. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="ac3b2df118803a4018b44f4e5f9da2790" name="ac3b2df118803a4018b44f4e5f9da2790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3b2df118803a4018b44f4e5f9da2790">&#9670;&#160;</a></span>abi_get_abi_version</h2>
+<a id="ac10fe0284f03bd22baa0ae37e863b338" name="ac10fe0284f03bd22baa0ae37e863b338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10fe0284f03bd22baa0ae37e863b338">&#9670;&#160;</a></span>abi_get_abi_version</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* ABI_SERVER_CORE_FUNCTIONS::abi_get_abi_version) (<a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context)</td>
+          <td class="memname">uint32_t(* ABI_SERVER_CORE_FUNCTIONS::abi_get_abi_version) (const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -138,14 +138,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="af5cc3ee924027cd7bf258da38829bc02" name="af5cc3ee924027cd7bf258da38829bc02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5cc3ee924027cd7bf258da38829bc02">&#9670;&#160;</a></span>abi_log</h2>
+<a id="a9012748332cc80b87f4abe4ae05432f9" name="a9012748332cc80b87f4abe4ae05432f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9012748332cc80b87f4abe4ae05432f9">&#9670;&#160;</a></span>abi_log</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* ABI_SERVER_CORE_FUNCTIONS::abi_log) (<a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context, int log_type, const char *message)</td>
+          <td class="memname">void(* ABI_SERVER_CORE_FUNCTIONS::abi_log) (const <a class="el" href="structABI__MODULE__CONTEXT.html">ABI_MODULE_CONTEXT</a> *context, int log_type, const char *message)</td>
         </tr>
       </table>
 </div><div class="memdoc">
