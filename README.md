@@ -17,7 +17,8 @@ To use, install the `dev` package from releases (the `dev` package only contains
 
 Next, check out these articles in the guide:
 
-- [Development of the first module](guides/0_first_module.md)
+- [Rules for creating your own modules](guides/0_module_template.md)
+- [Creating the first module](guides/1_own_module.md)
 
 
 
@@ -65,6 +66,19 @@ Use flags during configuration by passing them to cmake via `-D<flag>`, for exam
 ```
 cmake .. -DSDK_C_ENABLE_SANITIZERS=ON
 ```
+
+
+## Contribuing
+Please follow these guidelines:
+- Use `clang-format.txt`, which is located in the root of the repository for code formatting
+- Write clear, structured code.
+- Variables should clearly indicate their purpose. For global variables in `.c` files, use `static`
+- Functions must start with the prefix `sdk`. Then comes the name of the component. Then the name of the function, clearly and unambiguously reflecting its purpose. For example, `sdk_utils_log` refers to the SDK utility functions and is needed for logging.
+- Cover your code with tests. Place tests in the `tests` directory. The main test file is `main.c`. In it, write the test as a normal program, using the `Unity` testing library.
+- Write all the names of everything in `snake_case`
+- Commits should be clear and reflect the essence of the changes.
+- Describe all your functions/structures etc. in `Doxygen` style
+- Run tests only in **Debug** configuration **with sanitizers enabled**. This will catch more errors
 
 
 ## License
