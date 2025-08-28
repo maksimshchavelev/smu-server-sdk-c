@@ -3,6 +3,11 @@
 This is an SDK for developing external dynamically loadable modules in C language as part of the server part of the [smu (server monitoring utility) project](https://github.com/maksimshchavelev/server-monitoring-utility)
 
 
+## Documentation
+
+[See documentation here](https://maksimshchavelev.github.io/smu-server-sdk-c/html/)
+
+
 ## Installation & Usage (for users)
 
 If you are a regular user, download the **non `dev`** package and install it
