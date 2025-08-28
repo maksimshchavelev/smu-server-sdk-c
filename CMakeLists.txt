@@ -9,7 +9,7 @@ option(SDK_C_ENABLE_SANITIZERS "Enable sanitizers (only for Linux)?" OFF)
 set(SDK_NAME smu-server-sdk-c)
 set(SDK_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(SDK_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
-set(CMAKE_INSTALL_PREFIX /usr/local CACHE PATH "Install path prefix" FORCE)
+set(CMAKE_INSTALL_PREFIX /usr CACHE PATH "Install path prefix" FORCE)
 
 
 # VERSIONING
