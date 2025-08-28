@@ -1,0 +1,27 @@
+var imodule_8h =
+[
+    [ "IModule", "imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca", null ],
+    [ "sdk_imodule_create", "imodule_8h.html#a90c4800f4f43442f9022199489fa808f", null ],
+    [ "sdk_imodule_destroy", "imodule_8h.html#ab90b626232c3ec21f7f921a7bfa972de", null ],
+    [ "sdk_imodule_disable", "imodule_8h.html#acfdafaf928a53e4792e02c117560c5bb", null ],
+    [ "sdk_imodule_enable", "imodule_8h.html#a82dc1ecb02b5e126a5550470b73a7690", null ],
+    [ "sdk_imodule_get_context", "imodule_8h.html#a36a612139c1847eb36c9e0e9c7e069c2", null ],
+    [ "sdk_imodule_get_mdtp_data", "imodule_8h.html#a34aacaade718910c04e1c27982215612", null ],
+    [ "sdk_imodule_get_module_functions", "imodule_8h.html#a2b1a41abeb75f72b3e4898da85c32dd7", null ],
+    [ "sdk_imodule_get_poll_ratio", "imodule_8h.html#a6e3c478ae8c9b103bb34c2772b0f5320", null ],
+    [ "sdk_imodule_get_server_core_functions", "imodule_8h.html#a3481587778666204638532e0ac8c4ed8", null ],
+    [ "sdk_imodule_is_enabled", "imodule_8h.html#a9244e519a8bbde3586b891337a9e95b7", null ],
+    [ "sdk_imodule_set_context", "imodule_8h.html#a5e755afa42a08ad0099b36e8de6ece4a", null ],
+    [ "sdk_imodule_set_mdtp_data", "imodule_8h.html#a0fd5f01df8a69d0371a3940c270d0487", null ],
+    [ "sdk_imodule_set_poll_ratio", "imodule_8h.html#a46abeb8ab82d28d32c37cdd2c91068b0", null ],
+    [ "sdk_module_register_destroy", "imodule_8h.html#acd7cffa14f32c80e78cc1c369582f1fc", null ],
+    [ "sdk_module_register_disable", "imodule_8h.html#a7205dad8e92fedb2fdce2fe200a0044a", null ],
+    [ "sdk_module_register_enable", "imodule_8h.html#a3c5514ee0ec86f1db399ec24bd734984", null ],
+    [ "sdk_module_register_get_configuration", "imodule_8h.html#a0860138b29b20783aede3878288e0d16", null ],
+    [ "sdk_module_register_get_data", "imodule_8h.html#aa16079b98989075d83f2c090afa84a9b", null ],
+    [ "sdk_module_register_get_module_description", "imodule_8h.html#a47463462d5cf7c2c4c2f27ac3fa7ae95", null ],
+    [ "sdk_module_register_get_module_name", "imodule_8h.html#a8bd4973e0d039e11522bd9100d0cc97b", null ],
+    [ "sdk_module_register_get_poll_ratio", "imodule_8h.html#a95fd7b82098320665daae9910b594746", null ],
+    [ "sdk_module_register_is_enabled", "imodule_8h.html#a0e9bcedf6beda810aa37677eb4492ab8", null ],
+    [ "sdk_module_register_set_poll_ratio", "imodule_8h.html#aa154b98a1ebcf8a0a12ae9abaeb5cbd7", null ]
+];

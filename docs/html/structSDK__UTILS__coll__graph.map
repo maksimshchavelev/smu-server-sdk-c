@@ -1,0 +1,9 @@
+<map id="SDK_UTILS" name="SDK_UTILS">
+<area shape="rect" id="Node000001" title="Structure with SDK utility functions, such as logging or Json parsing. See details for usage example." alt="" coords="131,181,225,207"/>
+<area shape="rect" id="Node000002" href="$structABI__MODULE__CONTEXT.html" title="Context of module." alt="" coords="5,93,183,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,132,93,145,98,156,113,171,132,180,130,185,110,175,93,159,88,146,87,132"/>
+<area shape="rect" id="Node000003" href="$structMDTP__UTILS.html" title="Structure with pointers to functions for working with the MDTP protocol." alt="" coords="210,93,314,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,133,235,159,202,183,199,179,231,155,249,130"/>
+<area shape="rect" id="Node000004" href="$structABI__MODULE__MDTP__DATA.html" title="Struct to storing MDTP data. See documentation for MDTP protocol." alt="" coords="165,5,359,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,45,265,93,259,93,259,45"/>
+</map>

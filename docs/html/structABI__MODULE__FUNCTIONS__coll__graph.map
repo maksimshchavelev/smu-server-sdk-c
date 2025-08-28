@@ -1,0 +1,6 @@
+<map id="ABI_MODULE_FUNCTIONS" name="ABI_MODULE_FUNCTIONS">
+<area shape="rect" id="Node000001" title="Functions of the module that calls the server core." alt="" coords="7,93,199,119"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="213,98,225,106,217,113,199,116,198,111,215,108,220,106,211,103"/>
+<area shape="rect" id="Node000002" href="$structABI__MODULE__MDTP__DATA.html" title="Struct to storing MDTP data. See documentation for MDTP protocol." alt="" coords="5,5,200,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="105,45,105,93,100,93,100,45"/>
+</map>
