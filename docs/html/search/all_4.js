@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['data_0',['data',['../structABI__MODULE__MDTP__DATA.html#ac90e848dcab20ba6d6fc2c60730376de',1,'ABI_MODULE_MDTP_DATA']]],
-  ['developers_1',['Installation &amp; Usage (for developers)',['../index.html#autotoc_md3',1,'']]],
-  ['development_20of_20your_20own_20module_2',['Development of your own module',['../md_guides_20__first__module.html',1,'']]]
+  ['c_0',['c',['../md_guides_20__module__template.html#autotoc_md3',1,'main.c'],['../index.html',1,'What is smu-server-sdk-c?']]],
+  ['cmake_5fminimum_5frequired_1',['cmake_minimum_required',['../CMakeLists_8txt.html#a8151db42ff336ff441b32ae7baae11e0',1,'CMakeLists.txt']]],
+  ['cmakelists_20txt_2',['CMakeLists.txt',['../md_guides_20__module__template.html#autotoc_md2',1,'']]],
+  ['cmakelists_2etxt_3',['CMakeLists.txt',['../CMakeLists_8txt.html',1,'']]],
+  ['conclusion_4',['Conclusion',['../md_guides_20__module__template.html#autotoc_md5',1,'']]],
+  ['contribuing_5',['Contribuing',['../index.html#autotoc_md12',1,'']]]
 ];

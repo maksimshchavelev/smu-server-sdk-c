@@ -26,7 +26,14 @@ var NAVTREE =
 [
   [ "smu-server-sdk-c", "index.html", [
     [ "What is smu-server-sdk-c?", "index.html", "index" ],
-    [ "Development of your own module", "md_guides_20__first__module.html", null ],
+    [ "Module template", "md_guides_20__module__template.html", [
+      [ "Architecture", "md_guides_20__module__template.html#autotoc_md1", null ],
+      [ "CMakeLists.txt", "md_guides_20__module__template.html#autotoc_md2", null ],
+      [ "main.c", "md_guides_20__module__template.html#autotoc_md3", null ],
+      [ "Result", "md_guides_20__module__template.html#autotoc_md4", null ],
+      [ "Conclusion", "md_guides_20__module__template.html#autotoc_md5", null ]
+    ] ],
+    [ "Developing of own module", "md_guides_21__own__module.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

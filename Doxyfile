@@ -3,8 +3,9 @@
 #--------------------------------------------------------------------------- 
 PROJECT_NAME           = "smu-server-sdk-c"
 OUTPUT_DIRECTORY       = docs
-INPUT                  = include guides README.md
-FILE_PATTERNS          = *.h *.md
+INPUT                  = include guides guides/examples README.md
+FILE_PATTERNS          = *.h *.c *.md *.txt
+EXAMPLE_PATH 	       = guides/examples
 RECURSIVE              = YES
 STRIP_FROM_INC_PATH    = include
 ENABLE_PREPROCESSING   = YES
@@ -27,6 +28,9 @@ INTERNAL_DOCS          = YES          # export @internal
 HIDE_UNDOC_MEMBERS     = YES
 HIDE_UNDOC_CLASSES     = YES
 OPTIMIZE_OUTPUT_FOR_C  = YES
+HTML_DYNAMIC_MENUS     = YES
+GENERATE_TREEVIEW      = YES
+HTML_DYNAMIC_SECTIONS  = YES
 
 # EXCLUDE_PATTERNS       += */internals/*
 

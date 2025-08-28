@@ -94,13 +94,13 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> This is an SDK for developing external dynamically loadable modules in C language as part of the server part of the <a href="https://github.com/maksimshchavelev/server-monitoring-utility">smu (server monitoring utility) project</a></p>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Installation &amp; Usage (for users)</h1>
 <p>If you are a regular user, download the <b>non <code>dev</code></b> package and install it</p>
 <blockquote class="doxtable">
 <p>&zwj;You can download the <b>non <code>dev</code></b> package from the <code>smu</code> releases - it will contain SDKs for all languages ​​integrated into the project </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Installation &amp; Usage (for developers)</h1>
 <p>To use, install the <code>dev</code> package from releases (the <code>dev</code> package only contains runtime libraries). It also contains header files.</p>
 <blockquote class="doxtable">
@@ -108,9 +108,10 @@ Installation &amp; Usage (for developers)</h1>
 </blockquote>
 <p>Next, check out these articles in the guide:</p>
 <ul>
-<li><a class="el" href="md_guides_20__first__module.html">Development of the first module</a></li>
+<li><a class="el" href="md_guides_20__module__template.html">Rules for creating your own modules</a></li>
+<li><a class="el" href="md_guides_21__own__module.html">Creating the first module</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Building from source</h1>
 <p>First, you will need <code>cmake</code> and <code>gcc</code>. Install them with: </p><div class="fragment"><div class="line">sudo apt install cmake gcc</div>
 </div><!-- fragment --><p>Then download the archive with the source code of the latest release and unzip it somewhere. Go to the directory with the source code. <b>Further, all commands will be executed from this directory</b>:</p>
@@ -120,7 +121,7 @@ Building from source</h1>
 </div><!-- fragment --><p>Then create <code>deb</code> packages:</p>
 <div class="fragment"><div class="line">cmake --build . --target package</div>
 </div><!-- fragment --><p>You will see a development package and a package with runtime libraries.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Building flags</h2>
 <p>The following cmake build flags are available:</p>
 <table class="markdownTable">
@@ -133,7 +134,20 @@ Building flags</h2>
 </table>
 <p>Use flags during configuration by passing them to cmake via <code>-D&lt;flag&gt;</code>, for example:</p>
 <div class="fragment"><div class="line">cmake .. -DSDK_C_ENABLE_SANITIZERS=ON</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+Contribuing</h1>
+<p>Please follow these guidelines:</p><ul>
+<li>Use <code>clang-format.txt</code>, which is located in the root of the repository for code formatting</li>
+<li>Write clear, structured code.</li>
+<li>Variables should clearly indicate their purpose. For global variables in <code>.c</code> files, use <code>static</code></li>
+<li>Functions must start with the prefix <code>sdk</code>. Then comes the name of the component. Then the name of the function, clearly and unambiguously reflecting its purpose. For example, <code>sdk_utils_log</code> refers to the SDK utility functions and is needed for logging.</li>
+<li>Cover your code with tests. Place tests in the <code>tests</code> directory. The main test file is <code><a class="el" href="main_8c.html">main.c</a></code>. In it, write the test as a normal program, using the <code>Unity</code> testing library.</li>
+<li>Write all the names of everything in <code>snake_case</code></li>
+<li>Commits should be clear and reflect the essence of the changes.</li>
+<li>Describe all your functions/structures etc. in <code>Doxygen</code> style</li>
+<li>Run tests only in <b>Debug</b> configuration <b>with sanitizers enabled</b>. This will catch more errors</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md13"></a>
 License</h1>
 <p>This project is licensed under the <a href="./LICENSE">GPLv3 License</a></p>
 <p>It uses third-party components:</p><ul>
