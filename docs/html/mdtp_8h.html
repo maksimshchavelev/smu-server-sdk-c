@@ -303,7 +303,10 @@ The <code>name</code> string is copied into the container. The caller remains re
 <div class="line"><span class="keywordtype">void</span> *container = <a class="code hl_function" href="mdtp_8h.html#adbae223ab213c794ce68819cd181d855">sdk_mdtp_make_container</a>(<span class="stringliteral">&quot;ram&quot;</span>,</div>
 <div class="line">    <a class="code hl_function" href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a>(<span class="stringliteral">&quot;use&quot;</span>, <span class="stringliteral">&quot;12&quot;</span>, <span class="stringliteral">&quot;gb&quot;</span>),</div>
 <div class="line">    NULL);</div>
+<div class="line"><span class="comment">// Do something with container...</span></div>
+<div class="line"><a class="code hl_function" href="mdtp_8h.html#aabd41e20c8678d87c8c2e84ae900934f">sdk_mdtp_free_container</a>(container);</div>
 <div class="ttc" id="amdtp_8h_html_aa8ca73fdaa13f40d373b4c5aea3e9857"><div class="ttname"><a href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a></div><div class="ttdeci">void * sdk_mdtp_make_value(const char *value_name, const char *value, const char *value_units)</div><div class="ttdoc">Creates a value node.</div></div>
+<div class="ttc" id="amdtp_8h_html_aabd41e20c8678d87c8c2e84ae900934f"><div class="ttname"><a href="mdtp_8h.html#aabd41e20c8678d87c8c2e84ae900934f">sdk_mdtp_free_container</a></div><div class="ttdeci">void sdk_mdtp_free_container(void *container_node)</div><div class="ttdoc">Frees memory allocated for container node via MDTP_UTILS::make_container</div></div>
 <div class="ttc" id="amdtp_8h_html_adbae223ab213c794ce68819cd181d855"><div class="ttname"><a href="mdtp_8h.html#adbae223ab213c794ce68819cd181d855">sdk_mdtp_make_container</a></div><div class="ttdeci">void * sdk_mdtp_make_container(const char *name, void *first,...)</div><div class="ttdoc">Creates a container node.</div></div>
 </div><!-- fragment --> 
 </div>
@@ -355,9 +358,9 @@ The <code>name</code> string is copied into the container. The caller remains re
 The function takes ownership of passed nodes. Do not free them manually afterwards.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a valid <code>SDK_MODULE_MDTP_DATA</code> frame. <b>Do not free it, as this will happen automatically when the module terminates!</b></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Example usage:</span></div>
-<div class="line">SDK_MODULE_MDTP_DATA *data = <a class="code hl_function" href="mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a">sdk_mdtp_make_root</a>(</div>
+<div class="line">SDK_MODULE_MDTP_DATA *data = <a class="code hl_function" href="mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a">sdk_mdtp_make_root</a>(module,</div>
 <div class="line">    <a class="code hl_function" href="mdtp_8h.html#adbae223ab213c794ce68819cd181d855">sdk_mdtp_make_container</a>(<span class="stringliteral">&quot;ram&quot;</span>,</div>
-<div class="line">        <a class="code hl_function" href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a>(<span class="stringliteral">&quot;use&quot;</span>, <span class="stringliteral">&quot;12&quot;</span>, <span class="stringliteral">&quot;gb&quot;</span>),</div>
+<div class="line">        <a class="code hl_function" href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a>(<span class="stringliteral">&quot;usage&quot;</span>, <span class="stringliteral">&quot;12&quot;</span>, <span class="stringliteral">&quot;gb&quot;</span>),</div>
 <div class="line">        NULL),</div>
 <div class="line">    NULL);</div>
 <div class="ttc" id="amdtp_8h_html_afd1e45604f7d711eb0c321d0a5b1662a"><div class="ttname"><a href="mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a">sdk_mdtp_make_root</a></div><div class="ttdeci">const ABI_MODULE_MDTP_DATA * sdk_mdtp_make_root(IModule *module, void *first,...)</div><div class="ttdoc">Generates a valid MDTP frame with header, ready to be sent to the server.</div></div>
@@ -413,6 +416,9 @@ Value nodes cannot contain children. They are always leaves in the MDTP structur
 <dl class="section return"><dt>Returns</dt><dd><code>void*</code> Pointer to the created value node. <b>Must be freed with <code>sdk_mdtp_free_value</code> if you do not pass this pointer to <code>sdk_mdtp_make_container</code> or <code>sdk_mdtp_make_root</code></b>.</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Example usage:</span></div>
 <div class="line"><span class="keywordtype">void</span> *val = <a class="code hl_function" href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a>(<span class="stringliteral">&quot;RAM&quot;</span>, <span class="stringliteral">&quot;1234&quot;</span>, <span class="stringliteral">&quot;MB&quot;</span>);</div>
+<div class="line"><span class="comment">// Do something with value...</span></div>
+<div class="line"><a class="code hl_function" href="mdtp_8h.html#ae4f952dfd4149f1f8a38b0164afd4e12">sdk_mdtp_free_value</a>(val);</div>
+<div class="ttc" id="amdtp_8h_html_ae4f952dfd4149f1f8a38b0164afd4e12"><div class="ttname"><a href="mdtp_8h.html#ae4f952dfd4149f1f8a38b0164afd4e12">sdk_mdtp_free_value</a></div><div class="ttdeci">void sdk_mdtp_free_value(void *value_node)</div><div class="ttdoc">Frees memory allocated for value node via sdk_mdtp_make_value</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

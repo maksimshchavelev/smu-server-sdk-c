@@ -39,6 +39,8 @@ typedef struct ABI_MODULE_MDTP_DATA ABI_MODULE_MDTP_DATA; ///< Forward declarati
  * @code{.c}
  * // Example usage:
  * void *val = sdk_mdtp_make_value("RAM", "1234", "MB");
+ * // Do something with value...
+ * sdk_mdtp_free_value(val);
  * @endcode
  */
 void *sdk_mdtp_make_value(const char *value_name, const char *value, const char *value_units);
@@ -78,6 +80,8 @@ void sdk_mdtp_free_value(void *value_node);
  * void *container = sdk_mdtp_make_container("ram",
  *     sdk_mdtp_make_value("use", "12", "gb"),
  *     NULL);
+ * // Do something with container...
+ * sdk_mdtp_free_container(container);
  * @endcode
  */
 void *sdk_mdtp_make_container(const char *name, void *first, ...);
@@ -108,9 +112,9 @@ void sdk_mdtp_free_container(void *container_node);
  *
  * @code{.c}
  * // Example usage:
- * SDK_MODULE_MDTP_DATA *data = sdk_mdtp_make_root(
+ * SDK_MODULE_MDTP_DATA *data = sdk_mdtp_make_root(module,
  *     sdk_mdtp_make_container("ram",
- *         sdk_mdtp_make_value("use", "12", "gb"),
+ *         sdk_mdtp_make_value("usage", "12", "gb"),
  *         NULL),
  *     NULL);
  * @endcode
