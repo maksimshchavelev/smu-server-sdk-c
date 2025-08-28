@@ -73,7 +73,7 @@ cmake .. -DSDK_C_ENABLE_SANITIZERS=ON
 ```
 
 
-## Contribuing
+## Contributing
 Please follow these guidelines:
 - Use `clang-format.txt`, which is located in the root of the repository for code formatting
 - Write clear, structured code.
