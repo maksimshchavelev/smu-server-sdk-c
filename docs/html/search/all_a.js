@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['license_0',['License',['../index.html#autotoc_md13',1,'']]],
-  ['log_5ferror_1',['LOG_ERROR',['../log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca230506cce5c68c3bac5a821c42ed3473',1,'log_type.h']]],
-  ['log_5finfo_2',['LOG_INFO',['../log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837',1,'log_type.h']]],
-  ['log_5ftype_2eh_3',['log_type.h',['../log__type_8h.html',1,'']]],
-  ['log_5fwarning_4',['LOG_WARNING',['../log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca8f6fe15bfe15104da6d1b360194a5400',1,'log_type.h']]],
-  ['logtype_5',['logtype',['../log__type_8h.html#af67907baa897e9fb84df0cb89795b87c',1,'LogType:&#160;log_type.h'],['../log__type_8h.html#a102318ccdd7b5c8e32575d6bc5b72951',1,'LogType:&#160;log_type.h']]]
+  ['imodule_0',['imodule',['../structModule.html#a4843eed112445ad38df953b2b101bd9b',1,'Module::imodule'],['../imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;imodule.h'],['../mdtp_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;mdtp.h'],['../include_2modules_2internals_2utils_8h.html#ae33352835e22f05eb5ebddfae7e797ca',1,'IModule:&#160;utils.h']]],
+  ['imodule_2eh_1',['imodule.h',['../imodule_8h.html',1,'']]],
+  ['include_20utils_20h_2',['include/utils.h',['../md_guides_21__own__module.html#autotoc_md9',1,'']]],
+  ['installation_20usage_20for_20developers_3',['Installation &amp; Usage (for developers)',['../index.html#autotoc_md15',1,'']]],
+  ['installation_20usage_20for_20users_4',['Installation &amp; Usage (for users)',['../index.html#autotoc_md14',1,'']]],
+  ['is_20smu_20server_20sdk_20c_5',['What is smu-server-sdk-c?',['../index.html',1,'']]],
+  ['is_5fenabled_6',['is_enabled',['../MyWonderfulModule_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14',1,'is_enabled(void):&#160;main.c'],['../UPTIME_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14',1,'is_enabled(void):&#160;main.c']]]
 ];
