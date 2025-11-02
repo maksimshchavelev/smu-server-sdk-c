@@ -93,17 +93,17 @@ $(document).ready(function(){initNavTree('md_guides_20__module__template.html','
   <div class="headertitle"><div class="title">Module template</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> This topic provides a module template with a minimal <a class="el" href="CMakeLists_8txt.html">CMakeLists.txt</a> and a source file. You can use it as a template for creating a new module or as a reference. In any case, I recommend you carefully study what is written here.</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> This topic provides a module template with a minimal CMakeLists.txt and a source file. You can use it as a template for creating a new module or as a reference. In any case, I recommend you carefully study what is written here.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Architecture</h1>
-<p>The module contains a <a class="el" href="CMakeLists_8txt.html">CMakeLists.txt</a> file and source code:</p>
+<p>The module contains a CMakeLists.txt file and source code:</p>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── CMakeLists.txt</div>
 <div class="line">└── src</div>
 <div class="line">    └── main.c</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 CMakeLists.txt</h1>
-<p><a class="el" href="CMakeLists_8txt.html">CMakeLists.txt</a> is next:</p>
+<p>CMakeLists.txt is next:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.28)</div>
 <div class="line"> </div>
 <div class="line"># Set your module name here</div>
@@ -152,25 +152,25 @@ main.c</h1>
 <div class="line"><span class="comment">// yourself and then register them (see below).</span></div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line">uint8_t <a class="code hl_function" href="main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>(<span class="keywordtype">void</span>);</div>
+<div class="line">uint8_t <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *<a class="code hl_function" href="main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line">uint32_t <a class="code hl_function" href="main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>(<span class="keywordtype">void</span>);</div>
+<div class="line">uint32_t <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>(uint32_t poll_ratio);</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>(uint32_t poll_ratio);</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -180,7 +180,7 @@ main.c</h1>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <a class="code hl_typedef" href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a> *<span class="keyword">module</span> = NULL;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> *<a class="code hl_function" href="main_8c.html#aa350078c7077803fa3c8d98a4b7bdf70">module_init</a>(<a class="code hl_struct" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> server_functions,</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa350078c7077803fa3c8d98a4b7bdf70">module_init</a>(<a class="code hl_struct" href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a> server_functions,</div>
 <div class="line">                                        <span class="keyword">const</span> <span class="keywordtype">char</span>               *json_configuration) {</div>
 <div class="line">    <span class="comment">// We allocate memory for IModule and initialize it</span></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -199,19 +199,19 @@ main.c</h1>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Here we register handlers which the server calls</span></div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#acd7cffa14f32c80e78cc1c369582f1fc">sdk_module_register_destroy</a>(module, <a class="code hl_function" href="main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a3c5514ee0ec86f1db399ec24bd734984">sdk_module_register_enable</a>(module, <a class="code hl_function" href="main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a7205dad8e92fedb2fdce2fe200a0044a">sdk_module_register_disable</a>(module, <a class="code hl_function" href="main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a0e9bcedf6beda810aa37677eb4492ab8">sdk_module_register_is_enabled</a>(module, <a class="code hl_function" href="main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a0860138b29b20783aede3878288e0d16">sdk_module_register_get_configuration</a>(module, <a class="code hl_function" href="main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#aa16079b98989075d83f2c090afa84a9b">sdk_module_register_get_data</a>(module, <a class="code hl_function" href="main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a8bd4973e0d039e11522bd9100d0cc97b">sdk_module_register_get_module_name</a>(module, <a class="code hl_function" href="main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a47463462d5cf7c2c4c2f27ac3fa7ae95">sdk_module_register_get_module_description</a>(module, <a class="code hl_function" href="main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#a95fd7b82098320665daae9910b594746">sdk_module_register_get_poll_ratio</a>(module, <a class="code hl_function" href="main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>);</div>
-<div class="line">    <a class="code hl_function" href="imodule_8h.html#aa154b98a1ebcf8a0a12ae9abaeb5cbd7">sdk_module_register_set_poll_ratio</a>(module, <a class="code hl_function" href="main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#acd7cffa14f32c80e78cc1c369582f1fc">sdk_module_register_destroy</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a3c5514ee0ec86f1db399ec24bd734984">sdk_module_register_enable</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a7205dad8e92fedb2fdce2fe200a0044a">sdk_module_register_disable</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a0e9bcedf6beda810aa37677eb4492ab8">sdk_module_register_is_enabled</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a0860138b29b20783aede3878288e0d16">sdk_module_register_get_configuration</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#aa16079b98989075d83f2c090afa84a9b">sdk_module_register_get_data</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a8bd4973e0d039e11522bd9100d0cc97b">sdk_module_register_get_module_name</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a47463462d5cf7c2c4c2f27ac3fa7ae95">sdk_module_register_get_module_description</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#a95fd7b82098320665daae9910b594746">sdk_module_register_get_poll_ratio</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>);</div>
+<div class="line">    <a class="code hl_function" href="imodule_8h.html#aa154b98a1ebcf8a0a12ae9abaeb5cbd7">sdk_module_register_set_poll_ratio</a>(module, <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Then we can do some of our own work. But we just log the greeting</span></div>
-<div class="line">    <a class="code hl_function" href="utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a>(module, <a class="code hl_enumvalue" href="log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;Greetings from a module written in C!&quot;</span>);</div>
+<div class="line">    <a class="code hl_function" href="include_2modules_2internals_2utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a>(module, <a class="code hl_enumvalue" href="log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;Greetings from a module written in C!&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Return function table</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="imodule_8h.html#a2b1a41abeb75f72b3e4898da85c32dd7">sdk_imodule_get_module_functions</a>(module);</div>
@@ -220,31 +220,31 @@ main.c</h1>
 <div class="line"> </div>
 <div class="line"><span class="comment">// =============================== IMPLEMENTATION OF FUNCTIONS ===============================</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="comment">// Do something, like free up your resources. We log the completion of work</span></div>
-<div class="line">    <a class="code hl_function" href="utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a>(module, <a class="code hl_enumvalue" href="log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My wonderful module is being destroyed. Bye-bye :)&quot;</span>);</div>
+<div class="line">    <a class="code hl_function" href="include_2modules_2internals_2utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a>(module, <a class="code hl_enumvalue" href="log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My wonderful module is being destroyed. Bye-bye :)&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Finally, destroy the `module`</span></div>
 <div class="line">    <a class="code hl_function" href="imodule_8h.html#ab90b626232c3ec21f7f921a7bfa972de">sdk_imodule_destroy</a>(module);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <a class="code hl_function" href="imodule_8h.html#a82dc1ecb02b5e126a5550470b73a7690">sdk_imodule_enable</a>(module);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <a class="code hl_function" href="imodule_8h.html#acfdafaf928a53e4792e02c117560c5bb">sdk_imodule_disable</a>(module);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">uint8_t <a class="code hl_function" href="main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line">uint8_t <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="imodule_8h.html#a9244e519a8bbde3586b891337a9e95b7">sdk_imodule_is_enabled</a>(module);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="comment">// Return empty configuration</span></div>
 <div class="line">    <span class="comment">// In real form you should save the configuration either as Json (more convenient if you change</span></div>
 <div class="line">    <span class="comment">// it) or as a string and return the saved configuration</span></div>
@@ -254,7 +254,7 @@ main.c</h1>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *<a class="code hl_function" href="main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="comment">// In the real module you should create your meaningful data. Now we return the stub</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a">sdk_mdtp_make_root</a>(</div>
 <div class="line">        module,</div>
@@ -264,26 +264,37 @@ main.c</h1>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="comment">// We get the module context and extract its name from it.</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="imodule_8h.html#a36a612139c1847eb36c9e0e9c7e069c2">sdk_imodule_get_context</a>(module)-&gt;<a class="code hl_variable" href="structABI__MODULE__CONTEXT.html#a4433f2df4ddc74d433f829868e04c94e">module_name</a>;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="comment">// We get the module context and extract its description from it.</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="imodule_8h.html#a36a612139c1847eb36c9e0e9c7e069c2">sdk_imodule_get_context</a>(module)-&gt;<a class="code hl_variable" href="structABI__MODULE__CONTEXT.html#ad45cbed3efb47fa6396876720381ac50">module_description</a>;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">uint32_t <a class="code hl_function" href="main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line">uint32_t <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="imodule_8h.html#a6e3c478ae8c9b103bb34c2772b0f5320">sdk_imodule_get_poll_ratio</a>(module);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>(uint32_t poll_ratio) {</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="MyWonderfulModule_2src_2main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a>(uint32_t poll_ratio) {</div>
 <div class="line">    <a class="code hl_function" href="imodule_8h.html#a46abeb8ab82d28d32c37cdd2c91068b0">sdk_imodule_set_poll_ratio</a>(module, poll_ratio);</div>
 <div class="line">}</div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a0bbb5e1791db81255cae1be7ef8eecaa"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a></div><div class="ttdeci">void set_poll_ratio(uint32_t poll_ratio)</div><div class="ttdoc">Here you need to set the poll ratio.</div><div class="ttdef"><b>Definition</b> main.c:202</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a2b7e6a8f249525ea5757043414baed29"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a></div><div class="ttdeci">void enable(void)</div><div class="ttdoc">Here you need to correctly respond to the request to enable the module and enable it.</div><div class="ttdef"><b>Definition</b> main.c:150</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a6222b94a9cc5a4c4faffc131684bfa70"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a></div><div class="ttdeci">const ABI_MODULE_MDTP_DATA * get_data(void)</div><div class="ttdoc">Here we have to generate data using MDTP protocol and functions like sdk_mdtp_* and return it.</div><div class="ttdef"><b>Definition</b> main.c:175</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a703bec4d68ebddc3cf0f0a935fc1473c"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a></div><div class="ttdeci">uint32_t get_poll_ratio(void)</div><div class="ttdoc">Here you need to return the poll ratio for the module.</div><div class="ttdef"><b>Definition</b> main.c:197</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a753e3cdb094f7b939f247bd7e16fe04a"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a></div><div class="ttdeci">void destroy(void)</div><div class="ttdoc">The function destroys the module. At the end it must destroy module</div><div class="ttdef"><b>Definition</b> main.c:141</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a7d01bf2f27ba0dee39187c2e59a72a2e"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a></div><div class="ttdeci">const char * get_configuration(void)</div><div class="ttdoc">Here we need to return the current module configuration.</div><div class="ttdef"><b>Definition</b> main.c:165</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_a98759bc19c12f1457432619b2c30f556"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a></div><div class="ttdeci">const char * get_name(void)</div><div class="ttdoc">Here we need to return the module name.</div><div class="ttdef"><b>Definition</b> main.c:185</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_aa350078c7077803fa3c8d98a4b7bdf70"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#aa350078c7077803fa3c8d98a4b7bdf70">module_init</a></div><div class="ttdeci">const ABI_MODULE_FUNCTIONS * module_init(ABI_SERVER_CORE_FUNCTIONS server_functions, const char *json_configuration)</div><div class="ttdoc">This is the entry point to the module.</div><div class="ttdef"><b>Definition</b> main.c:101</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_aa895d5847ca0cc8eaec899b0b899c54a"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a></div><div class="ttdeci">void disable(void)</div><div class="ttdoc">Here you need to correctly respond to the request to turn off the module and turn it off.</div><div class="ttdef"><b>Definition</b> main.c:155</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_aa957d2d9fbcdc5642e196a70f242c00e"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a></div><div class="ttdeci">const char * get_description(void)</div><div class="ttdoc">Here we need to return the module description.</div><div class="ttdef"><b>Definition</b> main.c:191</div></div>
+<div class="ttc" id="aMyWonderfulModule_2src_2main_8c_html_ae4f05cf1175d542c6eaece01805a3b14"><div class="ttname"><a href="MyWonderfulModule_2src_2main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a></div><div class="ttdeci">uint8_t is_enabled(void)</div><div class="ttdoc">Here we need to return information about the module state.</div><div class="ttdef"><b>Definition</b> main.c:160</div></div>
 <div class="ttc" id="aimodule_8h_html_a0860138b29b20783aede3878288e0d16"><div class="ttname"><a href="imodule_8h.html#a0860138b29b20783aede3878288e0d16">sdk_module_register_get_configuration</a></div><div class="ttdeci">void sdk_module_register_get_configuration(IModule *module, const char *(*callback)(void))</div><div class="ttdoc">Registers a module function that returns JSON configuration and will be called by the server core.</div></div>
 <div class="ttc" id="aimodule_8h_html_a0e9bcedf6beda810aa37677eb4492ab8"><div class="ttname"><a href="imodule_8h.html#a0e9bcedf6beda810aa37677eb4492ab8">sdk_module_register_is_enabled</a></div><div class="ttdeci">void sdk_module_register_is_enabled(IModule *module, uint8_t(*callback)(void))</div><div class="ttdoc">Registers a module function that checks if the module is enabled and will be called by the server cor...</div></div>
 <div class="ttc" id="aimodule_8h_html_a2b1a41abeb75f72b3e4898da85c32dd7"><div class="ttname"><a href="imodule_8h.html#a2b1a41abeb75f72b3e4898da85c32dd7">sdk_imodule_get_module_functions</a></div><div class="ttdeci">const ABI_MODULE_FUNCTIONS * sdk_imodule_get_module_functions(const IModule *module)</div><div class="ttdoc">Get structure with pointer to module functions.</div></div>
@@ -303,18 +314,8 @@ main.c</h1>
 <div class="ttc" id="aimodule_8h_html_acd7cffa14f32c80e78cc1c369582f1fc"><div class="ttname"><a href="imodule_8h.html#acd7cffa14f32c80e78cc1c369582f1fc">sdk_module_register_destroy</a></div><div class="ttdeci">void sdk_module_register_destroy(IModule *module, void(*callback)(void))</div><div class="ttdoc">Registers a module destroy function that will be called by the server.</div></div>
 <div class="ttc" id="aimodule_8h_html_acfdafaf928a53e4792e02c117560c5bb"><div class="ttname"><a href="imodule_8h.html#acfdafaf928a53e4792e02c117560c5bb">sdk_imodule_disable</a></div><div class="ttdeci">void sdk_imodule_disable(IModule *module)</div><div class="ttdoc">Disables the module using pointer to IModule</div></div>
 <div class="ttc" id="aimodule_8h_html_ae33352835e22f05eb5ebddfae7e797ca"><div class="ttname"><a href="imodule_8h.html#ae33352835e22f05eb5ebddfae7e797ca">IModule</a></div><div class="ttdeci">struct IModule IModule</div><div class="ttdoc">A pseudo-base &quot;class&quot; for a module. Stores unique internal data for that module.</div><div class="ttdef"><b>Definition</b> imodule.h:20</div></div>
+<div class="ttc" id="ainclude_2modules_2internals_2utils_8h_html_a57bdbdc81ac94524b5b6f007930c5e02"><div class="ttname"><a href="include_2modules_2internals_2utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a></div><div class="ttdeci">void sdk_utils_log(const IModule *module, LogType log_type, const char *message)</div><div class="ttdoc">Logger functions to log messages.</div></div>
 <div class="ttc" id="alog__type_8h_html_af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837"><div class="ttname"><a href="log__type_8h.html#af67907baa897e9fb84df0cb89795b87ca6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a></div><div class="ttdeci">@ LOG_INFO</div><div class="ttdoc">White logs</div><div class="ttdef"><b>Definition</b> log_type.h:15</div></div>
-<div class="ttc" id="amain_8c_html_a0bbb5e1791db81255cae1be7ef8eecaa"><div class="ttname"><a href="main_8c.html#a0bbb5e1791db81255cae1be7ef8eecaa">set_poll_ratio</a></div><div class="ttdeci">void set_poll_ratio(uint32_t poll_ratio)</div><div class="ttdoc">Here you need to set the poll ratio.</div><div class="ttdef"><b>Definition</b> main.c:202</div></div>
-<div class="ttc" id="amain_8c_html_a2b7e6a8f249525ea5757043414baed29"><div class="ttname"><a href="main_8c.html#a2b7e6a8f249525ea5757043414baed29">enable</a></div><div class="ttdeci">void enable(void)</div><div class="ttdoc">Here you need to correctly respond to the request to enable the module and enable it.</div><div class="ttdef"><b>Definition</b> main.c:150</div></div>
-<div class="ttc" id="amain_8c_html_a6222b94a9cc5a4c4faffc131684bfa70"><div class="ttname"><a href="main_8c.html#a6222b94a9cc5a4c4faffc131684bfa70">get_data</a></div><div class="ttdeci">const ABI_MODULE_MDTP_DATA * get_data(void)</div><div class="ttdoc">Here we have to generate data using MDTP protocol and functions like sdk_mdtp_* and return it.</div><div class="ttdef"><b>Definition</b> main.c:175</div></div>
-<div class="ttc" id="amain_8c_html_a703bec4d68ebddc3cf0f0a935fc1473c"><div class="ttname"><a href="main_8c.html#a703bec4d68ebddc3cf0f0a935fc1473c">get_poll_ratio</a></div><div class="ttdeci">uint32_t get_poll_ratio(void)</div><div class="ttdoc">Here you need to return the poll ratio for the module.</div><div class="ttdef"><b>Definition</b> main.c:197</div></div>
-<div class="ttc" id="amain_8c_html_a753e3cdb094f7b939f247bd7e16fe04a"><div class="ttname"><a href="main_8c.html#a753e3cdb094f7b939f247bd7e16fe04a">destroy</a></div><div class="ttdeci">void destroy(void)</div><div class="ttdoc">The function destroys the module. At the end it must destroy module</div><div class="ttdef"><b>Definition</b> main.c:141</div></div>
-<div class="ttc" id="amain_8c_html_a7d01bf2f27ba0dee39187c2e59a72a2e"><div class="ttname"><a href="main_8c.html#a7d01bf2f27ba0dee39187c2e59a72a2e">get_configuration</a></div><div class="ttdeci">const char * get_configuration(void)</div><div class="ttdoc">Here we need to return the current module configuration.</div><div class="ttdef"><b>Definition</b> main.c:165</div></div>
-<div class="ttc" id="amain_8c_html_a98759bc19c12f1457432619b2c30f556"><div class="ttname"><a href="main_8c.html#a98759bc19c12f1457432619b2c30f556">get_name</a></div><div class="ttdeci">const char * get_name(void)</div><div class="ttdoc">Here we need to return the module name.</div><div class="ttdef"><b>Definition</b> main.c:185</div></div>
-<div class="ttc" id="amain_8c_html_aa350078c7077803fa3c8d98a4b7bdf70"><div class="ttname"><a href="main_8c.html#aa350078c7077803fa3c8d98a4b7bdf70">module_init</a></div><div class="ttdeci">const ABI_MODULE_FUNCTIONS * module_init(ABI_SERVER_CORE_FUNCTIONS server_functions, const char *json_configuration)</div><div class="ttdoc">This is the entry point to the module.</div><div class="ttdef"><b>Definition</b> main.c:101</div></div>
-<div class="ttc" id="amain_8c_html_aa895d5847ca0cc8eaec899b0b899c54a"><div class="ttname"><a href="main_8c.html#aa895d5847ca0cc8eaec899b0b899c54a">disable</a></div><div class="ttdeci">void disable(void)</div><div class="ttdoc">Here you need to correctly respond to the request to turn off the module and turn it off.</div><div class="ttdef"><b>Definition</b> main.c:155</div></div>
-<div class="ttc" id="amain_8c_html_aa957d2d9fbcdc5642e196a70f242c00e"><div class="ttname"><a href="main_8c.html#aa957d2d9fbcdc5642e196a70f242c00e">get_description</a></div><div class="ttdeci">const char * get_description(void)</div><div class="ttdoc">Here we need to return the module description.</div><div class="ttdef"><b>Definition</b> main.c:191</div></div>
-<div class="ttc" id="amain_8c_html_ae4f05cf1175d542c6eaece01805a3b14"><div class="ttname"><a href="main_8c.html#ae4f05cf1175d542c6eaece01805a3b14">is_enabled</a></div><div class="ttdeci">uint8_t is_enabled(void)</div><div class="ttdoc">Here we need to return information about the module state.</div><div class="ttdef"><b>Definition</b> main.c:160</div></div>
 <div class="ttc" id="amdtp_8h_html_aa8ca73fdaa13f40d373b4c5aea3e9857"><div class="ttname"><a href="mdtp_8h.html#aa8ca73fdaa13f40d373b4c5aea3e9857">sdk_mdtp_make_value</a></div><div class="ttdeci">void * sdk_mdtp_make_value(const char *value_name, const char *value, const char *value_units)</div><div class="ttdoc">Creates a value node.</div></div>
 <div class="ttc" id="amdtp_8h_html_adbae223ab213c794ce68819cd181d855"><div class="ttname"><a href="mdtp_8h.html#adbae223ab213c794ce68819cd181d855">sdk_mdtp_make_container</a></div><div class="ttdeci">void * sdk_mdtp_make_container(const char *name, void *first,...)</div><div class="ttdoc">Creates a container node.</div></div>
 <div class="ttc" id="amdtp_8h_html_afd1e45604f7d711eb0c321d0a5b1662a"><div class="ttname"><a href="mdtp_8h.html#afd1e45604f7d711eb0c321d0a5b1662a">sdk_mdtp_make_root</a></div><div class="ttdeci">const ABI_MODULE_MDTP_DATA * sdk_mdtp_make_root(IModule *module, void *first,...)</div><div class="ttdoc">Generates a valid MDTP frame with header, ready to be sent to the server.</div></div>
@@ -323,7 +324,6 @@ main.c</h1>
 <div class="ttc" id="astructABI__MODULE__FUNCTIONS_html"><div class="ttname"><a href="structABI__MODULE__FUNCTIONS.html">ABI_MODULE_FUNCTIONS</a></div><div class="ttdoc">Functions of the module that calls the server core.</div><div class="ttdef"><b>Definition</b> abi.h:79</div></div>
 <div class="ttc" id="astructABI__MODULE__MDTP__DATA_html"><div class="ttname"><a href="structABI__MODULE__MDTP__DATA.html">ABI_MODULE_MDTP_DATA</a></div><div class="ttdoc">Struct to storing MDTP data. See documentation for MDTP protocol.</div><div class="ttdef"><b>Definition</b> abi.h:21</div></div>
 <div class="ttc" id="astructABI__SERVER__CORE__FUNCTIONS_html"><div class="ttname"><a href="structABI__SERVER__CORE__FUNCTIONS.html">ABI_SERVER_CORE_FUNCTIONS</a></div><div class="ttdoc">Functions provided by the server for the module.</div><div class="ttdef"><b>Definition</b> abi.h:48</div></div>
-<div class="ttc" id="autils_8h_html_a57bdbdc81ac94524b5b6f007930c5e02"><div class="ttname"><a href="utils_8h.html#a57bdbdc81ac94524b5b6f007930c5e02">sdk_utils_log</a></div><div class="ttdeci">void sdk_utils_log(const IModule *module, LogType log_type, const char *message)</div><div class="ttdoc">Logger functions to log messages.</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 Result</h1>
 <p>After compilation and installation on the server, when you start the server you will see:</p>

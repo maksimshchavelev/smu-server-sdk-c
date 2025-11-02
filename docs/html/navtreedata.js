@@ -33,7 +33,14 @@ var NAVTREE =
       [ "Result", "md_guides_20__module__template.html#autotoc_md4", null ],
       [ "Conclusion", "md_guides_20__module__template.html#autotoc_md5", null ]
     ] ],
-    [ "Developing of own module", "md_guides_21__own__module.html", null ],
+    [ "Developing of own module", "md_guides_21__own__module.html", [
+      [ "Structure of the Module's Source Files", "md_guides_21__own__module.html#autotoc_md7", null ],
+      [ "CMakeLists.txt", "md_guides_21__own__module.html#autotoc_md8", null ],
+      [ "include/utils.h", "md_guides_21__own__module.html#autotoc_md9", null ],
+      [ "src/utils.c", "md_guides_21__own__module.html#autotoc_md10", null ],
+      [ "src/main.c", "md_guides_21__own__module.html#autotoc_md11", null ],
+      [ "Conclusion", "md_guides_21__own__module.html#autotoc_md12", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -58,7 +65,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"abi_8h.html"
+"MyWonderfulModule_2src_2main_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
